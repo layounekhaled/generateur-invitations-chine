@@ -20,6 +20,8 @@ interface InvitationData {
   notes: string
 }
 
+const DOWNLOAD_DIR = path.join(process.cwd(), 'download')
+
 export async function POST(request: NextRequest) {
   try {
     const { invitations } = await request.json() as { invitations: InvitationData[] }
@@ -29,6 +31,8 @@ export async function POST(request: NextRequest) {
     }
 
     const scriptPath = path.join(process.cwd(), 'mini-services', 'pdf-service')
+
+    if (!fs.existsSync(DOWNLOAD_DIR)) fs.mkdirSync(DOWNLOAD_DIR, { recursive: true })
 
     if (invitations.length === 1) {
       // Single invitation
@@ -42,12 +46,16 @@ pdf = gen_pdf(data)
 sys.stdout.buffer.write(pdf)
 `, ], { input: inputData, maxBuffer: 10 * 1024 * 1024, timeout: 30000 })
 
-      return new NextResponse(pdfBuffer, {
-        status: 200,
-        headers: {
-          'Content-Type': 'application/pdf',
-          'Content-Disposition': `inline; filename="invitations_groupe.pdf"`,
-        },
+      const timestamp = Date.now()
+      const filename = `invitation_${(invitations[0].lastName || 'unknown').replace(/[^a-zA-Z0-9]/g, '_')}_${(invitations[0].firstName || 'unknown').replace(/[^a-zA-Z0-9]/g, '_')}_${timestamp}.pdf`
+      const filePath = path.join(DOWNLOAD_DIR, filename)
+      fs.writeFileSync(filePath, pdfBuffer)
+
+      return NextResponse.json({
+        success: true,
+        downloadUrl: `/api/download/${filename}`,
+        filename,
+        size: pdfBuffer.length,
       })
     }
 
@@ -80,48 +88,43 @@ sys.stdout.buffer.write(pdf)
       return NextResponse.json({ error: 'No PDFs generated' }, { status: 500 })
     }
 
-    if (pdfFiles.length === 1) {
-      const pdf = fs.readFileSync(pdfFiles[0])
-      try { fs.unlinkSync(pdfFiles[0]) } catch {}
-      return new NextResponse(pdf, {
-        status: 200,
-        headers: {
-          'Content-Type': 'application/pdf',
-          'Content-Disposition': `inline; filename="invitations_groupe.pdf"`,
-        },
-      })
-    }
+    let finalPdf: Buffer
 
-    // Merge using pypdf
-    const outputPath = path.join(tmpDir, 'merged.pdf')
-    const mergeScript = `
+    if (pdfFiles.length === 1) {
+      finalPdf = fs.readFileSync(pdfFiles[0])
+      try { fs.unlinkSync(pdfFiles[0]) } catch {}
+    } else {
+      // Merge using pypdf
+      const outputPath = path.join(tmpDir, 'merged.pdf')
+      const mergeScript = `
 from pypdf import PdfMerger
 merger = PdfMerger()
 ${pdfFiles.map(f => `merger.append("${f}")`).join('\n')}
 merger.write("${outputPath}")
 merger.close()
 `
-    try {
-      execFileSync('python3', ['-c', mergeScript], { timeout: 30000 })
-    } catch {
-      const firstPdf = fs.readFileSync(pdfFiles[0])
+      try {
+        execFileSync('python3', ['-c', mergeScript], { timeout: 30000 })
+        finalPdf = fs.readFileSync(outputPath)
+      } catch {
+        finalPdf = fs.readFileSync(pdfFiles[0])
+      }
+
+      // Clean up temp files
       pdfFiles.forEach(f => { try { fs.unlinkSync(f) } catch {} })
-      return new NextResponse(firstPdf, {
-        status: 200,
-        headers: { 'Content-Type': 'application/pdf' },
-      })
+      try { fs.unlinkSync(outputPath) } catch {}
     }
 
-    const mergedPdf = fs.readFileSync(outputPath)
-    pdfFiles.forEach(f => { try { fs.unlinkSync(f) } catch { /* ignore */ } })
-    try { fs.unlinkSync(outputPath) } catch {}
+    const timestamp = Date.now()
+    const filename = `invitations_groupe_${timestamp}.pdf`
+    const filePath = path.join(DOWNLOAD_DIR, filename)
+    fs.writeFileSync(filePath, finalPdf)
 
-    return new NextResponse(mergedPdf, {
-      status: 200,
-      headers: {
-        'Content-Type': 'application/pdf',
-        'Content-Disposition': `inline; filename="invitations_groupe.pdf"`,
-      },
+    return NextResponse.json({
+      success: true,
+      downloadUrl: `/api/download/${filename}`,
+      filename,
+      size: finalPdf.length,
     })
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : 'Unknown error'

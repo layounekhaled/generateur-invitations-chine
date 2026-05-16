@@ -153,17 +153,17 @@ export default function Home() {
         body: JSON.stringify(formData),
       })
 
-      if (!response.ok) throw new Error('Erreur de génération PDF')
+      if (!response.ok) {
+        const errData = await response.json().catch(() => ({}))
+        throw new Error(errData.error || 'Erreur de génération PDF')
+      }
 
-      const blob = await response.blob()
-      const url = URL.createObjectURL(blob)
-      const a = document.createElement('a')
-      a.href = url
-      a.download = `invitation_${formData.lastName}_${formData.firstName}.pdf`
-      document.body.appendChild(a)
-      a.click()
-      document.body.removeChild(a)
-      URL.revokeObjectURL(url)
+      const result = await response.json()
+
+      if (result.downloadUrl) {
+        // Open download URL in a new window/tab - works in iframe/preview environments
+        window.open(result.downloadUrl, '_blank')
+      }
 
       saveToHistory(formData)
       toast({
@@ -301,15 +301,10 @@ export default function Home() {
           })
 
           if (response.ok) {
-            const blob = await response.blob()
-            const url = URL.createObjectURL(blob)
-            const a = document.createElement('a')
-            a.href = url
-            a.download = `invitation_${data.lastName}_${data.firstName}.pdf`
-            document.body.appendChild(a)
-            a.click()
-            document.body.removeChild(a)
-            URL.revokeObjectURL(url)
+            const result = await response.json()
+            if (result.downloadUrl) {
+              window.open(result.downloadUrl, '_blank')
+            }
             saveToHistory(data)
             successCount++
             // Small delay to avoid browser blocking
@@ -331,15 +326,10 @@ export default function Home() {
         })
 
         if (response.ok) {
-          const blob = await response.blob()
-          const url = URL.createObjectURL(blob)
-          const a = document.createElement('a')
-          a.href = url
-          a.download = `invitations_groupe_${new Date().toISOString().split('T')[0]}.pdf`
-          document.body.appendChild(a)
-          a.click()
-          document.body.removeChild(a)
-          URL.revokeObjectURL(url)
+          const result = await response.json()
+          if (result.downloadUrl) {
+            window.open(result.downloadUrl, '_blank')
+          }
           importData.forEach(d => saveToHistory(d))
           successCount = importData.length
         } else {
@@ -418,15 +408,10 @@ export default function Home() {
 
       if (!response.ok) throw new Error()
 
-      const blob = await response.blob()
-      const url = URL.createObjectURL(blob)
-      const a = document.createElement('a')
-      a.href = url
-      a.download = `invitation_${record.lastName}_${record.firstName}.pdf`
-      document.body.appendChild(a)
-      a.click()
-      document.body.removeChild(a)
-      URL.revokeObjectURL(url)
+      const result = await response.json()
+      if (result.downloadUrl) {
+        window.open(result.downloadUrl, '_blank')
+      }
     } catch {
       toast({
         title: 'Erreur',

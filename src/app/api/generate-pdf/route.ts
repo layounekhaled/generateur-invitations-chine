@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { execFileSync } from 'child_process'
 import path from 'path'
+import fs from 'fs'
+
+const DOWNLOAD_DIR = path.join(process.cwd(), 'download')
 
 export async function POST(request: NextRequest) {
   try {
@@ -15,12 +18,12 @@ export async function POST(request: NextRequest) {
     }
 
     // Call Python script to generate PDF
-    const scriptPath = path.join(process.cwd(), 'mini-services', 'pdf-service', 'service.py')
+    const scriptPath = path.join(process.cwd(), 'mini-services', 'pdf-service')
     const inputData = JSON.stringify(body)
 
     const pdfBuffer = execFileSync('python3', ['-c', `
 import sys, json
-sys.path.insert(0, '${path.join(process.cwd(), 'mini-services', 'pdf-service')}')
+sys.path.insert(0, '${scriptPath}')
 from service import gen_pdf
 data = json.loads(sys.stdin.read())
 pdf = gen_pdf(data)
@@ -31,12 +34,26 @@ sys.stdout.buffer.write(pdf)
       timeout: 30000,
     })
 
-    return new NextResponse(pdfBuffer, {
-      status: 200,
-      headers: {
-        'Content-Type': 'application/pdf',
-        'Content-Disposition': `inline; filename="invitation_${body.lastName}_${body.firstName}.pdf"`,
-      },
+    // Save PDF to download directory
+    if (!fs.existsSync(DOWNLOAD_DIR)) fs.mkdirSync(DOWNLOAD_DIR, { recursive: true })
+
+    const timestamp = Date.now()
+    const safeLastName = (body.lastName || 'unknown').replace(/[^a-zA-Z0-9]/g, '_')
+    const safeFirstName = (body.firstName || 'unknown').replace(/[^a-zA-Z0-9]/g, '_')
+    const filename = `invitation_${safeLastName}_${safeFirstName}_${timestamp}.pdf`
+    const filePath = path.join(DOWNLOAD_DIR, filename)
+
+    fs.writeFileSync(filePath, pdfBuffer)
+
+    // Return download URL instead of binary PDF
+    // This is more reliable in iframe/preview environments
+    const downloadUrl = `/api/download/${filename}`
+
+    return NextResponse.json({
+      success: true,
+      downloadUrl,
+      filename,
+      size: pdfBuffer.length,
     })
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : 'Unknown error'
