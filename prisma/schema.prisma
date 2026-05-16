@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Invitation {
+  id              String   @id @default(cuid())
+  template        String   // "akkak" or "houacine"
+  lastName        String
+  firstName       String
+  sex             String   // "M" or "F"
+  dateOfBirth     String
+  nationality     String
+  passportNumber  String
+  arrivalDate     String
+  departureDate   String
+  visitPurpose    String
+  cityToVisit     String
+  inviterRelation String
+  fundingSource   String
+  notes           String?
+  pdfGenerated    Boolean  @default(false)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}

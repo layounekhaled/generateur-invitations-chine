@@ -1,0 +1,11 @@
+{
+  "name": "pdf-service",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node service.cjs"
+  },
+  "dependencies": {
+    "playwright": "^1.60.0"
+  }
+}
