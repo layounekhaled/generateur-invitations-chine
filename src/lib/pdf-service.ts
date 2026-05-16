@@ -1,9 +1,9 @@
 /**
  * PDF Generation Service for China Invitation Generator
  * Uses pdf-lib (pure JavaScript) for Vercel serverless compatibility.
- * Reads original PDF templates, overlays dynamic text fields.
+ * Uses original template page images as backgrounds and overlays text fields.
  */
-import { PDFDocument, rgb, StandardFonts, pdfColors } from 'pdf-lib'
+import { PDFDocument, rgb } from 'pdf-lib'
 import fontkit from '@pdf-lib/fontkit'
 import path from 'path'
 import fs from 'fs'
@@ -26,6 +26,33 @@ async function getFontBold(): Promise<Uint8Array> {
     _fontBold = fs.readFileSync(fontPath)
   }
   return _fontBold!
+}
+
+// Template image cache
+const _imageCache: Record<string, Uint8Array> = {}
+
+function getTemplateImage(template: string, pageIdx: number): Uint8Array {
+  const key = `${template}_page${pageIdx + 1}`
+  if (_imageCache[key]) return _imageCache[key]
+
+  // Try hires first (better quality), fallback to standard
+  const hiresPath = path.join(process.cwd(), 'public/templates/hires', `${template}_page${pageIdx + 1}.png`)
+  const stdPath = path.join(process.cwd(), 'public/templates', `${template}_page${pageIdx + 1}.png`)
+
+  const imgPath = fs.existsSync(hiresPath) ? hiresPath : stdPath
+  if (!fs.existsSync(imgPath)) {
+    throw new Error(`Template image not found: ${imgPath}`)
+  }
+
+  const data = fs.readFileSync(imgPath)
+  _imageCache[key] = data
+  return data
+}
+
+// Check if we should use original PDFs (local dev) or images (Vercel)
+function useOriginalPDFs(): boolean {
+  const houacinePath = path.join(process.cwd(), 'upload', 'HOUACINE ABDESSALAM.pdf')
+  return fs.existsSync(houacinePath)
 }
 
 // Nationality mapping
@@ -139,7 +166,8 @@ interface InvitationData {
   notes: string
 }
 
-// Overlay HOUACINE template page 1
+// ============== HOUACINE overlays ==============
+
 function overlayHouacinePage1(pdfDoc: PDFDocument, page: any, font: any, fontBold: any, data: InvitationData) {
   const name = `${data.lastName} ${data.firstName}`
   const nationality = data.nationality || 'Algeria'
@@ -151,29 +179,28 @@ function overlayHouacinePage1(pdfDoc: PDFDocument, page: any, font: any, fontBol
 
   const fontSize = 11
 
-  // Nationality field: original around y=550, x=248
+  // Nationality field
   whiteOut(page, 248, 550, 200, 16)
-  page.drawText(`${cnNat}／${nationality}`, { x: 248, y: 553, size: fontSize, font, color: rgb(0, 0, 0) })
+  page.drawText(`${cnNat}/${nationality}`, { x: 248, y: 553, size: fontSize, font, color: rgb(0, 0, 0) })
 
-  // Name field: original around y=530, x=216
+  // Name field
   whiteOut(page, 216, 530, 300, 16)
   page.drawText(name, { x: 216, y: 533, size: fontSize, font, color: rgb(0, 0, 0) })
 
-  // Passport field: original around y=513, x=275
+  // Passport field
   whiteOut(page, 275, 513, 200, 16)
   page.drawText(passport, { x: 275, y: 516, size: fontSize, font, color: rgb(0, 0, 0) })
 
-  // Visit dates: original around y=496, x=262
+  // Visit dates
   const dateVal = `${fmtDate(arrival)}-${fmtDate(departure)}`
   whiteOut(page, 262, 496, 220, 16)
   page.drawText(dateVal, { x: 262, y: 499, size: fontSize, font, color: rgb(0, 0, 0) })
 
-  // Signature date: original around y=294, x=381
+  // Signature date
   whiteOut(page, 370, 294, 160, 16)
   page.drawText(dateStr, { x: 370, y: 297, size: fontSize, font, color: rgb(0, 0, 0) })
 }
 
-// Overlay HOUACINE template page 2
 function overlayHouacinePage2(pdfDoc: PDFDocument, page: any, font: any, fontBold: any, data: InvitationData) {
   const arrival = data.arrivalDate
   const departure = data.departureDate
@@ -207,7 +234,8 @@ function overlayHouacinePage2(pdfDoc: PDFDocument, page: any, font: any, fontBol
   page.drawText(dateStr, { x: 385, y: 290, size: fontSize, font, color: rgb(0, 0, 0) })
 }
 
-// Overlay AKKAK template page 1
+// ============== AKKAK overlays ==============
+
 function overlayAkkakPage1(pdfDoc: PDFDocument, page: any, font: any, fontBold: any, data: InvitationData) {
   const name = `${data.lastName} ${data.firstName}`
   const nationality = data.nationality || 'Algeria'
@@ -224,15 +252,15 @@ function overlayAkkakPage1(pdfDoc: PDFDocument, page: any, font: any, fontBold: 
 
   const fontSize = 10
 
-  // Name field: original around x=203, y=508
+  // Name field
   whiteOut(page, 200, 508, 200, 14)
   page.drawText(name, { x: 200, y: 510, size: fontSize, font, color: rgb(0, 0, 0) })
 
-  // DOB field: original around x=228, y=486
+  // DOB field
   whiteOut(page, 225, 486, 100, 14)
   page.drawText(dob, { x: 225, y: 488, size: fontSize, font, color: rgb(0, 0, 0) })
 
-  // Passport field: original around x=429, y=486
+  // Passport field
   whiteOut(page, 425, 486, 130, 14)
   page.drawText(passport, { x: 425, y: 488, size: fontSize, font, color: rgb(0, 0, 0) })
 
@@ -263,10 +291,9 @@ function overlayAkkakPage1(pdfDoc: PDFDocument, page: any, font: any, fontBold: 
 
   // Nationality
   whiteOut(page, 320, 402, 200, 14)
-  page.drawText(`${cnNat}／${nationality}`, { x: 320, y: 404, size: fontSize, font, color: rgb(0, 0, 0) })
+  page.drawText(`${cnNat}/${nationality}`, { x: 320, y: 404, size: fontSize, font, color: rgb(0, 0, 0) })
 }
 
-// Overlay AKKAK template page 2
 function overlayAkkakPage2(pdfDoc: PDFDocument, page: any, font: any, fontBold: any, data: InvitationData) {
   const arrival = data.arrivalDate
   const departure = data.departureDate
@@ -281,7 +308,7 @@ function overlayAkkakPage2(pdfDoc: PDFDocument, page: any, font: any, fontBold: 
   // White out itinerary table area
   whiteOut(page, 78, 550, 440, 165)
 
-  // Table header (4 columns)
+  // Table header
   page.drawText('日期', { x: 82, y: 703, size: fontSize, font: fontBold, color: rgb(0, 0, 0) })
   page.drawText('行程', { x: 160, y: 703, size: fontSize, font: fontBold, color: rgb(0, 0, 0) })
   page.drawText('交通', { x: 390, y: 703, size: fontSize, font: fontBold, color: rgb(0, 0, 0) })
@@ -302,31 +329,28 @@ function overlayAkkakPage2(pdfDoc: PDFDocument, page: any, font: any, fontBold: 
   page.drawText(`仅供${fullName}先生申请签证使用`, { x: 60, y: 47, size: 9, font, color: rgb(0, 0, 0) })
 }
 
+// ============== Main PDF generation ==============
+
 /**
- * Generate a PDF by loading the original template PDF and overlaying text fields.
+ * Generate PDF using original PDF templates (local dev with upload/ dir)
  */
-export async function generatePDF(data: InvitationData): Promise<Uint8Array> {
+async function generatePDFFromOriginal(data: InvitationData): Promise<Uint8Array> {
   const template = data.template || 'houacine'
   const templateFileName = template === 'akkak' ? 'AKKAK AMIR FAHD.pdf' : 'HOUACINE ABDESSALAM.pdf'
   const templatePath = path.join(process.cwd(), 'upload', templateFileName)
 
-  // Load original PDF template
   const templateBytes = fs.readFileSync(templatePath)
   const pdfDoc = await PDFDocument.load(templateBytes)
 
-  // Register fontkit for custom font embedding
   pdfDoc.registerFontkit(fontkit)
 
-  // Load Chinese fonts
   const fontBytes = await getFontRegular()
   const fontBoldBytes = await getFontBold()
   const font = await pdfDoc.embedFont(fontBytes)
   const fontBold = await pdfDoc.embedFont(fontBoldBytes)
 
-  // Get pages
   const pages = pdfDoc.getPages()
 
-  // Overlay dynamic fields on each page
   for (let pageIdx = 0; pageIdx < pages.length; pageIdx++) {
     const page = pages[pageIdx]
 
@@ -339,9 +363,71 @@ export async function generatePDF(data: InvitationData): Promise<Uint8Array> {
     }
   }
 
-  // Save and return
-  const pdfBytes = await pdfDoc.save()
-  return pdfBytes
+  return await pdfDoc.save()
+}
+
+/**
+ * Generate PDF using template images as backgrounds (Vercel/serverless)
+ * Creates a new PDF from scratch with images as backgrounds + text overlay
+ */
+async function generatePDFFromImages(data: InvitationData): Promise<Uint8Array> {
+  const template = data.template || 'houacine'
+
+  const pdfDoc = await PDFDocument.create()
+  pdfDoc.registerFontkit(fontkit)
+
+  const fontBytes = await getFontRegular()
+  const fontBoldBytes = await getFontBold()
+  const font = await pdfDoc.embedFont(fontBytes)
+  const fontBold = await pdfDoc.embedFont(fontBoldBytes)
+
+  // A4 dimensions in points
+  const pageWidth = 595.28
+  const pageHeight = 841.89
+
+  // Determine number of pages (both templates have 3 pages)
+  const numPages = 3
+
+  for (let pageIdx = 0; pageIdx < numPages; pageIdx++) {
+    const page = pdfDoc.addPage([pageWidth, pageHeight])
+
+    // Embed and draw template image as background
+    try {
+      const imgBytes = getTemplateImage(template, pageIdx)
+      const img = await pdfDoc.embedPng(imgBytes)
+      page.drawImage(img, {
+        x: 0,
+        y: 0,
+        width: pageWidth,
+        height: pageHeight,
+      })
+    } catch (e) {
+      console.error(`Failed to load template image for page ${pageIdx + 1}:`, e)
+    }
+
+    // Overlay dynamic fields
+    if (template === 'houacine') {
+      if (pageIdx === 0) overlayHouacinePage1(pdfDoc, page, font, fontBold, data)
+      else if (pageIdx === 1) overlayHouacinePage2(pdfDoc, page, font, fontBold, data)
+    } else {
+      if (pageIdx === 0) overlayAkkakPage1(pdfDoc, page, font, fontBold, data)
+      else if (pageIdx === 1) overlayAkkakPage2(pdfDoc, page, font, fontBold, data)
+    }
+  }
+
+  return await pdfDoc.save()
+}
+
+/**
+ * Generate a PDF by loading the original template or using images as fallback.
+ * On Vercel (serverless), uses image-based approach.
+ * Locally, uses original PDF templates for best quality.
+ */
+export async function generatePDF(data: InvitationData): Promise<Uint8Array> {
+  if (useOriginalPDFs()) {
+    return generatePDFFromOriginal(data)
+  }
+  return generatePDFFromImages(data)
 }
 
 /**
@@ -361,8 +447,7 @@ export function generateHTMLPreview(data: InvitationData): string {
   const dob = (data.dateOfBirth || '').replace(/-/g, '/')
   const purpose = data.visitPurpose || '商务洽谈'
   const funding = data.fundingSource || '客户本人'
-  const cnNatForItin = cnNat
-  const itin = genItinerary(arrival, departure, city, cnNatForItin)
+  const itin = genItinerary(arrival, departure, city, cnNat)
   const dateStr = todayCN()
 
   const fieldStyle = 'background:#fffde7;border:1px dashed #ff9800;padding:1px 4px;font-weight:bold'
@@ -380,36 +465,36 @@ export function generateHTMLPreview(data: InvitationData): string {
 html,body{width:210mm;font-family:"Noto Sans SC","Sarasa Mono SC",sans-serif}
 .page{width:210mm;min-height:297mm;position:relative}</style></head><body>
 <div class="page" style="padding:25mm 20mm">
-<h3 style="color:#1a5276">Aperçu - Modèle AKKAK</h3>
+<h3 style="color:#1a5276">Apercu - Modele AKKAK</h3>
 <table style="border-collapse:collapse;margin:10px 0;width:100%"><tr>
-<td style="padding:6px;border:1px solid #ccc;font-weight:bold">姓名/Name</td>
+<td style="padding:6px;border:1px solid #ccc;font-weight:bold">Name</td>
 <td style="${fieldStyle}">${name}</td>
-<td style="padding:6px;border:1px solid #ccc;font-weight:bold">性别/Gender</td>
-<td style="${fieldStyle}">${sex === 'M' ? '男/Male' : '女/Female'}</td></tr><tr>
-<td style="padding:6px;border:1px solid #ccc;font-weight:bold">出生日期/DOB</td>
+<td style="padding:6px;border:1px solid #ccc;font-weight:bold">Gender</td>
+<td style="${fieldStyle}">${sex === 'M' ? 'Male' : 'Female'}</td></tr><tr>
+<td style="padding:6px;border:1px solid #ccc;font-weight:bold">DOB</td>
 <td style="${fieldStyle}">${dob}</td>
-<td style="padding:6px;border:1px solid #ccc;font-weight:bold">护照/Passport</td>
+<td style="padding:6px;border:1px solid #ccc;font-weight:bold">Passport</td>
 <td style="${fieldStyle}">${passport}</td></tr><tr>
-<td style="padding:6px;border:1px solid #ccc;font-weight:bold">访问目的/Purpose</td>
+<td style="padding:6px;border:1px solid #ccc;font-weight:bold">Purpose</td>
 <td style="${fieldStyle}">${purpose}</td>
-<td style="padding:6px;border:1px solid #ccc;font-weight:bold">日期/Dates</td>
+<td style="padding:6px;border:1px solid #ccc;font-weight:bold">Dates</td>
 <td style="${fieldStyle}">${fmtDate(arrival)} TO ${fmtDate(departure)}</td></tr><tr>
-<td style="padding:6px;border:1px solid #ccc;font-weight:bold">地点/Place</td>
+<td style="padding:6px;border:1px solid #ccc;font-weight:bold">Place</td>
 <td style="${fieldStyle}">${city}</td>
-<td style="padding:6px;border:1px solid #ccc;font-weight:bold">关系/Relation</td>
+<td style="padding:6px;border:1px solid #ccc;font-weight:bold">Relation</td>
 <td style="${fieldStyle}">${data.inviterRelation || '客户'}</td></tr><tr>
-<td style="padding:6px;border:1px solid #ccc;font-weight:bold">资金/Funding</td>
+<td style="padding:6px;border:1px solid #ccc;font-weight:bold">Funding</td>
 <td style="${fieldStyle}">${funding}</td>
-<td style="padding:6px;border:1px solid #ccc;font-weight:bold">国籍/Nationality</td>
-<td style="${fieldStyle}">${cnNat}／${nationality}</td></tr></table>
+<td style="padding:6px;border:1px solid #ccc;font-weight:bold">Nationality</td>
+<td style="${fieldStyle}">${cnNat}/${nationality}</td></tr></table>
 </div>
 <div class="page" style="page-break-before:always;padding:20mm">
-<h3 style="color:#1a5276">行程安排 / Itinerary</h3>
+<h3 style="color:#1a5276">Itinerary</h3>
 <table style="width:100%;border-collapse:collapse;margin-top:10px"><thead><tr>
-<th style="background:#f0f0f0;padding:8px;border:1px solid #ccc;font-size:12px">日期</th>
-<th style="background:#f0f0f0;padding:8px;border:1px solid #ccc;font-size:12px">行程</th>
-<th style="background:#f0f0f0;padding:8px;border:1px solid #ccc;font-size:12px">交通</th>
-<th style="background:#f0f0f0;padding:8px;border:1px solid #ccc;font-size:12px">用餐</th>
+<th style="background:#f0f0f0;padding:8px;border:1px solid #ccc;font-size:12px">Date</th>
+<th style="background:#f0f0f0;padding:8px;border:1px solid #ccc;font-size:12px">Activity</th>
+<th style="background:#f0f0f0;padding:8px;border:1px solid #ccc;font-size:12px">Transport</th>
+<th style="background:#f0f0f0;padding:8px;border:1px solid #ccc;font-size:12px">Meals</th>
 </tr></thead><tbody>${rows}</tbody></table>
 </div></body></html>`
   } else {
@@ -424,22 +509,22 @@ html,body{width:210mm;font-family:"Noto Sans SC","Sarasa Mono SC",sans-serif}
 html,body{width:210mm;font-family:"Noto Sans SC","Sarasa Mono SC",sans-serif}
 .page{width:210mm;min-height:297mm;position:relative;background:white}</style></head><body>
 <div class="page" style="padding:25mm 25mm 20mm 25mm">
-<h3 style="color:#c41e3a">Aperçu - Modèle HOUACINE</h3>
+<h3 style="color:#c41e3a">Apercu - Modele HOUACINE</h3>
 <div style="margin-top:20px">
-<div style="font-size:12pt;line-height:2.2">国籍／Nationality：<span style="${fieldStyle}">${cnNat}／${nationality}</span></div>
-<div style="font-size:12pt;line-height:2.2">姓名／Name: <span style="${fieldStyle}">${name}</span></div>
-<div style="font-size:12pt;line-height:2.2">护照号码／Passport NO.: <span style="${fieldStyle}">${passport}</span></div>
-<div style="font-size:12pt;line-height:2.2">拜访日期／time: <span style="${fieldStyle}">${fmtDate(arrival)}-${fmtDate(departure)}</span></div>
+<div style="font-size:12pt;line-height:2.2">Nationality: <span style="${fieldStyle}">${cnNat}/${nationality}</span></div>
+<div style="font-size:12pt;line-height:2.2">Name: <span style="${fieldStyle}">${name}</span></div>
+<div style="font-size:12pt;line-height:2.2">Passport: <span style="${fieldStyle}">${passport}</span></div>
+<div style="font-size:12pt;line-height:2.2">Dates: <span style="${fieldStyle}">${fmtDate(arrival)}-${fmtDate(departure)}</span></div>
 </div>
 <div style="text-align:right;margin-top:40px"><div style="font-size:12pt;color:#333">${dateStr}</div>
-<div style="font-size:13pt;font-weight:bold;color:#c41e3a;margin-top:6px">佛山市乐织外贸服务有限公司</div></div>
+<div style="font-size:13pt;font-weight:bold;color:#c41e3a;margin-top:6px">Company Name</div></div>
 </div>
 <div class="page" style="page-break-before:always;padding:25mm 20mm">
-<h3 style="color:#c41e3a">行程安排 / Itinerary</h3>
+<h3 style="color:#c41e3a">Itinerary</h3>
 <table style="width:100%;border-collapse:collapse;margin-top:10px"><thead><tr>
-<th style="background:#f0f0f0;padding:10px;border:1px solid #ccc;font-size:14px;width:25%">日期</th>
-<th style="background:#f0f0f0;padding:10px;border:1px solid #ccc;font-size:14px;width:55%">行程</th>
-<th style="background:#f0f0f0;padding:10px;border:1px solid #ccc;font-size:14px;width:20%">住处</th>
+<th style="background:#f0f0f0;padding:10px;border:1px solid #ccc;font-size:14px;width:25%">Date</th>
+<th style="background:#f0f0f0;padding:10px;border:1px solid #ccc;font-size:14px;width:55%">Activity</th>
+<th style="background:#f0f0f0;padding:10px;border:1px solid #ccc;font-size:14px;width:20%">Hotel</th>
 </tr></thead><tbody>${rows}</tbody></table>
 </div></body></html>`
   }
