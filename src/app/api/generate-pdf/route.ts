@@ -30,8 +30,8 @@ pdf = gen_pdf(data)
 sys.stdout.buffer.write(pdf)
 `, ], {
       input: inputData,
-      maxBuffer: 10 * 1024 * 1024, // 10MB
-      timeout: 30000,
+      maxBuffer: 50 * 1024 * 1024, // 50MB - AKKAK template has large images
+      timeout: 60000,
     })
 
     // Save PDF to download directory

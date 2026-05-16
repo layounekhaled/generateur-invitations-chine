@@ -161,8 +161,17 @@ export default function Home() {
       const result = await response.json()
 
       if (result.downloadUrl) {
-        // Open download URL in a new window/tab - works in iframe/preview environments
-        window.open(result.downloadUrl, '_blank')
+        // Use a hidden link with download attribute - most reliable across all environments
+        const link = document.createElement('a')
+        link.href = result.downloadUrl
+        link.download = result.filename || `invitation_${formData.lastName}_${formData.firstName}.pdf`
+        link.style.display = 'none'
+        document.body.appendChild(link)
+        link.click()
+        // Keep link briefly to ensure download starts
+        setTimeout(() => {
+          document.body.removeChild(link)
+        }, 1000)
       }
 
       saveToHistory(formData)
@@ -303,7 +312,13 @@ export default function Home() {
           if (response.ok) {
             const result = await response.json()
             if (result.downloadUrl) {
-              window.open(result.downloadUrl, '_blank')
+              const link = document.createElement('a')
+              link.href = result.downloadUrl
+              link.download = result.filename || `invitation_${data.lastName}_${data.firstName}.pdf`
+              link.style.display = 'none'
+              document.body.appendChild(link)
+              link.click()
+              setTimeout(() => { document.body.removeChild(link) }, 1000)
             }
             saveToHistory(data)
             successCount++
@@ -328,7 +343,13 @@ export default function Home() {
         if (response.ok) {
           const result = await response.json()
           if (result.downloadUrl) {
-            window.open(result.downloadUrl, '_blank')
+            const link = document.createElement('a')
+            link.href = result.downloadUrl
+            link.download = result.filename || `invitations_groupe.pdf`
+            link.style.display = 'none'
+            document.body.appendChild(link)
+            link.click()
+            setTimeout(() => { document.body.removeChild(link) }, 1000)
           }
           importData.forEach(d => saveToHistory(d))
           successCount = importData.length
@@ -410,7 +431,13 @@ export default function Home() {
 
       const result = await response.json()
       if (result.downloadUrl) {
-        window.open(result.downloadUrl, '_blank')
+        const link = document.createElement('a')
+        link.href = result.downloadUrl
+        link.download = result.filename || `invitation_${record.lastName}_${record.firstName}.pdf`
+        link.style.display = 'none'
+        document.body.appendChild(link)
+        link.click()
+        setTimeout(() => { document.body.removeChild(link) }, 1000)
       }
     } catch {
       toast({

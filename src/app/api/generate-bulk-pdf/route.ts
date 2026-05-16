@@ -44,7 +44,7 @@ from service import gen_pdf
 data = json.loads(sys.stdin.read())
 pdf = gen_pdf(data)
 sys.stdout.buffer.write(pdf)
-`, ], { input: inputData, maxBuffer: 10 * 1024 * 1024, timeout: 30000 })
+`, ], { input: inputData, maxBuffer: 50 * 1024 * 1024, timeout: 60000 })
 
       const timestamp = Date.now()
       const filename = `invitation_${(invitations[0].lastName || 'unknown').replace(/[^a-zA-Z0-9]/g, '_')}_${(invitations[0].firstName || 'unknown').replace(/[^a-zA-Z0-9]/g, '_')}_${timestamp}.pdf`
@@ -74,7 +74,7 @@ from service import gen_pdf
 data = json.loads(sys.stdin.read())
 pdf = gen_pdf(data)
 sys.stdout.buffer.write(pdf)
-`, ], { input: inputData, maxBuffer: 10 * 1024 * 1024, timeout: 30000 })
+`, ], { input: inputData, maxBuffer: 50 * 1024 * 1024, timeout: 60000 })
 
         const filePath = path.join(tmpDir, `invite_${i}.pdf`)
         fs.writeFileSync(filePath, pdfBuffer)
