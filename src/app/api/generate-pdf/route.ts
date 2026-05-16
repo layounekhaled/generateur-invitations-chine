@@ -1,15 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
-import fs from 'fs'
-import path from 'path'
 import { generatePDF } from '@/lib/pdf-service'
 
-const DOWNLOAD_DIR = path.join(process.cwd(), 'download')
+export const runtime = 'nodejs'
+export const maxDuration = 60
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
 
-    // Validate required fields
     if (!body.lastName || !body.firstName || !body.passportNumber || !body.arrivalDate || !body.departureDate) {
       return NextResponse.json(
         { error: 'Champs obligatoires manquants: nom, prénom, passeport, dates' },
@@ -17,32 +15,25 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Generate PDF using pdf-lib (pure JavaScript, Vercel-compatible)
     const pdfBytes = await generatePDF(body)
 
-    // Save PDF to download directory
-    if (!fs.existsSync(DOWNLOAD_DIR)) fs.mkdirSync(DOWNLOAD_DIR, { recursive: true })
-
-    const timestamp = Date.now()
     const safeLastName = (body.lastName || 'unknown').replace(/[^a-zA-Z0-9]/g, '_')
     const safeFirstName = (body.firstName || 'unknown').replace(/[^a-zA-Z0-9]/g, '_')
-    const filename = `invitation_${safeLastName}_${safeFirstName}_${timestamp}.pdf`
-    const filePath = path.join(DOWNLOAD_DIR, filename)
+    const filename = `invitation_${safeLastName}_${safeFirstName}.pdf`
 
-    fs.writeFileSync(filePath, pdfBytes)
-
-    // Return download URL
-    const downloadUrl = `/api/download/${filename}`
-
-    return NextResponse.json({
-      success: true,
-      downloadUrl,
-      filename,
-      size: pdfBytes.length,
+    return new NextResponse(pdfBytes, {
+      status: 200,
+      headers: {
+        'Content-Type': 'application/pdf',
+        'Content-Disposition': `attachment; filename="${filename}"`,
+        'Content-Length': pdfBytes.length.toString(),
+      },
     })
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : 'Unknown error'
+    const stack = error instanceof Error ? error.stack : ''
     console.error('PDF generation error:', message)
-    return NextResponse.json({ error: 'Erreur de génération PDF: ' + message }, { status: 500 })
+    console.error('Stack:', stack)
+    return NextResponse.json({ error: 'Erreur de génération PDF: ' + message, stack: stack?.split('\n').slice(0,5).join('\n') }, { status: 500 })
   }
 }
