@@ -158,21 +158,19 @@ export default function Home() {
         throw new Error(errData.error || 'Erreur de génération PDF')
       }
 
-      const result = await response.json()
-
-      if (result.downloadUrl) {
-        // Use a hidden link with download attribute - most reliable across all environments
-        const link = document.createElement('a')
-        link.href = result.downloadUrl
-        link.download = result.filename || `invitation_${formData.lastName}_${formData.firstName}.pdf`
-        link.style.display = 'none'
-        document.body.appendChild(link)
-        link.click()
-        // Keep link briefly to ensure download starts
-        setTimeout(() => {
-          document.body.removeChild(link)
-        }, 1000)
-      }
+      // Download PDF binary directly from response
+      const blob = await response.blob()
+      const url = URL.createObjectURL(blob)
+      const link = document.createElement('a')
+      link.href = url
+      link.download = `invitation_${formData.lastName}_${formData.firstName}.pdf`
+      link.style.display = 'none'
+      document.body.appendChild(link)
+      link.click()
+      setTimeout(() => {
+        URL.revokeObjectURL(url)
+        document.body.removeChild(link)
+      }, 3000)
 
       saveToHistory(formData)
       toast({
@@ -310,19 +308,17 @@ export default function Home() {
           })
 
           if (response.ok) {
-            const result = await response.json()
-            if (result.downloadUrl) {
-              const link = document.createElement('a')
-              link.href = result.downloadUrl
-              link.download = result.filename || `invitation_${data.lastName}_${data.firstName}.pdf`
-              link.style.display = 'none'
-              document.body.appendChild(link)
-              link.click()
-              setTimeout(() => { document.body.removeChild(link) }, 1000)
-            }
+            const blob = await response.blob()
+            const url = URL.createObjectURL(blob)
+            const link = document.createElement('a')
+            link.href = url
+            link.download = `invitation_${data.lastName}_${data.firstName}.pdf`
+            link.style.display = 'none'
+            document.body.appendChild(link)
+            link.click()
+            setTimeout(() => { URL.revokeObjectURL(url); document.body.removeChild(link) }, 3000)
             saveToHistory(data)
             successCount++
-            // Small delay to avoid browser blocking
             await new Promise(r => setTimeout(r, 500))
           } else {
             errorCount++
@@ -341,16 +337,15 @@ export default function Home() {
         })
 
         if (response.ok) {
-          const result = await response.json()
-          if (result.downloadUrl) {
-            const link = document.createElement('a')
-            link.href = result.downloadUrl
-            link.download = result.filename || `invitations_groupe.pdf`
-            link.style.display = 'none'
-            document.body.appendChild(link)
-            link.click()
-            setTimeout(() => { document.body.removeChild(link) }, 1000)
-          }
+          const blob = await response.blob()
+          const url = URL.createObjectURL(blob)
+          const link = document.createElement('a')
+          link.href = url
+          link.download = 'invitations_groupe.pdf'
+          link.style.display = 'none'
+          document.body.appendChild(link)
+          link.click()
+          setTimeout(() => { URL.revokeObjectURL(url); document.body.removeChild(link) }, 3000)
           importData.forEach(d => saveToHistory(d))
           successCount = importData.length
         } else {
@@ -429,16 +424,15 @@ export default function Home() {
 
       if (!response.ok) throw new Error()
 
-      const result = await response.json()
-      if (result.downloadUrl) {
-        const link = document.createElement('a')
-        link.href = result.downloadUrl
-        link.download = result.filename || `invitation_${record.lastName}_${record.firstName}.pdf`
-        link.style.display = 'none'
-        document.body.appendChild(link)
-        link.click()
-        setTimeout(() => { document.body.removeChild(link) }, 1000)
-      }
+      const blob = await response.blob()
+      const url = URL.createObjectURL(blob)
+      const link = document.createElement('a')
+      link.href = url
+      link.download = `invitation_${record.lastName}_${record.firstName}.pdf`
+      link.style.display = 'none'
+      document.body.appendChild(link)
+      link.click()
+      setTimeout(() => { URL.revokeObjectURL(url); document.body.removeChild(link) }, 3000)
     } catch {
       toast({
         title: 'Erreur',

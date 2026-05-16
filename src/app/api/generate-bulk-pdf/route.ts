@@ -1,6 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server'
-import path from 'path'
-import fs from 'fs'
 import { PDFDocument } from 'pdf-lib'
 import { generatePDF } from '@/lib/pdf-service'
 
@@ -21,8 +19,6 @@ interface InvitationData {
   notes: string
 }
 
-const DOWNLOAD_DIR = path.join(process.cwd(), 'download')
-
 export async function POST(request: NextRequest) {
   try {
     const { invitations } = await request.json() as { invitations: InvitationData[] }
@@ -31,33 +27,14 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'No invitations provided' }, { status: 400 })
     }
 
-    if (!fs.existsSync(DOWNLOAD_DIR)) fs.mkdirSync(DOWNLOAD_DIR, { recursive: true })
-
-    if (invitations.length === 1) {
-      // Single invitation
-      const pdfBytes = await generatePDF(invitations[0])
-
-      const timestamp = Date.now()
-      const filename = `invitation_${(invitations[0].lastName || 'unknown').replace(/[^a-zA-Z0-9]/g, '_')}_${(invitations[0].firstName || 'unknown').replace(/[^a-zA-Z0-9]/g, '_')}_${timestamp}.pdf`
-      const filePath = path.join(DOWNLOAD_DIR, filename)
-      fs.writeFileSync(filePath, pdfBytes)
-
-      return NextResponse.json({
-        success: true,
-        downloadUrl: `/api/download/${filename}`,
-        filename,
-        size: pdfBytes.length,
-      })
-    }
-
-    // Multiple invitations - generate each and merge
+    // Generate all PDFs
     const pdfBuffers: Uint8Array[] = []
-    for (let i = 0; i < invitations.length; i++) {
+    for (const inv of invitations) {
       try {
-        const pdfBytes = await generatePDF(invitations[i])
+        const pdfBytes = await generatePDF(inv)
         pdfBuffers.push(pdfBytes)
       } catch (e) {
-        console.error(`Failed to generate PDF for invitation ${i}:`, e)
+        console.error('Failed to generate PDF for invitation:', e)
       }
     }
 
@@ -72,28 +49,21 @@ export async function POST(request: NextRequest) {
     } else {
       // Merge using pdf-lib
       const mergedDoc = await PDFDocument.create()
-
       for (const pdfBytes of pdfBuffers) {
         const srcDoc = await PDFDocument.load(pdfBytes)
         const pages = await mergedDoc.copyPages(srcDoc, srcDoc.getPageIndices())
-        for (const page of pages) {
-          mergedDoc.addPage(page)
-        }
+        for (const page of pages) mergedDoc.addPage(page)
       }
-
       finalPdfBytes = await mergedDoc.save()
     }
 
-    const timestamp = Date.now()
-    const filename = `invitations_groupe_${timestamp}.pdf`
-    const filePath = path.join(DOWNLOAD_DIR, filename)
-    fs.writeFileSync(filePath, finalPdfBytes)
-
-    return NextResponse.json({
-      success: true,
-      downloadUrl: `/api/download/${filename}`,
-      filename,
-      size: finalPdfBytes.length,
+    return new NextResponse(finalPdfBytes, {
+      status: 200,
+      headers: {
+        'Content-Type': 'application/pdf',
+        'Content-Disposition': 'attachment; filename="invitations_groupe.pdf"',
+        'Content-Length': finalPdfBytes.length.toString(),
+      },
     })
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : 'Unknown error'
