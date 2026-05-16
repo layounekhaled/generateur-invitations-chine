@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { execFileSync } from 'child_process'
-import path from 'path'
+import { generateHTMLPreview } from '@/lib/pdf-service'
 
 export async function POST(request: NextRequest) {
   try {
@@ -13,23 +12,9 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const scriptPath = path.join(process.cwd(), 'mini-services', 'pdf-service')
-    const inputData = JSON.stringify(body)
+    const html = generateHTMLPreview(body)
 
-    const htmlBuffer = execFileSync('python3', ['-c', `
-import sys, json
-sys.path.insert(0, '${scriptPath}')
-from service import gen_html_preview
-data = json.loads(sys.stdin.read())
-html = gen_html_preview(data)
-sys.stdout.write(html)
-`, ], {
-      input: inputData,
-      maxBuffer: 10 * 1024 * 1024,
-      timeout: 15000,
-    })
-
-    return new NextResponse(htmlBuffer, {
+    return new NextResponse(html, {
       status: 200,
       headers: { 'Content-Type': 'text/html; charset=utf-8' },
     })

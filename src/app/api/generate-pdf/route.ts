@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { execFileSync } from 'child_process'
-import path from 'path'
 import fs from 'fs'
+import path from 'path'
+import { generatePDF } from '@/lib/pdf-service'
 
 const DOWNLOAD_DIR = path.join(process.cwd(), 'download')
 
@@ -17,22 +17,8 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Call Python script to generate PDF
-    const scriptPath = path.join(process.cwd(), 'mini-services', 'pdf-service')
-    const inputData = JSON.stringify(body)
-
-    const pdfBuffer = execFileSync('python3', ['-c', `
-import sys, json
-sys.path.insert(0, '${scriptPath}')
-from service import gen_pdf
-data = json.loads(sys.stdin.read())
-pdf = gen_pdf(data)
-sys.stdout.buffer.write(pdf)
-`, ], {
-      input: inputData,
-      maxBuffer: 50 * 1024 * 1024, // 50MB - AKKAK template has large images
-      timeout: 60000,
-    })
+    // Generate PDF using pdf-lib (pure JavaScript, Vercel-compatible)
+    const pdfBytes = await generatePDF(body)
 
     // Save PDF to download directory
     if (!fs.existsSync(DOWNLOAD_DIR)) fs.mkdirSync(DOWNLOAD_DIR, { recursive: true })
@@ -43,17 +29,16 @@ sys.stdout.buffer.write(pdf)
     const filename = `invitation_${safeLastName}_${safeFirstName}_${timestamp}.pdf`
     const filePath = path.join(DOWNLOAD_DIR, filename)
 
-    fs.writeFileSync(filePath, pdfBuffer)
+    fs.writeFileSync(filePath, pdfBytes)
 
-    // Return download URL instead of binary PDF
-    // This is more reliable in iframe/preview environments
+    // Return download URL
     const downloadUrl = `/api/download/${filename}`
 
     return NextResponse.json({
       success: true,
       downloadUrl,
       filename,
-      size: pdfBuffer.length,
+      size: pdfBytes.length,
     })
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : 'Unknown error'

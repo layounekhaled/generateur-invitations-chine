@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { execFileSync } from 'child_process'
 import path from 'path'
 import fs from 'fs'
+import { PDFDocument } from 'pdf-lib'
+import { generatePDF } from '@/lib/pdf-service'
 
 interface InvitationData {
   template: string
@@ -30,101 +31,69 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'No invitations provided' }, { status: 400 })
     }
 
-    const scriptPath = path.join(process.cwd(), 'mini-services', 'pdf-service')
-
     if (!fs.existsSync(DOWNLOAD_DIR)) fs.mkdirSync(DOWNLOAD_DIR, { recursive: true })
 
     if (invitations.length === 1) {
       // Single invitation
-      const inputData = JSON.stringify(invitations[0])
-      const pdfBuffer = execFileSync('python3', ['-c', `
-import sys, json
-sys.path.insert(0, '${scriptPath}')
-from service import gen_pdf
-data = json.loads(sys.stdin.read())
-pdf = gen_pdf(data)
-sys.stdout.buffer.write(pdf)
-`, ], { input: inputData, maxBuffer: 50 * 1024 * 1024, timeout: 60000 })
+      const pdfBytes = await generatePDF(invitations[0])
 
       const timestamp = Date.now()
       const filename = `invitation_${(invitations[0].lastName || 'unknown').replace(/[^a-zA-Z0-9]/g, '_')}_${(invitations[0].firstName || 'unknown').replace(/[^a-zA-Z0-9]/g, '_')}_${timestamp}.pdf`
       const filePath = path.join(DOWNLOAD_DIR, filename)
-      fs.writeFileSync(filePath, pdfBuffer)
+      fs.writeFileSync(filePath, pdfBytes)
 
       return NextResponse.json({
         success: true,
         downloadUrl: `/api/download/${filename}`,
         filename,
-        size: pdfBuffer.length,
+        size: pdfBytes.length,
       })
     }
 
     // Multiple invitations - generate each and merge
-    const tmpDir = '/tmp/invitations_bulk'
-    if (!fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir, { recursive: true })
-
-    const pdfFiles: string[] = []
+    const pdfBuffers: Uint8Array[] = []
     for (let i = 0; i < invitations.length; i++) {
       try {
-        const inputData = JSON.stringify(invitations[i])
-        const pdfBuffer = execFileSync('python3', ['-c', `
-import sys, json
-sys.path.insert(0, '${scriptPath}')
-from service import gen_pdf
-data = json.loads(sys.stdin.read())
-pdf = gen_pdf(data)
-sys.stdout.buffer.write(pdf)
-`, ], { input: inputData, maxBuffer: 50 * 1024 * 1024, timeout: 60000 })
-
-        const filePath = path.join(tmpDir, `invite_${i}.pdf`)
-        fs.writeFileSync(filePath, pdfBuffer)
-        pdfFiles.push(filePath)
+        const pdfBytes = await generatePDF(invitations[i])
+        pdfBuffers.push(pdfBytes)
       } catch (e) {
         console.error(`Failed to generate PDF for invitation ${i}:`, e)
       }
     }
 
-    if (pdfFiles.length === 0) {
+    if (pdfBuffers.length === 0) {
       return NextResponse.json({ error: 'No PDFs generated' }, { status: 500 })
     }
 
-    let finalPdf: Buffer
+    let finalPdfBytes: Uint8Array
 
-    if (pdfFiles.length === 1) {
-      finalPdf = fs.readFileSync(pdfFiles[0])
-      try { fs.unlinkSync(pdfFiles[0]) } catch {}
+    if (pdfBuffers.length === 1) {
+      finalPdfBytes = pdfBuffers[0]
     } else {
-      // Merge using pypdf
-      const outputPath = path.join(tmpDir, 'merged.pdf')
-      const mergeScript = `
-from pypdf import PdfMerger
-merger = PdfMerger()
-${pdfFiles.map(f => `merger.append("${f}")`).join('\n')}
-merger.write("${outputPath}")
-merger.close()
-`
-      try {
-        execFileSync('python3', ['-c', mergeScript], { timeout: 30000 })
-        finalPdf = fs.readFileSync(outputPath)
-      } catch {
-        finalPdf = fs.readFileSync(pdfFiles[0])
+      // Merge using pdf-lib
+      const mergedDoc = await PDFDocument.create()
+
+      for (const pdfBytes of pdfBuffers) {
+        const srcDoc = await PDFDocument.load(pdfBytes)
+        const pages = await mergedDoc.copyPages(srcDoc, srcDoc.getPageIndices())
+        for (const page of pages) {
+          mergedDoc.addPage(page)
+        }
       }
 
-      // Clean up temp files
-      pdfFiles.forEach(f => { try { fs.unlinkSync(f) } catch {} })
-      try { fs.unlinkSync(outputPath) } catch {}
+      finalPdfBytes = await mergedDoc.save()
     }
 
     const timestamp = Date.now()
     const filename = `invitations_groupe_${timestamp}.pdf`
     const filePath = path.join(DOWNLOAD_DIR, filename)
-    fs.writeFileSync(filePath, finalPdf)
+    fs.writeFileSync(filePath, finalPdfBytes)
 
     return NextResponse.json({
       success: true,
       downloadUrl: `/api/download/${filename}`,
       filename,
-      size: finalPdf.length,
+      size: finalPdfBytes.length,
     })
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : 'Unknown error'
