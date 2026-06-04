@@ -9,10 +9,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
-import { ScrollArea } from '@/components/ui/scroll-area'
 import { useToast } from '@/hooks/use-toast'
 import {
   FileText,
@@ -20,21 +19,19 @@ import {
   Eye,
   Upload,
   History,
-  Copy,
   Trash2,
   Search,
   Plus,
   Loader2,
-  ChevronRight,
   FileSpreadsheet,
   Users,
   CheckCircle2,
   AlertCircle,
+  RotateCcw,
 } from 'lucide-react'
 
 // Types
 interface InvitationForm {
-  template: string
   lastName: string
   firstName: string
   sex: string
@@ -47,12 +44,12 @@ interface InvitationForm {
   cityToVisit: string
   inviterRelation: string
   fundingSource: string
+  inviterCompany: string
   notes: string
 }
 
 interface InvitationRecord {
   id: string
-  template: string
   lastName: string
   firstName: string
   sex: string
@@ -65,13 +62,13 @@ interface InvitationRecord {
   cityToVisit: string
   inviterRelation: string
   fundingSource: string
+  inviterCompany: string
   notes: string
   pdfGenerated: boolean
   createdAt: string
 }
 
 const emptyForm: InvitationForm = {
-  template: 'houacine',
   lastName: '',
   firstName: '',
   sex: 'M',
@@ -84,6 +81,7 @@ const emptyForm: InvitationForm = {
   cityToVisit: '广州',
   inviterRelation: '客户',
   fundingSource: '客户本人',
+  inviterCompany: '佛山市乐织外贸服务有限公司',
   notes: '',
 }
 
@@ -255,7 +253,6 @@ export default function Home() {
       }
 
       const imported: InvitationForm[] = rows.map(row => ({
-        template: form.template,
         lastName: row['Nom'] || row['nom'] || row['lastName'] || row['last_name'] || '',
         firstName: row['Prénom'] || row['prenom'] || row['firstName'] || row['first_name'] || '',
         sex: row['Sexe'] || row['sexe'] || row['sex'] || row['gender'] || 'M',
@@ -268,6 +265,7 @@ export default function Home() {
         cityToVisit: row['Ville'] || row['ville'] || row['cityToVisit'] || row['city'] || '广州',
         inviterRelation: row['Relation'] || row['relation'] || row['inviterRelation'] || '客户',
         fundingSource: row['Financement'] || row['financement'] || row['fundingSource'] || row['funding'] || '客户本人',
+        inviterCompany: row['Entreprise invitante'] || row['entreprise'] || row['inviterCompany'] || '佛山市乐织外贸服务有限公司',
         notes: row['Notes'] || row['notes'] || '',
       }))
 
@@ -287,7 +285,7 @@ export default function Home() {
       setImportLoading(false)
       if (fileInputRef.current) fileInputRef.current.value = ''
     }
-  }, [form.template, toast])
+  }, [toast])
 
   // Bulk generate
   const handleBulkGenerate = useCallback(async () => {
@@ -297,43 +295,13 @@ export default function Home() {
     let successCount = 0
     let errorCount = 0
 
-    if (bulkMode) {
-      // Generate one PDF per person
-      for (const data of importData) {
-        try {
-          const response = await fetch('/api/generate-pdf', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data),
-          })
-
-          if (response.ok) {
-            const blob = await response.blob()
-            const url = URL.createObjectURL(blob)
-            const link = document.createElement('a')
-            link.href = url
-            link.download = `invitation_${data.lastName}_${data.firstName}.pdf`
-            link.style.display = 'none'
-            document.body.appendChild(link)
-            link.click()
-            setTimeout(() => { URL.revokeObjectURL(url); document.body.removeChild(link) }, 3000)
-            saveToHistory(data)
-            successCount++
-            await new Promise(r => setTimeout(r, 500))
-          } else {
-            errorCount++
-          }
-        } catch {
-          errorCount++
-        }
-      }
-    } else {
-      // Generate all in one PDF (sequential pages)
+    // Generate one PDF per person
+    for (const data of importData) {
       try {
-        const response = await fetch('/api/generate-bulk-pdf', {
+        const response = await fetch('/api/generate-pdf', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ invitations: importData }),
+          body: JSON.stringify(data),
         })
 
         if (response.ok) {
@@ -341,18 +309,19 @@ export default function Home() {
           const url = URL.createObjectURL(blob)
           const link = document.createElement('a')
           link.href = url
-          link.download = 'invitations_groupe.pdf'
+          link.download = `invitation_${data.lastName}_${data.firstName}.pdf`
           link.style.display = 'none'
           document.body.appendChild(link)
           link.click()
           setTimeout(() => { URL.revokeObjectURL(url); document.body.removeChild(link) }, 3000)
-          importData.forEach(d => saveToHistory(d))
-          successCount = importData.length
+          saveToHistory(data)
+          successCount++
+          await new Promise(r => setTimeout(r, 500))
         } else {
-          errorCount = importData.length
+          errorCount++
         }
       } catch {
-        errorCount = importData.length
+        errorCount++
       }
     }
 
@@ -362,12 +331,11 @@ export default function Home() {
       description: `${successCount} PDF généré(s) avec succès.${errorCount > 0 ? ` ${errorCount} erreur(s).` : ''}`,
       variant: errorCount > 0 ? 'destructive' : undefined,
     })
-  }, [importData, bulkMode, saveToHistory, toast])
+  }, [importData, saveToHistory, toast])
 
   // Duplicate from history
   const handleDuplicate = useCallback((record: InvitationRecord) => {
     setForm({
-      template: record.template,
       lastName: record.lastName,
       firstName: record.firstName,
       sex: record.sex,
@@ -380,6 +348,7 @@ export default function Home() {
       cityToVisit: record.cityToVisit,
       inviterRelation: record.inviterRelation,
       fundingSource: record.fundingSource,
+      inviterCompany: record.inviterCompany || '佛山市乐织外贸服务有限公司',
       notes: record.notes || '',
     })
     setActiveTab('create')
@@ -400,7 +369,6 @@ export default function Home() {
     setLoading(true)
     try {
       const formData: InvitationForm = {
-        template: record.template,
         lastName: record.lastName,
         firstName: record.firstName,
         sex: record.sex,
@@ -413,6 +381,7 @@ export default function Home() {
         cityToVisit: record.cityToVisit,
         inviterRelation: record.inviterRelation,
         fundingSource: record.fundingSource,
+        inviterCompany: record.inviterCompany || '佛山市乐织外贸服务有限公司',
         notes: record.notes || '',
       }
 
@@ -456,18 +425,18 @@ export default function Home() {
   })
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-red-50/20">
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-red-600 to-red-700 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-red-600 to-red-700 flex items-center justify-center shadow-sm">
                 <FileText className="h-5 w-5 text-white" />
               </div>
               <div>
                 <h1 className="text-xl font-bold text-gray-900">Générateur d&apos;invitations Chine</h1>
-                <p className="text-xs text-gray-500">Invitation professionnelle pour visa chinois</p>
+                <p className="text-xs text-gray-500">邀请函生成器 — Invitation professionnelle pour visa chinois</p>
               </div>
             </div>
             <Badge variant="outline" className="hidden sm:flex gap-1 text-xs">
@@ -501,45 +470,6 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               {/* Form */}
               <div className="lg:col-span-2 space-y-6">
-                {/* Template Selection */}
-                <Card>
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-base flex items-center gap-2">
-                      <FileText className="h-4 w-4 text-red-600" />
-                      Modèle d&apos;invitation
-                    </CardTitle>
-                    <CardDescription>Sélectionnez le modèle de document</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <button
-                        onClick={() => updateForm('template', 'houacine')}
-                        className={`p-4 rounded-lg border-2 text-left transition-all ${
-                          form.template === 'houacine'
-                            ? 'border-red-600 bg-red-50 shadow-sm'
-                            : 'border-gray-200 hover:border-gray-300'
-                        }`}
-                      >
-                        <div className="font-semibold text-sm">HOUACINE</div>
-                        <div className="text-xs text-gray-500 mt-1">Modèle standard avec en-tête rouge</div>
-                        <div className="text-xs text-gray-400 mt-1">Style classique chinois</div>
-                      </button>
-                      <button
-                        onClick={() => updateForm('template', 'akkak')}
-                        className={`p-4 rounded-lg border-2 text-left transition-all ${
-                          form.template === 'akkak'
-                            ? 'border-blue-600 bg-blue-50 shadow-sm'
-                            : 'border-gray-200 hover:border-gray-300'
-                        }`}
-                      >
-                        <div className="font-semibold text-sm">AKKAK</div>
-                        <div className="text-xs text-gray-500 mt-1">Modèle premium avec encadré bleu</div>
-                        <div className="text-xs text-gray-400 mt-1">Style professionnel détaillé</div>
-                      </button>
-                    </div>
-                  </CardContent>
-                </Card>
-
                 {/* Personal Info */}
                 <Card>
                   <CardHeader className="pb-3">
@@ -552,7 +482,7 @@ export default function Home() {
                         <Label htmlFor="lastName">Nom *</Label>
                         <Input
                           id="lastName"
-                          placeholder="Ex: HOUACINE"
+                          placeholder="Ex: BENALI"
                           value={form.lastName}
                           onChange={(e) => updateForm('lastName', e.target.value)}
                         />
@@ -561,7 +491,7 @@ export default function Home() {
                         <Label htmlFor="firstName">Prénom *</Label>
                         <Input
                           id="firstName"
-                          placeholder="Ex: ABDESSALAM"
+                          placeholder="Ex: MOHAMED"
                           value={form.firstName}
                           onChange={(e) => updateForm('firstName', e.target.value)}
                         />
@@ -713,6 +643,16 @@ export default function Home() {
                     </div>
 
                     <div className="space-y-2">
+                      <Label htmlFor="inviterCompany">Entreprise invitante</Label>
+                      <Input
+                        id="inviterCompany"
+                        placeholder="佛山市乐织外贸服务有限公司"
+                        value={form.inviterCompany}
+                        onChange={(e) => updateForm('inviterCompany', e.target.value)}
+                      />
+                    </div>
+
+                    <div className="space-y-2">
                       <Label htmlFor="notes">Notes supplémentaires</Label>
                       <Textarea
                         id="notes"
@@ -745,10 +685,11 @@ export default function Home() {
                     Télécharger PDF
                   </Button>
                   <Button
-                    onClick={() => setForm({ ...emptyForm, template: form.template })}
+                    onClick={() => setForm({ ...emptyForm })}
                     variant="ghost"
                     className="min-w-[100px]"
                   >
+                    <RotateCcw className="h-4 w-4 mr-2" />
                     Réinitialiser
                   </Button>
                 </div>
@@ -763,11 +704,6 @@ export default function Home() {
                   </CardHeader>
                   <CardContent className="space-y-3 text-sm">
                     <div className="flex justify-between">
-                      <span className="text-gray-500">Modèle:</span>
-                      <span className="font-medium">{form.template === 'houacine' ? 'HOUACINE' : 'AKKAK'}</span>
-                    </div>
-                    <Separator />
-                    <div className="flex justify-between">
                       <span className="text-gray-500">Nom complet:</span>
                       <span className="font-medium">{form.firstName} {form.lastName || '—'}</span>
                     </div>
@@ -778,12 +714,22 @@ export default function Home() {
                     </div>
                     <Separator />
                     <div className="flex justify-between">
+                      <span className="text-gray-500">Nationalité:</span>
+                      <span className="font-medium">{form.nationality}</span>
+                    </div>
+                    <Separator />
+                    <div className="flex justify-between">
                       <span className="text-gray-500">Séjour:</span>
                       <span className="font-medium">
                         {form.arrivalDate && form.departureDate
                           ? `${Math.ceil((new Date(form.departureDate).getTime() - new Date(form.arrivalDate).getTime()) / (1000 * 60 * 60 * 24)) + 1} jour(s)`
                           : '—'}
                       </span>
+                    </div>
+                    <Separator />
+                    <div className="flex justify-between">
+                      <span className="text-gray-500">Ville:</span>
+                      <span className="font-medium">{form.cityToVisit || '—'}</span>
                     </div>
                   </CardContent>
                 </Card>
@@ -869,24 +815,10 @@ export default function Home() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  {/* Template selection for import */}
-                  <div className="space-y-2">
-                    <Label>Modèle pour l&apos;import</Label>
-                    <Select value={form.template} onValueChange={(v) => updateForm('template', v)}>
-                      <SelectTrigger className="w-64">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="houacine">HOUACINE (rouge)</SelectItem>
-                        <SelectItem value="akkak">AKKAK (bleu)</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
                   {/* File Upload Area */}
                   <div
                     onClick={() => fileInputRef.current?.click()}
-                    className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center cursor-pointer hover:border-blue-400 hover:bg-blue-50/50 transition-colors"
+                    className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center cursor-pointer hover:border-red-400 hover:bg-red-50/50 transition-colors"
                   >
                     <Upload className="h-10 w-10 mx-auto text-gray-400 mb-3" />
                     <p className="font-medium text-gray-700">
@@ -906,7 +838,7 @@ export default function Home() {
                   <div className="bg-gray-50 rounded-lg p-4">
                     <p className="text-sm font-medium mb-2">Colonnes attendues dans le fichier :</p>
                     <div className="flex flex-wrap gap-2">
-                      {['Nom', 'Prénom', 'Sexe', 'Date naissance', 'Nationalité', 'Passeport', 'Date arrivée', 'Date départ', 'Objet visite', 'Ville', 'Relation', 'Financement', 'Notes'].map(col => (
+                      {['Nom', 'Prénom', 'Sexe', 'Date naissance', 'Nationalité', 'Passeport', 'Date arrivée', 'Date départ', 'Objet visite', 'Ville', 'Relation', 'Financement', 'Entreprise invitante', 'Notes'].map(col => (
                         <Badge key={col} variant="secondary" className="text-xs">{col}</Badge>
                       ))}
                     </div>
@@ -925,68 +857,42 @@ export default function Home() {
                         </Button>
                       </div>
 
-                      <ScrollArea className="max-h-64 rounded-lg border">
+                      {/* Table */}
+                      <div className="border rounded-lg overflow-x-auto">
                         <table className="w-full text-sm">
-                          <thead className="bg-gray-50 sticky top-0">
+                          <thead className="bg-gray-50">
                             <tr>
-                              <th className="p-2 text-left">#</th>
-                              <th className="p-2 text-left">Nom</th>
-                              <th className="p-2 text-left">Prénom</th>
-                              <th className="p-2 text-left">Passeport</th>
-                              <th className="p-2 text-left">Arrivée</th>
-                              <th className="p-2 text-left">Départ</th>
+                              <th className="px-3 py-2 text-left">#</th>
+                              <th className="px-3 py-2 text-left">Nom</th>
+                              <th className="px-3 py-2 text-left">Prénom</th>
+                              <th className="px-3 py-2 text-left">Passeport</th>
+                              <th className="px-3 py-2 text-left">Arrivée</th>
+                              <th className="px-3 py-2 text-left">Départ</th>
                             </tr>
                           </thead>
                           <tbody>
-                            {importData.map((d, i) => (
-                              <tr key={i} className="border-t hover:bg-gray-50">
-                                <td className="p-2">{i + 1}</td>
-                                <td className="p-2">{d.lastName}</td>
-                                <td className="p-2">{d.firstName}</td>
-                                <td className="p-2">{d.passportNumber}</td>
-                                <td className="p-2">{d.arrivalDate}</td>
-                                <td className="p-2">{d.departureDate}</td>
+                            {importData.map((row, i) => (
+                              <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                                <td className="px-3 py-2">{i + 1}</td>
+                                <td className="px-3 py-2">{row.lastName}</td>
+                                <td className="px-3 py-2">{row.firstName}</td>
+                                <td className="px-3 py-2">{row.passportNumber}</td>
+                                <td className="px-3 py-2">{row.arrivalDate}</td>
+                                <td className="px-3 py-2">{row.departureDate}</td>
                               </tr>
                             ))}
                           </tbody>
                         </table>
-                      </ScrollArea>
+                      </div>
 
-                      {/* Generation Mode */}
-                      <div className="bg-blue-50 rounded-lg p-4 space-y-3">
-                        <p className="font-medium text-sm">Mode de génération :</p>
-                        <div className="flex gap-4">
-                          <label className="flex items-center gap-2 cursor-pointer">
-                            <input
-                              type="radio"
-                              name="bulkMode"
-                              checked={!bulkMode}
-                              onChange={() => setBulkMode(false)}
-                              className="accent-blue-600"
-                            />
-                            <span className="text-sm">Un seul PDF (toutes les invitations)</span>
-                          </label>
-                          <label className="flex items-center gap-2 cursor-pointer">
-                            <input
-                              type="radio"
-                              name="bulkMode"
-                              checked={bulkMode}
-                              onChange={() => setBulkMode(true)}
-                              className="accent-blue-600"
-                            />
-                            <span className="text-sm">Un PDF par personne</span>
-                          </label>
-                        </div>
+                      {/* Generate buttons */}
+                      <div className="flex gap-3">
                         <Button
                           onClick={handleBulkGenerate}
                           disabled={importLoading}
-                          className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800"
+                          className="flex-1 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800"
                         >
-                          {importLoading ? (
-                            <Loader2 className="h-4 w-4 animate-spin mr-2" />
-                          ) : (
-                            <Download className="h-4 w-4 mr-2" />
-                          )}
+                          {importLoading ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <Download className="h-4 w-4 mr-2" />}
                           Générer {importData.length} PDF
                         </Button>
                       </div>
@@ -1001,18 +907,18 @@ export default function Home() {
           <TabsContent value="history">
             <Card>
               <CardHeader>
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div className="flex items-center justify-between">
                   <div>
                     <CardTitle className="flex items-center gap-2">
                       <History className="h-5 w-5" />
-                      Historique des invitations
+                      Historique
                     </CardTitle>
-                    <CardDescription>{history.length} invitation(s) générée(s)</CardDescription>
+                    <CardDescription>Vos invitations générées précédemment</CardDescription>
                   </div>
-                  <div className="relative w-full sm:w-72">
-                    <Search className="h-4 w-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                  <div className="relative w-64">
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
                     <Input
-                      placeholder="Rechercher par nom ou passeport..."
+                      placeholder="Rechercher..."
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       className="pl-9"
@@ -1023,46 +929,53 @@ export default function Home() {
               <CardContent>
                 {filteredHistory.length === 0 ? (
                   <div className="text-center py-12 text-gray-400">
-                    <History className="h-12 w-12 mx-auto mb-3 opacity-30" />
+                    <History className="h-12 w-12 mx-auto mb-3 opacity-50" />
                     <p className="font-medium">Aucune invitation dans l&apos;historique</p>
                     <p className="text-sm mt-1">Les invitations générées apparaîtront ici</p>
                   </div>
                 ) : (
-                  <ScrollArea className="max-h-[500px]">
-                    <div className="space-y-3">
-                      {filteredHistory.map((record) => (
-                        <div
-                          key={record.id}
-                          className="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
-                        >
-                          <div className="flex items-center gap-4 min-w-0 flex-1">
-                            <div className={`w-2 h-2 rounded-full shrink-0 ${record.template === 'houacine' ? 'bg-red-500' : 'bg-blue-500'}`} />
-                            <div className="min-w-0">
-                              <div className="font-medium text-sm truncate">
-                                {record.firstName} {record.lastName}
-                              </div>
-                              <div className="text-xs text-gray-500 flex items-center gap-2 flex-wrap">
-                                <span>Passeport: {record.passportNumber}</span>
-                                <span className="hidden sm:inline">|</span>
-                                <span>{record.arrivalDate} → {record.departureDate}</span>
-                              </div>
-                            </div>
+                  <div className="space-y-2">
+                    {filteredHistory.map((record) => (
+                      <div key={record.id} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <div className="flex-1 min-w-0">
+                          <div className="font-medium text-sm">{record.firstName} {record.lastName}</div>
+                          <div className="text-xs text-gray-500">
+                            Passeport: {record.passportNumber} &bull; {record.arrivalDate} → {record.departureDate}
                           </div>
-                          <div className="flex items-center gap-2 shrink-0">
-                            <Button variant="ghost" size="icon" onClick={() => handleRedownload(record)} title="Télécharger">
-                              <Download className="h-4 w-4" />
-                            </Button>
-                            <Button variant="ghost" size="icon" onClick={() => handleDuplicate(record)} title="Dupliquer">
-                              <Copy className="h-4 w-4" />
-                            </Button>
-                            <Button variant="ghost" size="icon" onClick={() => handleDeleteHistory(record.id)} title="Supprimer">
-                              <Trash2 className="h-4 w-4 text-red-400" />
-                            </Button>
+                          <div className="text-xs text-gray-400 mt-0.5">
+                            {new Date(record.createdAt).toLocaleString('fr-FR')}
                           </div>
                         </div>
-                      ))}
-                    </div>
-                  </ScrollArea>
+                        <div className="flex items-center gap-1 ml-2">
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            onClick={() => handleRedownload(record)}
+                            title="Re-télécharger"
+                          >
+                            <Download className="h-4 w-4" />
+                          </Button>
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            onClick={() => handleDuplicate(record)}
+                            title="Dupliquer"
+                          >
+                            <Plus className="h-4 w-4" />
+                          </Button>
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            onClick={() => handleDeleteHistory(record.id)}
+                            title="Supprimer"
+                            className="text-red-500 hover:text-red-700"
+                          >
+                            <Trash2 className="h-4 w-4" />
+                          </Button>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 )}
               </CardContent>
             </Card>
@@ -1072,31 +985,19 @@ export default function Home() {
 
       {/* Preview Dialog */}
       <Dialog open={showPreview} onOpenChange={setShowPreview}>
-        <DialogContent className="max-w-4xl w-[95vw] h-[90vh] p-0">
-          <DialogHeader className="px-6 pt-6 pb-2">
-            <DialogTitle className="flex items-center gap-2">
-              <Eye className="h-4 w-4" />
-              Aperçu de l&apos;invitation
-            </DialogTitle>
+        <DialogContent className="max-w-4xl max-h-[90vh]">
+          <DialogHeader>
+            <DialogTitle>Aperçu de l&apos;invitation</DialogTitle>
           </DialogHeader>
-          <div className="flex-1 px-6 pb-6 overflow-hidden" style={{ height: 'calc(100% - 70px)' }}>
-            {previewHtml && (
-              <iframe
-                srcDoc={previewHtml}
-                className="w-full h-full border rounded-lg"
-                title="Aperçu invitation"
-              />
-            )}
-          </div>
+          {previewHtml && (
+            <iframe
+              srcDoc={previewHtml}
+              className="w-full h-[70vh] border rounded"
+              title="Aperçu"
+            />
+          )}
         </DialogContent>
       </Dialog>
-
-      {/* Footer */}
-      <footer className="border-t bg-white mt-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-center text-xs text-gray-400">
-          Générateur d&apos;invitations Chine —佛山市乐织外贸服务有限公司
-        </div>
-      </footer>
     </div>
   )
 }
