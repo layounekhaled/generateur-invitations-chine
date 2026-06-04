@@ -6,6 +6,15 @@ const nextConfig: NextConfig = {
   },
   reactStrictMode: false,
   serverExternalPackages: ["@pdf-lib/fontkit", "fontkit"],
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.externals = config.externals || [];
+      if (Array.isArray(config.externals)) {
+        config.externals.push('child_process');
+      }
+    }
+    return config;
+  },
 };
 
 export default nextConfig;

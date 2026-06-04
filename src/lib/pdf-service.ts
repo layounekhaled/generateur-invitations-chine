@@ -1,11 +1,10 @@
 /**
  * PDF Generation Service - China Invitation Generator
- * Uses a child process to avoid fontkit crashes in Next.js production mode.
+ * Uses a child process running a pre-bundled JS script to avoid fontkit crashes in Next.js.
  */
-import { spawn } from 'child_process'
 import path from 'path'
 
-// ============== Data helpers (shared) ==============
+// ============== Data helpers ==============
 
 const NAT_MAP: Record<string, string> = {
   'Algeria': '阿尔及利亚', 'France': '法国', 'Morocco': '摩洛哥',
@@ -104,7 +103,9 @@ interface InvitationData {
 }
 
 export async function generatePDF(data: InvitationData): Promise<Uint8Array> {
-  const scriptPath = path.join(process.cwd(), 'src/lib/pdf-generator.ts')
+  // Use the pre-bundled generator script via child process
+  // This avoids fontkit crashes in Next.js production mode
+  const scriptPath = path.join(process.cwd(), 'dist/pdf-generator.js')
 
   const inputData = JSON.stringify({
     ...data,
@@ -112,188 +113,13 @@ export async function generatePDF(data: InvitationData): Promise<Uint8Array> {
     _cityMap: CITY_MAP,
   })
 
-  return new Promise<Uint8Array>((resolve, reject) => {
+  return new Promise<Uint8Array>(async (resolve, reject) => {
+    // Dynamic import to avoid Next.js bundling issues with child_process
+    const { spawn } = await import('child_process')
     const chunks: Buffer[] = []
     const errChunks: Buffer[] = []
 
-    // Use detached process to avoid crashing the parent
-    const child = spawn('node', ['--max-old-space-size=256', '-e', `
-      const { PDFDocument, rgb, StandardFonts } = require('pdf-lib');
-      const fontkit = require('@pdf-lib/fontkit');
-      const fs = require('fs');
-      const path = require('path');
-
-      async function main() {
-        const chunks = [];
-        for await (const chunk of process.stdin) chunks.push(Buffer.from(chunk));
-        const data = JSON.parse(Buffer.concat(chunks).toString('utf-8'));
-
-        const pdfDoc = await PDFDocument.create();
-        pdfDoc.registerFontkit(fontkit);
-
-        const cwd = process.cwd();
-        const cnFont = await pdfDoc.embedFont(fs.readFileSync(path.join(cwd, 'public/fonts/chinese-subset.ttf')));
-        const cnFontBold = await pdfDoc.embedFont(fs.readFileSync(path.join(cwd, 'public/fonts/chinese-subset-bold.ttf')));
-        const latinFont = await pdfDoc.embedFont(StandardFonts.Helvetica);
-        const latinFontBold = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
-
-        const NAT_MAP = data._natMap || {};
-        const CITY_MAP = data._cityMap || {};
-        const nationality = data.nationality || 'Algeria';
-        const cnNat = NAT_MAP[nationality] || nationality;
-        const fullName = data.lastName + ' ' + data.firstName;
-        const city = data.cityToVisit || '广州';
-        const cityEN = CITY_MAP[city] || city;
-        const sex = data.sex || 'M';
-        const dob = (data.dateOfBirth || '').replace(/-/g, '/');
-        const purpose = data.visitPurpose || '商务洽谈';
-        const funding = data.fundingSource || '客户本人';
-        const relation = data.inviterRelation || '客户';
-        const inviterCompany = data.inviterCompany || '佛山市乐织外贸服务有限公司';
-        const genderSuffix = sex === 'M' ? '先生' : '女士';
-        const now = new Date();
-        const dateStr = now.getFullYear() + '年' + (now.getMonth()+1) + '月' + now.getDate() + '日';
-
-        const DR = rgb(0.72, 0.05, 0.05);
-        const GOLD = rgb(0.85, 0.65, 0.13);
-        const BLK = rgb(0.1, 0.1, 0.1);
-        const DK = rgb(0.15, 0.15, 0.15);
-        const WH = rgb(1, 1, 1);
-
-        function fmtDate(d) { if (!d) return ''; const dt = new Date(d+'T00:00:00'); return dt.getFullYear()+'/'+(dt.getMonth()+1)+'/'+dt.getDate(); }
-        function fmtDateCN(d) { if (!d) return ''; const dt = new Date(d+'T00:00:00'); return (dt.getMonth()+1)+'月'+dt.getDate()+'日'; }
-
-        const pw = 595.28, ph = 841.89, LM = 55, RM = 55, TW = 485;
-
-        // Itinerary
-        const arr = new Date(data.arrivalDate+'T00:00:00');
-        const dep = new Date(data.departureDate+'T00:00:00');
-        const total = Math.floor((dep.getTime()-arr.getTime())/(86400000))+1;
-        const itin = [];
-        if (total > 0) {
-          itin.push({date:fmtDateCN(data.arrivalDate), act:'到达'+city+'机场。', acc:city});
-          if (total>=2) { const d2=new Date(arr.getTime()+86400000); itin.push({date:fmtDateCN(d2.toISOString().slice(0,10)), act:'到达佛山市乐织外贸服务公司。', acc:'佛山'}); }
-          if (total>=4) { const ms=new Date(arr.getTime()+2*86400000); const me=new Date(dep.getTime()-2*86400000); itin.push({date:fmtDateCN(ms.toISOString().slice(0,10))+'-'+fmtDateCN(me.toISOString().slice(0,10)), act:'佛山南海工厂洽谈业务和订货。', acc:'佛山'}); }
-          else if (total===3) { const d3=new Date(arr.getTime()+2*86400000); itin.push({date:fmtDateCN(d3.toISOString().slice(0,10)), act:'佛山南海工厂洽谈业务和订货。', acc:'佛山'}); }
-          if (total>=4) { const sl=new Date(dep.getTime()-86400000); itin.push({date:fmtDateCN(sl.toISOString().slice(0,10)), act:'拜访'+city+'物流公司。', acc:city}); }
-          if (total>=2) { itin.push({date:fmtDateCN(data.departureDate), act:'从'+city+'返回'+cnNat+'。', acc:'/'}); }
-        }
-
-        // PAGE 1
-        const p1 = pdfDoc.addPage([pw,ph]);
-        p1.drawRectangle({x:0,y:ph-80,width:pw,height:80,color:DR,borderWidth:0});
-        p1.drawRectangle({x:0,y:ph-84,width:pw,height:4,color:GOLD,borderWidth:0});
-        const tw1=cnFontBold.widthOfTextAtSize('邀 请 函',28); p1.drawText('邀 请 函',{x:(pw-tw1)/2,y:ph-38,size:28,font:cnFontBold,color:WH});
-        const tw2=latinFontBold.widthOfTextAtSize('INVITATION LETTER',12); p1.drawText('INVITATION LETTER',{x:(pw-tw2)/2,y:ph-58,size:12,font:latinFontBold,color:rgb(1,0.92,0.92)});
-        p1.drawRectangle({x:pw-165,y:ph-195,width:115,height:115,borderColor:DR,borderWidth:1.5,color:rgb(1,0.99,0.99)});
-        p1.drawRectangle({x:pw-163,y:ph-193,width:111,height:111,borderColor:DR,borderWidth:0.5,color:rgb(1,0.99,0.99)});
-        p1.drawText(inviterCompany,{x:pw-155,y:ph-140,size:7.5,font:cnFont,color:DR});
-
-        let y=ph-115;
-        p1.drawText('敬启者：',{x:LM,y,size:11,font:cnFontBold,color:DK}); y-=22;
-        const bodyCN=['谨以此函，我们诚挚地邀请如下客户来我公司洽谈采购及商务','交流，届时一切费用由客户本人承担。我们将保证其遵守中国','的法律法规，并且不会超期滞留，若贵处能酌情协助其办理签','证，我公司将不胜感激！恭祝工作顺利！'];
-        for (const l of bodyCN) { p1.drawText(l,{x:LM+20,y,size:11,font:cnFont,color:DK}); y-=18; }
-        y-=8;
-        const bodyEN=['We would like to sincerely invite the following client to visit','our company for purchase bargain and business exchange. All the','expenses will be borne by the client. We guarantee that the client','will abide by Chinese laws and regulations and will not overstay','their visa. We would be extremely grateful if your company could','assist them with visa processing. Wish you the best in your work!'];
-        for (const l of bodyEN) { p1.drawText(l,{x:LM+20,y,size:9,font:latinFont,color:rgb(0.35,0.35,0.35)}); y-=14; }
-        y-=12; p1.drawLine({start:{x:LM,y:y+4},end:{x:pw-RM,y:y+4},thickness:2,color:DR}); y-=8;
-        p1.drawRectangle({x:LM,y:y-4,width:280,height:20,color:DR,borderWidth:0});
-        p1.drawText('受邀人信息',{x:LM+8,y:y+2,size:11,font:cnFontBold,color:WH});
-        p1.drawText('/ Invitee Information',{x:LM+78,y:y+2,size:10,font:latinFont,color:rgb(1,0.92,0.92)}); y-=28;
-
-        function fieldRow(labelCN,labelEN,value) {
-          p1.drawRectangle({x:LM,y:y-4,width:160,height:24,color:rgb(0.97,0.94,0.94),borderWidth:0});
-          p1.drawText(labelCN,{x:LM+6,y:y+4,size:10,font:cnFontBold,color:DR});
-          p1.drawText(labelEN,{x:LM+6,y:y-1,size:6.5,font:latinFont,color:rgb(0.55,0.55,0.55)});
-          p1.drawText(value,{x:LM+170,y:y+2,size:10.5,font:cnFont,color:BLK});
-          p1.drawLine({start:{x:LM,y:y-4},end:{x:LM+485,y:y-4},thickness:0.5,color:rgb(0.85,0.85,0.85)});
-          y-=32;
-        }
-        fieldRow('国籍','Nationality',cnNat+' / '+nationality);
-        fieldRow('姓名','Name',fullName);
-        fieldRow('性别','Gender',sex==='M'?'男 / Male':'女 / Female');
-        fieldRow('出生日期','Date of Birth',dob);
-        fieldRow('护照号码','Passport No.',data.passportNumber);
-        fieldRow('拜访日期','Visit Dates',fmtDate(data.arrivalDate)+' - '+fmtDate(data.departureDate));
-        fieldRow('前往城市','City to Visit',city+' / '+cityEN);
-        fieldRow('访目的','Purpose',purpose);
-        fieldRow('关系','Relation',relation);
-        fieldRow('费用负担','Funding',funding);
-
-        const dsW=cnFont.widthOfTextAtSize(dateStr,12);
-        p1.drawText(dateStr,{x:pw-RM-dsW,y:90,size:12,font:cnFont,color:DK});
-        const icW=cnFont.widthOfTextAtSize(inviterCompany,11);
-        p1.drawText(inviterCompany,{x:pw-RM-icW,y:72,size:11,font:cnFont,color:DR});
-        p1.drawText('仅供'+fullName+genderSuffix+'申请签证使用',{x:LM,y:22,size:8,font:cnFont,color:rgb(0.6,0.6,0.6)});
-        p1.drawRectangle({x:0,y:6,width:pw,height:2,color:GOLD,borderWidth:0});
-        p1.drawRectangle({x:0,y:0,width:pw,height:6,color:DR,borderWidth:0});
-
-        // PAGE 2
-        const p2 = pdfDoc.addPage([pw,ph]);
-        p2.drawRectangle({x:0,y:ph-55,width:pw,height:55,color:DR,borderWidth:0});
-        p2.drawRectangle({x:0,y:ph-59,width:pw,height:4,color:GOLD,borderWidth:0});
-        const t2w=cnFontBold.widthOfTextAtSize('行程安排',20);
-        p2.drawText('行程安排',{x:(pw-t2w)/2,y:ph-35,size:20,font:cnFontBold,color:WH});
-        p2.drawText('/ Itinerary',{x:(pw-t2w)/2+42,y:ph-35,size:12,font:latinFont,color:rgb(1,0.92,0.92)});
-
-        y=ph-90;
-        p2.drawText('受邀人: '+fullName,{x:LM,y,size:11,font:cnFont,color:DK});
-        p2.drawText('护照: '+data.passportNumber,{x:300,y,size:11,font:cnFont,color:DK}); y-=18;
-        p2.drawText('日期: '+fmtDate(data.arrivalDate)+' - '+fmtDate(data.departureDate),{x:LM,y,size:11,font:cnFont,color:DK});
-        p2.drawText('城市: '+city+' / '+cityEN,{x:300,y,size:11,font:cnFont,color:DK}); y-=30;
-
-        const colX=[LM,LM+120,LM+340,LM+430];
-        p2.drawRectangle({x:LM,y:y-28+8,width:TW,height:28,color:DR,borderWidth:0});
-        p2.drawText('日期',{x:colX[0]+6,y:y-4,size:10,font:cnFontBold,color:WH});
-        p2.drawText('/ Date',{x:colX[0]+30,y:y-4,size:8,font:latinFont,color:rgb(1,0.92,0.92)});
-        p2.drawText('行程',{x:colX[1]+6,y:y-4,size:10,font:cnFontBold,color:WH});
-        p2.drawText('/ Activity',{x:colX[1]+30,y:y-4,size:8,font:latinFont,color:rgb(1,0.92,0.92)});
-        p2.drawText('住处',{x:colX[2]+6,y:y-4,size:10,font:cnFontBold,color:WH});
-        p2.drawText('/ Hotel',{x:colX[2]+30,y:y-4,size:8,font:latinFont,color:rgb(1,0.92,0.92)});
-        p2.drawText('交通',{x:colX[3]+6,y:y-4,size:10,font:cnFontBold,color:WH});
-        p2.drawText('/ Trans.',{x:colX[3]+30,y:y-4,size:8,font:latinFont,color:rgb(1,0.92,0.92)}); y-=28;
-
-        for (let idx=0; idx<itin.length; idx++) {
-          const day=itin[idx];
-          p2.drawRectangle({x:LM,y:y-26+8,width:TW,height:26,color:idx%2===0?WH:rgb(0.99,0.98,0.98),borderWidth:0});
-          p2.drawLine({start:{x:LM,y:y-26+8},end:{x:LM+TW,y:y-26+8},thickness:0.3,color:rgb(0.9,0.9,0.9)});
-          p2.drawText(day.date,{x:colX[0]+6,y:y-4,size:9.5,font:cnFont,color:BLK});
-          p2.drawText(day.act,{x:colX[1]+6,y:y-4,size:9.5,font:cnFont,color:BLK});
-          p2.drawText(day.acc,{x:colX[2]+6,y:y-4,size:9.5,font:cnFont,color:BLK});
-          p2.drawText('包车',{x:colX[3]+6,y:y-4,size:9.5,font:cnFont,color:BLK}); y-=26;
-        }
-        p2.drawLine({start:{x:LM,y:y+8},end:{x:LM+TW,y:y+8},thickness:1.5,color:DR});
-
-        const fY=100;
-        p2.drawRectangle({x:LM,y:fY-5,width:TW,height:22,color:rgb(1,0.98,0.95),borderWidth:0});
-        p2.drawLine({start:{x:LM,y:fY+17},end:{x:LM+TW,y:fY+17},thickness:1,color:GOLD});
-        p2.drawLine({start:{x:LM,y:fY-5},end:{x:LM+TW,y:fY-5},thickness:1,color:GOLD});
-        p2.drawText('备注: 仅供'+fullName+genderSuffix+'申请签证使用',{x:LM+10,y:fY+2,size:9,font:cnFont,color:DR});
-        const ds2W=cnFont.widthOfTextAtSize(dateStr,12);
-        p2.drawText(dateStr,{x:pw-RM-ds2W,y:55,size:12,font:cnFont,color:DK});
-        const ic2W=cnFont.widthOfTextAtSize(inviterCompany,11);
-        p2.drawText(inviterCompany,{x:pw-RM-ic2W,y:37,size:11,font:cnFont,color:DR});
-        p2.drawRectangle({x:0,y:6,width:pw,height:2,color:GOLD,borderWidth:0});
-        p2.drawRectangle({x:0,y:0,width:pw,height:6,color:DR,borderWidth:0});
-
-        // PAGE 3
-        const p3 = pdfDoc.addPage([pw,ph]);
-        p3.drawRectangle({x:0,y:ph-55,width:pw,height:55,color:DR,borderWidth:0});
-        p3.drawRectangle({x:0,y:ph-59,width:pw,height:4,color:GOLD,borderWidth:0});
-        const t3w=cnFontBold.widthOfTextAtSize('备注',20);
-        p3.drawText('备注',{x:(pw-t3w)/2,y:ph-30,size:20,font:cnFontBold,color:WH});
-        p3.drawText('/ Notes',{x:(pw-t3w)/2+30,y:ph-30,size:12,font:latinFont,color:rgb(1,0.92,0.92)});
-        y=ph-100;
-        for (let i=0;i<25;i++) { p3.drawLine({start:{x:LM,y},end:{x:pw-RM,y},thickness:0.5,color:rgb(0.9,0.9,0.9)}); y-=28; }
-        p3.drawRectangle({x:0,y:6,width:pw,height:2,color:GOLD,borderWidth:0});
-        p3.drawRectangle({x:0,y:0,width:pw,height:6,color:DR,borderWidth:0});
-
-        const pdfBytes = await pdfDoc.save();
-        process.stdout.write(pdfBytes);
-        process.exit(0);
-      }
-      main().catch(e => { process.stderr.write(e.message+'\\n'); process.exit(1); });
-    `], {
+    const child = spawn('node', ['--max-old-space-size=256', scriptPath], {
       stdio: ['pipe', 'pipe', 'pipe'],
     })
 
