@@ -26,3 +26,28 @@ Stage Summary:
 - HOUACINE template: red color scheme, standard layout
 - AKKAK template: blue color scheme, info box layout with more details
 - Itinerary auto-generates based on arrival/departure dates
+---
+Task ID: 1
+Agent: Main Agent
+Task: Create new PDF template, remove HOUACINE/AKKAK, fix PDF generation
+
+Work Log:
+- Analyzed original PDFs (HOUACINE: text positions extracted, AKKAK: corrupted/xref errors)
+- Created new Chinese font subsets without GSUB/GPOS tables (fontkit compatibility)
+- Designed a professional 3-page invitation letter template from scratch:
+  - Page 1: Invitation letter with decorative red/gold bands, body text, form fields
+  - Page 2: Itinerary table with bilingual headers
+  - Page 3: Notes page with blank lines
+- Removed HOUACINE and AKKAK template selection from frontend
+- Added inviterCompany field to form
+- Fixed fontkit crashes in Next.js production by using child process with esbuild-bundled generator
+- Created pdf-generator.ts as standalone PDF generation script
+- Built and tested successfully: multiple PDF requests, server stays alive
+- PDFs generated: ~119 KB, valid PDF format
+
+Stage Summary:
+- PDF generation works end-to-end in production mode
+- New professional template with bilingual labels
+- All fonts complete (Chinese city names, nationalities, etc.)
+- GitHub push failed: token expired/revoked
+- Vercel deployment needs new token
