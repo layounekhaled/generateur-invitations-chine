@@ -9967,7 +9967,7 @@ var require_UPNG = __commonJS({
       H.H.N = function(N, W) {
         var R = Uint8Array, i = 0, m = 0, J = 0, h = 0, Q = 0, X = 0, u = 0, w = 0, d = 0, v, C;
         if (N[0] == 3 && N[1] == 0) return W ? W : new R(0);
-        var V = H.H, n = V.b, A = V.e, l = V.R, M = V.n, I = V.A, e = V.Z, b = V.m, Z = W == null;
+        var V = H.H, n = V.b, A = V.e, l = V.R, M2 = V.n, I = V.A, e = V.Z, b = V.m, Z = W == null;
         if (Z) W = new R(N.length >>> 2 << 3);
         while (i == 0) {
           i = n(N, d, 1);
@@ -10005,7 +10005,7 @@ var require_UPNG = __commonJS({
               if (K > j) j = K;
             }
             d += 3 * Q;
-            M(b.Q, j);
+            M2(b.Q, j);
             I(b.Q, j, b.u);
             v = b.w;
             C = b.d;
@@ -10014,9 +10014,9 @@ var require_UPNG = __commonJS({
             X = (1 << r) - 1;
             var S = V.V(b.v, J, h, b.D);
             u = (1 << S) - 1;
-            M(b.C, r);
+            M2(b.C, r);
             I(b.C, r, v);
-            M(b.D, S);
+            M2(b.D, S);
             I(b.D, S, C);
           }
           while (true) {
@@ -10058,9 +10058,9 @@ var require_UPNG = __commonJS({
         return V;
       };
       H.H.R = function(N, W, R, V, n, A) {
-        var l = H.H.e, M = H.H.Z, I = 0;
+        var l = H.H.e, M2 = H.H.Z, I = 0;
         while (I < R) {
-          var e = N[M(V, n) & W];
+          var e = N[M2(V, n) & W];
           n += e & 15;
           var b = e >>> 4;
           if (b <= 15) {
@@ -10091,10 +10091,10 @@ var require_UPNG = __commonJS({
       H.H.V = function(N, W, R, V) {
         var n = 0, A = 0, l = V.length >>> 1;
         while (A < R) {
-          var M = N[A + W];
+          var M2 = N[A + W];
           V[A << 1] = 0;
-          V[(A << 1) + 1] = M;
-          if (M > n) n = M;
+          V[(A << 1) + 1] = M2;
+          if (M2 > n) n = M2;
           A++;
         }
         while (A < l) {
@@ -10105,9 +10105,9 @@ var require_UPNG = __commonJS({
         return n;
       };
       H.H.n = function(N, W) {
-        var R = H.H.m, V = N.length, n, A, l, M, I, e = R.j;
-        for (var M = 0; M <= W; M++) e[M] = 0;
-        for (M = 1; M < V; M += 2) e[N[M]]++;
+        var R = H.H.m, V = N.length, n, A, l, M2, I, e = R.j;
+        for (var M2 = 0; M2 <= W; M2++) e[M2] = 0;
+        for (M2 = 1; M2 < V; M2 += 2) e[N[M2]]++;
         var b = R.K;
         n = 0;
         e[0] = 0;
@@ -10126,7 +10126,7 @@ var require_UPNG = __commonJS({
       H.H.A = function(N, W, R) {
         var V = N.length, n = H.H.m, A = n.r;
         for (var l = 0; l < V; l += 2) if (N[l + 1] != 0) {
-          var M = l >> 1, I = N[l + 1], e = M << 4 | I, b = W - I, Z = N[l] << b, m = Z + (1 << b);
+          var M2 = l >> 1, I = N[l + 1], e = M2 << 4 | I, b = W - I, Z = N[l] << b, m = Z + (1 << b);
           while (Z != m) {
             var J = A[Z] >>> 15 - W;
             R[J] = e;
@@ -10208,8 +10208,8 @@ var require_UPNG = __commonJS({
           V = (V & 4278255360) >>> 8 | (V & 16711935) << 8;
           N.r[R] = (V >>> 16 | V << 16) >>> 17;
         }
-        function n(A, l, M) {
-          while (l-- != 0) A.push(0, M);
+        function n(A, l, M2) {
+          while (l-- != 0) A.push(0, M2);
         }
         for (var R = 0; R < 32; R++) {
           N.q[R] = N.S[R] << 3 | N.T[R];
@@ -11095,24 +11095,24 @@ var require_UPNG = __commonJS({
       var R = stats.R, m = stats.m, N = stats.N;
       var m0 = m[0], m1 = m[1], m2 = m[2], m3 = m[3], iN = N == 0 ? 0 : 1 / N;
       var Rj = [R[0] - m0 * m0 * iN, R[1] - m0 * m1 * iN, R[2] - m0 * m2 * iN, R[3] - m0 * m3 * iN, R[4] - m1 * m0 * iN, R[5] - m1 * m1 * iN, R[6] - m1 * m2 * iN, R[7] - m1 * m3 * iN, R[8] - m2 * m0 * iN, R[9] - m2 * m1 * iN, R[10] - m2 * m2 * iN, R[11] - m2 * m3 * iN, R[12] - m3 * m0 * iN, R[13] - m3 * m1 * iN, R[14] - m3 * m2 * iN, R[15] - m3 * m3 * iN];
-      var A = Rj, M = UPNG.M4;
+      var A = Rj, M2 = UPNG.M4;
       var b = [0.5, 0.5, 0.5, 0.5], mi = 0, tmi = 0;
       if (N != 0) for (var i = 0; i < 10; i++) {
-        b = M.multVec(A, b);
-        tmi = Math.sqrt(M.dot(b, b));
-        b = M.sml(1 / tmi, b);
+        b = M2.multVec(A, b);
+        tmi = Math.sqrt(M2.dot(b, b));
+        b = M2.sml(1 / tmi, b);
         if (Math.abs(tmi - mi) < 1e-9) break;
         mi = tmi;
       }
       var q = [m0 * iN, m1 * iN, m2 * iN, m3 * iN];
-      var eMq255 = M.dot(M.sml(255, q), b);
+      var eMq255 = M2.dot(M2.sml(255, q), b);
       return {
         Cov: Rj,
         q,
         e: b,
         L: mi,
         eMq255,
-        eMq: M.dot(b, q),
+        eMq: M2.dot(b, q),
         rgba: (Math.round(255 * q[3]) << 24 | Math.round(255 * q[2]) << 16 | Math.round(255 * q[1]) << 8 | Math.round(255 * q[0]) << 0) >>> 0
       };
     };
@@ -49834,7 +49834,7 @@ var require_fontkit_umd = __commonJS({
       var T = 3;
       var LV = 4;
       var LVT = 5;
-      var M = 6;
+      var M2 = 6;
       function getType(code2) {
         if (isL(code2)) {
           return L;
@@ -49852,7 +49852,7 @@ var require_fontkit_umd = __commonJS({
           return LVT;
         }
         if (isTone(code2)) {
-          return M;
+          return M2;
         }
         return X;
       }
@@ -58592,54 +58592,130 @@ var import_pdf_lib = __toESM(require_cjs());
 var import_fontkit = __toESM(require_fontkit_umd());
 var import_path = __toESM(require("path"));
 var import_fs = __toESM(require("fs"));
-var DARK_RED = (0, import_pdf_lib.rgb)(0.72, 0.05, 0.05);
-var GOLD = (0, import_pdf_lib.rgb)(0.85, 0.65, 0.13);
-var BLACK = (0, import_pdf_lib.rgb)(0.1, 0.1, 0.1);
-var DARK_TEXT = (0, import_pdf_lib.rgb)(0.15, 0.15, 0.15);
-var WHITE = (0, import_pdf_lib.rgb)(1, 1, 1);
-var LIGHT_GRAY = (0, import_pdf_lib.rgb)(0.9, 0.9, 0.9);
-var LEFT_MARGIN = 55;
-var RIGHT_MARGIN = 55;
-var TABLE_WIDTH = 485;
-function drawCentered(page, text, y, size, font, color = BLACK) {
-  const { width } = page.getSize();
+var PAGE_W = 595.28;
+var PAGE_H = 841.89;
+var M = 50;
+var CW = PAGE_W - 2 * M;
+var C_RED = (0, import_pdf_lib.rgb)(0.71, 0.08, 0.08);
+var C_GOLD = (0, import_pdf_lib.rgb)(0.83, 0.66, 0.15);
+var C_BLACK = (0, import_pdf_lib.rgb)(0.12, 0.12, 0.12);
+var C_DGRAY = (0, import_pdf_lib.rgb)(0.3, 0.3, 0.3);
+var C_LGRAY = (0, import_pdf_lib.rgb)(0.82, 0.82, 0.82);
+var C_WHITE = (0, import_pdf_lib.rgb)(1, 1, 1);
+var C_CREAM = (0, import_pdf_lib.rgb)(0.99, 0.97, 0.94);
+var C_LTRED = (0, import_pdf_lib.rgb)(0.97, 0.93, 0.93);
+var C_BGALT = (0, import_pdf_lib.rgb)(0.98, 0.97, 0.97);
+function centerText(page, text, y, size, font, color = C_BLACK) {
   const tw = font.widthOfTextAtSize(text, size);
-  page.drawText(text, { x: (width - tw) / 2, y, size, font, color });
+  page.drawText(text, { x: (PAGE_W - tw) / 2, y, size, font, color });
 }
-function drawRightAligned(page, text, y, size, font, color = BLACK) {
-  const { width } = page.getSize();
+function rightText(page, text, y, size, font, color = C_BLACK) {
   const tw = font.widthOfTextAtSize(text, size);
-  page.drawText(text, { x: width - RIGHT_MARGIN - tw, y, size, font, color });
+  page.drawText(text, { x: PAGE_W - M - tw, y, size, font, color });
 }
-function drawHLine(page, y, x1 = LEFT_MARGIN, x2, color = LIGHT_GRAY, thickness = 0.5) {
-  const { width } = page.getSize();
-  page.drawLine({ start: { x: x1, y }, end: { x: x2 ?? width - RIGHT_MARGIN, y }, thickness, color });
+function hLine(page, y, x1 = M, x2 = PAGE_W - M, color = C_LGRAY, thick = 0.5) {
+  page.drawLine({ start: { x: x1, y }, end: { x: x2, y }, thickness: thick, color });
 }
-function drawTopBand(page, height = 80) {
-  const { width, height: pageH } = page.getSize();
-  page.drawRectangle({ x: 0, y: pageH - height, width, height, color: DARK_RED, borderWidth: 0 });
-  page.drawRectangle({ x: 0, y: pageH - height - 4, width, height: 4, color: GOLD, borderWidth: 0 });
+function headerBand(page, h = 75) {
+  page.drawRectangle({ x: 0, y: PAGE_H - h, width: PAGE_W, height: h, color: C_RED });
+  page.drawRectangle({ x: 0, y: PAGE_H - h - 3, width: PAGE_W, height: 3, color: C_GOLD });
+  page.drawRectangle({ x: 0, y: PAGE_H - h + 6, width: PAGE_W, height: 1, color: (0, import_pdf_lib.rgb)(0.9, 0.78, 0.35) });
 }
-function drawBottomBand(page) {
-  const { width } = page.getSize();
-  page.drawRectangle({ x: 0, y: 6, width, height: 2, color: GOLD, borderWidth: 0 });
-  page.drawRectangle({ x: 0, y: 0, width, height: 6, color: DARK_RED, borderWidth: 0 });
+function footerBand(page) {
+  page.drawRectangle({ x: 0, y: 5, width: PAGE_W, height: 2, color: C_GOLD });
+  page.drawRectangle({ x: 0, y: 0, width: PAGE_W, height: 5, color: C_RED });
 }
-function drawFieldRow(page, labelCN, labelEN, value, y, cnFontBold, cnFont, latinFont, labelWidth = 160, valueWidth = 325) {
-  page.drawRectangle({ x: LEFT_MARGIN, y: y - 4, width: labelWidth, height: 24, color: (0, import_pdf_lib.rgb)(0.97, 0.94, 0.94), borderWidth: 0 });
-  page.drawText(labelCN, { x: LEFT_MARGIN + 6, y: y + 4, size: 10, font: cnFontBold, color: DARK_RED });
-  page.drawText(labelEN, { x: LEFT_MARGIN + 6, y: y - 1, size: 6.5, font: latinFont, color: (0, import_pdf_lib.rgb)(0.55, 0.55, 0.55) });
-  page.drawText(value, { x: LEFT_MARGIN + labelWidth + 10, y: y + 2, size: 10.5, font: cnFont, color: BLACK });
-  drawHLine(page, y - 4, LEFT_MARGIN, LEFT_MARGIN + labelWidth + valueWidth, (0, import_pdf_lib.rgb)(0.85, 0.85, 0.85), 0.5);
-  return y - 32;
+function watermark(page, cnText, enText, cnFont, latinFont) {
+  const cnW = cnFont.widthOfTextAtSize(cnText, 8);
+  const sep = " / ";
+  const sepW = cnFont.widthOfTextAtSize(sep, 8);
+  page.drawText(cnText + sep, { x: M, y: 16, size: 8, font: cnFont, color: (0, import_pdf_lib.rgb)(0.65, 0.65, 0.65) });
+  page.drawText(enText, { x: M + cnW + sepW, y: 16, size: 8, font: latinFont, color: (0, import_pdf_lib.rgb)(0.65, 0.65, 0.65) });
+}
+function dateSlash(d) {
+  if (!d) return "";
+  const dt = /* @__PURE__ */ new Date(d + "T00:00:00");
+  return `${dt.getFullYear()}/${String(dt.getMonth() + 1).padStart(2, "0")}/${String(dt.getDate()).padStart(2, "0")}`;
+}
+function dateCN(d) {
+  if (!d) return "";
+  const dt = /* @__PURE__ */ new Date(d + "T00:00:00");
+  return `${dt.getMonth() + 1}\u6708${dt.getDate()}\u65E5`;
+}
+function todayCN() {
+  const n = /* @__PURE__ */ new Date();
+  return `${n.getFullYear()}\u5E74${n.getMonth() + 1}\u6708${n.getDate()}\u65E5`;
+}
+function fieldRow(page, labelCN, labelEN, value, y, fonts, opts) {
+  const lw = opts?.labelW ?? 155;
+  const vw = opts?.valueW ?? CW - lw;
+  const rowH = 26;
+  page.drawRectangle({ x: M, y: y - 3, width: lw, height: rowH, color: C_LTRED });
+  page.drawText(labelCN, { x: M + 8, y: y + 8, size: 10, font: fonts.cnBold, color: C_RED });
+  page.drawText(labelEN, { x: M + 8, y: y - 0, size: 6, font: fonts.latin, color: (0, import_pdf_lib.rgb)(0.5, 0.5, 0.5) });
+  page.drawText(value, { x: M + lw + 12, y: y + 5, size: 10.5, font: fonts.cn, color: C_BLACK });
+  hLine(page, y - 3, M, M + lw + vw, (0, import_pdf_lib.rgb)(0.88, 0.88, 0.88), 0.5);
+  return y - rowH - 6;
+}
+function makeItinerary(arrival, departure, city, cnNat) {
+  const a = /* @__PURE__ */ new Date(arrival + "T00:00:00");
+  const dep = /* @__PURE__ */ new Date(departure + "T00:00:00");
+  const total = Math.floor((dep.getTime() - a.getTime()) / 864e5) + 1;
+  if (total <= 0) return [];
+  const days = [];
+  days.push({ date: dateCN(arrival), act: `\u5230\u8FBE${city}\u673A\u573A\uFF0C\u5165\u4F4F\u9152\u5E97\u3002`, hotel: city, transport: "\u98DE\u673A" });
+  if (total >= 2) {
+    const d2 = new Date(a.getTime() + 864e5);
+    days.push({
+      date: dateCN(d2.toISOString().slice(0, 10)),
+      act: "\u5230\u8FBE\u4F5B\u5C71\u5E02\u4E50\u7EC7\u5916\u8D38\u670D\u52A1\u6709\u9650\u516C\u53F8\uFF0C\u5546\u52A1\u6D3D\u8C08\u3002",
+      hotel: "\u4F5B\u5C71",
+      transport: "\u5305\u8F66"
+    });
+  }
+  if (total >= 4) {
+    const ms = new Date(a.getTime() + 2 * 864e5);
+    const me = new Date(dep.getTime() - 2 * 864e5);
+    days.push({
+      date: `${dateCN(ms.toISOString().slice(0, 10))} - ${dateCN(me.toISOString().slice(0, 10))}`,
+      act: "\u4F5B\u5C71\u5357\u6D77\u5DE5\u5382\u6D3D\u8C08\u4E1A\u52A1\u548C\u8BA2\u8D27\u3002",
+      hotel: "\u4F5B\u5C71",
+      transport: "\u5305\u8F66"
+    });
+  } else if (total === 3) {
+    const d3 = new Date(a.getTime() + 2 * 864e5);
+    days.push({
+      date: dateCN(d3.toISOString().slice(0, 10)),
+      act: "\u4F5B\u5C71\u5357\u6D77\u5DE5\u5382\u6D3D\u8C08\u4E1A\u52A1\u548C\u8BA2\u8D27\u3002",
+      hotel: "\u4F5B\u5C71",
+      transport: "\u5305\u8F66"
+    });
+  }
+  if (total >= 4) {
+    const sl = new Date(dep.getTime() - 864e5);
+    days.push({
+      date: dateCN(sl.toISOString().slice(0, 10)),
+      act: `\u62DC\u8BBF${city}\u7269\u6D41\u516C\u53F8\uFF0C\u6574\u7406\u8D27\u7269\u3002`,
+      hotel: city,
+      transport: "\u5305\u8F66"
+    });
+  }
+  if (total >= 2) {
+    days.push({
+      date: dateCN(departure),
+      act: `\u4ECE${city}\u673A\u573A\u51FA\u53D1\uFF0C\u8FD4\u56DE${cnNat}\u3002`,
+      hotel: "/",
+      transport: "\u98DE\u673A"
+    });
+  }
+  return days;
 }
 async function main() {
   const chunks = [];
   for await (const chunk of process.stdin) {
     chunks.push(Buffer.from(chunk));
   }
-  const inputStr = Buffer.concat(chunks).toString("utf-8");
-  const data = JSON.parse(inputStr);
+  const data = JSON.parse(Buffer.concat(chunks).toString("utf-8"));
   const NAT_MAP = data._natMap || {};
   const CITY_MAP = data._cityMap || {};
   const nationality = data.nationality || "Algeria";
@@ -58653,42 +58729,12 @@ async function main() {
   const funding = data.fundingSource || "\u5BA2\u6237\u672C\u4EBA";
   const relation = data.inviterRelation || "\u5BA2\u6237";
   const inviterCompany = data.inviterCompany || "\u4F5B\u5C71\u5E02\u4E50\u7EC7\u5916\u8D38\u670D\u52A1\u6709\u9650\u516C\u53F8";
-  const dateStr = (() => {
-    const n = /* @__PURE__ */ new Date();
-    return `${n.getFullYear()}\u5E74${n.getMonth() + 1}\u6708${n.getDate()}\u65E5`;
-  })();
+  const passportNo = data.passportNumber || "";
+  const dateStr = todayCN();
   const genderSuffix = sex === "M" ? "\u5148\u751F" : "\u5973\u58EB";
-  function fmtDateCN(d) {
-    if (!d) return "";
-    const dt = /* @__PURE__ */ new Date(d + "T00:00:00");
-    return `${dt.getMonth() + 1}\u6708${dt.getDate()}\u65E5`;
-  }
-  const a = /* @__PURE__ */ new Date(data.arrivalDate + "T00:00:00");
-  const dep = /* @__PURE__ */ new Date(data.departureDate + "T00:00:00");
-  const total = Math.floor((dep.getTime() - a.getTime()) / (1e3 * 60 * 60 * 24)) + 1;
-  const itin = [];
-  if (total > 0) {
-    itin.push({ date: fmtDateCN(data.arrivalDate), act: `\u5230\u8FBE${city}\u673A\u573A\u3002`, acc: city });
-    if (total >= 2) {
-      const d2 = new Date(a.getTime() + 864e5);
-      itin.push({ date: fmtDateCN(d2.toISOString().slice(0, 10)), act: "\u5230\u8FBE\u4F5B\u5C71\u5E02\u4E50\u7EC7\u5916\u8D38\u670D\u52A1\u516C\u53F8\u3002", acc: "\u4F5B\u5C71" });
-    }
-    if (total >= 4) {
-      const ms = new Date(a.getTime() + 2 * 864e5);
-      const me = new Date(dep.getTime() - 2 * 864e5);
-      itin.push({ date: `${fmtDateCN(ms.toISOString().slice(0, 10))}-${fmtDateCN(me.toISOString().slice(0, 10))}`, act: "\u4F5B\u5C71\u5357\u6D77\u5DE5\u5382\u6D3D\u8C08\u4E1A\u52A1\u548C\u8BA2\u8D27\u3002", acc: "\u4F5B\u5C71" });
-    } else if (total === 3) {
-      const d3 = new Date(a.getTime() + 2 * 864e5);
-      itin.push({ date: fmtDateCN(d3.toISOString().slice(0, 10)), act: "\u4F5B\u5C71\u5357\u6D77\u5DE5\u5382\u6D3D\u8C08\u4E1A\u52A1\u548C\u8BA2\u8D27\u3002", acc: "\u4F5B\u5C71" });
-    }
-    if (total >= 4) {
-      const sl = new Date(dep.getTime() - 864e5);
-      itin.push({ date: fmtDateCN(sl.toISOString().slice(0, 10)), act: `\u62DC\u8BBF${city}\u7269\u6D41\u516C\u53F8\u3002`, acc: city });
-    }
-    if (total >= 2) {
-      itin.push({ date: fmtDateCN(data.departureDate), act: `\u4ECE${city}\u8FD4\u56DE${cnNat}\u3002`, acc: "/" });
-    }
-  }
+  const arrival = data.arrivalDate || "";
+  const departure = data.departureDate || "";
+  const itin = makeItinerary(arrival, departure, city, cnNat);
   const pdfDoc = await import_pdf_lib.PDFDocument.create();
   pdfDoc.registerFontkit(import_fontkit.default);
   const cwd = process.cwd();
@@ -58696,127 +58742,147 @@ async function main() {
   const cnFontBold = await pdfDoc.embedFont(import_fs.default.readFileSync(import_path.default.join(cwd, "public/fonts/chinese-subset-bold.ttf")));
   const latinFont = await pdfDoc.embedFont(import_pdf_lib.StandardFonts.Helvetica);
   const latinFontBold = await pdfDoc.embedFont(import_pdf_lib.StandardFonts.HelveticaBold);
-  const pageWidth = 595.28;
-  const pageHeight = 841.89;
-  const page1 = pdfDoc.addPage([pageWidth, pageHeight]);
-  drawTopBand(page1, 80);
-  drawCentered(page1, "\u9080 \u8BF7 \u51FD", pageHeight - 38, 28, cnFontBold, WHITE);
-  drawCentered(page1, "INVITATION LETTER", pageHeight - 58, 12, latinFontBold, (0, import_pdf_lib.rgb)(1, 0.92, 0.92));
-  page1.drawRectangle({ x: pageWidth - 165, y: pageHeight - 195, width: 115, height: 115, borderColor: DARK_RED, borderWidth: 1.5, color: (0, import_pdf_lib.rgb)(1, 0.99, 0.99) });
-  page1.drawRectangle({ x: pageWidth - 163, y: pageHeight - 193, width: 111, height: 111, borderColor: DARK_RED, borderWidth: 0.5, color: (0, import_pdf_lib.rgb)(1, 0.99, 0.99) });
-  page1.drawText(inviterCompany, { x: pageWidth - 155, y: pageHeight - 140, size: 7.5, font: cnFont, color: DARK_RED });
-  let y = pageHeight - 115;
-  page1.drawText("\u656C\u542F\u8005\uFF1A", { x: LEFT_MARGIN, y, size: 11, font: cnFontBold, color: DARK_TEXT });
-  y -= 22;
-  const bodyCN = [
+  const fonts = { cn: cnFont, cnBold: cnFontBold, latin: latinFont, latinBold: latinFontBold };
+  const p1 = pdfDoc.addPage([PAGE_W, PAGE_H]);
+  let y = PAGE_H;
+  headerBand(p1, 78);
+  centerText(p1, "\u9080 \u8BF7 \u51FD", PAGE_H - 36, 26, cnFontBold, C_WHITE);
+  centerText(p1, "INVITATION LETTER", PAGE_H - 55, 11, latinFontBold, (0, import_pdf_lib.rgb)(1, 0.9, 0.9));
+  const stampX = PAGE_W - M - 110;
+  const stampY = PAGE_H - 200;
+  p1.drawRectangle({ x: stampX, y: stampY, width: 105, height: 105, borderColor: C_RED, borderWidth: 2, color: (0, import_pdf_lib.rgb)(1, 0.995, 0.995) });
+  p1.drawRectangle({ x: stampX + 4, y: stampY + 4, width: 97, height: 97, borderColor: C_RED, borderWidth: 0.5, color: (0, import_pdf_lib.rgb)(1, 0.995, 0.995) });
+  const stampText = inviterCompany;
+  const stampTextW = cnFont.widthOfTextAtSize(stampText, 8);
+  const stampTextX = stampX + (105 - stampTextW) / 2;
+  p1.drawText(stampText, { x: stampTextX, y: stampY + 48, size: 8, font: cnFont, color: C_RED });
+  const stampLabel = "(\u516C\u7AE0)";
+  const stampLabelW = cnFont.widthOfTextAtSize(stampLabel, 8);
+  p1.drawText(stampLabel, { x: stampX + (105 - stampLabelW) / 2, y: stampY + 34, size: 8, font: cnFont, color: (0, import_pdf_lib.rgb)(0.7, 0.4, 0.4) });
+  p1.drawText("\u2605", { x: stampX + 48, y: stampY + 72, size: 14, font: cnFont, color: C_RED });
+  y = PAGE_H - 105;
+  p1.drawText("\u656C\u542F\u8005\uFF1A", { x: M, y, size: 12, font: cnFontBold, color: C_BLACK });
+  y -= 24;
+  const bodyLinesCN = [
     "\u8C28\u4EE5\u6B64\u51FD\uFF0C\u6211\u4EEC\u8BDA\u631A\u5730\u9080\u8BF7\u5982\u4E0B\u5BA2\u6237\u6765\u6211\u516C\u53F8\u6D3D\u8C08\u91C7\u8D2D\u53CA\u5546\u52A1",
     "\u4EA4\u6D41\uFF0C\u5C4A\u65F6\u4E00\u5207\u8D39\u7528\u7531\u5BA2\u6237\u672C\u4EBA\u627F\u62C5\u3002\u6211\u4EEC\u5C06\u4FDD\u8BC1\u5176\u9075\u5B88\u4E2D\u56FD",
     "\u7684\u6CD5\u5F8B\u6CD5\u89C4\uFF0C\u5E76\u4E14\u4E0D\u4F1A\u8D85\u671F\u6EDE\u7559\uFF0C\u82E5\u8D35\u5904\u80FD\u914C\u60C5\u534F\u52A9\u5176\u529E\u7406\u7B7E",
     "\u8BC1\uFF0C\u6211\u516C\u53F8\u5C06\u4E0D\u80DC\u611F\u6FC0\uFF01\u606D\u795D\u5DE5\u4F5C\u987A\u5229\uFF01"
   ];
-  for (const line of bodyCN) {
-    page1.drawText(line, { x: LEFT_MARGIN + 20, y, size: 11, font: cnFont, color: DARK_TEXT });
+  for (const line of bodyLinesCN) {
+    p1.drawText(line, { x: M + 18, y, size: 11, font: cnFont, color: C_BLACK });
     y -= 18;
   }
-  y -= 8;
-  const bodyEN = [
-    "We would like to sincerely invite the following client to visit",
-    "our company for purchase bargain and business exchange. All the",
-    "expenses will be borne by the client. We guarantee that the client",
-    "will abide by Chinese laws and regulations and will not overstay",
-    "their visa. We would be extremely grateful if your company could",
-    "assist them with visa processing. Wish you the best in your work!"
+  y -= 6;
+  const bodyLinesEN = [
+    "We hereby sincerely invite the following client to visit our company for",
+    "business negotiation and procurement. All expenses during the stay will be",
+    "borne by the client. We guarantee that the invitee will comply with Chinese",
+    "laws and regulations, and will not overstay the visa period. We would be",
+    "extremely grateful if you could assist in processing the visa application."
   ];
-  for (const line of bodyEN) {
-    page1.drawText(line, { x: LEFT_MARGIN + 20, y, size: 9, font: latinFont, color: (0, import_pdf_lib.rgb)(0.35, 0.35, 0.35) });
-    y -= 14;
+  for (const line of bodyLinesEN) {
+    p1.drawText(line, { x: M + 18, y, size: 8.5, font: latinFont, color: C_DGRAY });
+    y -= 13;
   }
-  y -= 12;
-  drawHLine(page1, y + 4, LEFT_MARGIN, pageWidth - RIGHT_MARGIN, DARK_RED, 2);
+  y -= 10;
+  hLine(p1, y, M, PAGE_W - M, C_RED, 2);
   y -= 8;
-  page1.drawRectangle({ x: LEFT_MARGIN, y: y - 4, width: 280, height: 20, color: DARK_RED, borderWidth: 0 });
-  page1.drawText("\u53D7\u9080\u4EBA\u4FE1\u606F", { x: LEFT_MARGIN + 8, y: y + 2, size: 11, font: cnFontBold, color: WHITE });
-  page1.drawText("/ Invitee Information", { x: LEFT_MARGIN + 78, y: y + 2, size: 10, font: latinFont, color: (0, import_pdf_lib.rgb)(1, 0.92, 0.92) });
-  y -= 28;
-  y = drawFieldRow(page1, "\u56FD\u7C4D", "Nationality", `${cnNat} / ${nationality}`, y, cnFontBold, cnFont, latinFont);
-  y = drawFieldRow(page1, "\u59D3\u540D", "Name", fullName, y, cnFontBold, cnFont, latinFont);
-  y = drawFieldRow(page1, "\u6027\u522B", "Gender", sex === "M" ? "\u7537 / Male" : "\u5973 / Female", y, cnFontBold, cnFont, latinFont);
-  y = drawFieldRow(page1, "\u51FA\u751F\u65E5\u671F", "Date of Birth", dob, y, cnFontBold, cnFont, latinFont);
-  y = drawFieldRow(page1, "\u62A4\u7167\u53F7\u7801", "Passport No.", data.passportNumber, y, cnFontBold, cnFont, latinFont);
-  y = drawFieldRow(page1, "\u62DC\u8BBF\u65E5\u671F", "Visit Dates", `${((d) => {
-    if (!d) return "";
-    const dt = /* @__PURE__ */ new Date(d + "T00:00:00");
-    return `${dt.getFullYear()}/${dt.getMonth() + 1}/${dt.getDate()}`;
-  })(data.arrivalDate)} - ${((d) => {
-    if (!d) return "";
-    const dt = /* @__PURE__ */ new Date(d + "T00:00:00");
-    return `${dt.getFullYear()}/${dt.getMonth() + 1}/${dt.getDate()}`;
-  })(data.departureDate)}`, y, cnFontBold, cnFont, latinFont);
-  y = drawFieldRow(page1, "\u524D\u5F80\u57CE\u5E02", "City to Visit", `${city} / ${cityEN}`, y, cnFontBold, cnFont, latinFont);
-  y = drawFieldRow(page1, "\u8BBF\u76EE\u7684", "Purpose", purpose, y, cnFontBold, cnFont, latinFont);
-  y = drawFieldRow(page1, "\u5173\u7CFB", "Relation", relation, y, cnFontBold, cnFont, latinFont);
-  y = drawFieldRow(page1, "\u8D39\u7528\u8D1F\u62C5", "Funding", funding, y, cnFontBold, cnFont, latinFont);
-  drawRightAligned(page1, dateStr, 90, 12, cnFont, DARK_TEXT);
-  drawRightAligned(page1, inviterCompany, 72, 11, cnFont, DARK_RED);
-  page1.drawText(`\u4EC5\u4F9B${fullName}${genderSuffix}\u7533\u8BF7\u7B7E\u8BC1\u4F7F\u7528`, { x: LEFT_MARGIN, y: 22, size: 8, font: cnFont, color: (0, import_pdf_lib.rgb)(0.6, 0.6, 0.6) });
-  drawBottomBand(page1);
-  const page2 = pdfDoc.addPage([pageWidth, pageHeight]);
-  drawTopBand(page2, 55);
-  drawCentered(page2, "\u884C\u7A0B\u5B89\u6392", pageHeight - 30, 20, cnFontBold, WHITE);
-  page2.drawText("/ Itinerary", { x: pageWidth / 2 + 40, y: pageHeight - 30, size: 12, font: latinFont, color: (0, import_pdf_lib.rgb)(1, 0.92, 0.92) });
-  y = pageHeight - 90;
-  page2.drawText(`\u53D7\u9080\u4EBA: ${fullName}`, { x: LEFT_MARGIN, y, size: 11, font: cnFont, color: DARK_TEXT });
-  page2.drawText(`\u62A4\u7167: ${data.passportNumber}`, { x: 300, y, size: 11, font: cnFont, color: DARK_TEXT });
-  y -= 18;
-  const fmtDateSimple = (d) => {
-    if (!d) return "";
-    const dt = /* @__PURE__ */ new Date(d + "T00:00:00");
-    return `${dt.getFullYear()}/${dt.getMonth() + 1}/${dt.getDate()}`;
-  };
-  page2.drawText(`\u65E5\u671F: ${fmtDateSimple(data.arrivalDate)} - ${fmtDateSimple(data.departureDate)}`, { x: LEFT_MARGIN, y, size: 11, font: cnFont, color: DARK_TEXT });
-  page2.drawText(`\u57CE\u5E02: ${city} / ${cityEN}`, { x: 300, y, size: 11, font: cnFont, color: DARK_TEXT });
+  p1.drawRectangle({ x: M, y: y - 2, width: 260, height: 22, color: C_RED });
+  p1.drawText("\u53D7\u9080\u4EBA\u4FE1\u606F", { x: M + 10, y: y + 4, size: 11, font: cnFontBold, color: C_WHITE });
+  p1.drawText("/ Invitee Information", { x: M + 80, y: y + 4, size: 9.5, font: latinFont, color: (0, import_pdf_lib.rgb)(1, 0.9, 0.9) });
   y -= 30;
-  const colX = [LEFT_MARGIN, LEFT_MARGIN + 120, LEFT_MARGIN + 340, LEFT_MARGIN + 430];
-  page2.drawRectangle({ x: LEFT_MARGIN, y: y - 28 + 8, width: TABLE_WIDTH, height: 28, color: DARK_RED, borderWidth: 0 });
-  page2.drawText("\u65E5\u671F", { x: colX[0] + 6, y: y - 4, size: 10, font: cnFontBold, color: WHITE });
-  page2.drawText("/ Date", { x: colX[0] + 30, y: y - 4, size: 8, font: latinFont, color: (0, import_pdf_lib.rgb)(1, 0.92, 0.92) });
-  page2.drawText("\u884C\u7A0B", { x: colX[1] + 6, y: y - 4, size: 10, font: cnFontBold, color: WHITE });
-  page2.drawText("/ Activity", { x: colX[1] + 30, y: y - 4, size: 8, font: latinFont, color: (0, import_pdf_lib.rgb)(1, 0.92, 0.92) });
-  page2.drawText("\u4F4F\u5904", { x: colX[2] + 6, y: y - 4, size: 10, font: cnFontBold, color: WHITE });
-  page2.drawText("/ Hotel", { x: colX[2] + 30, y: y - 4, size: 8, font: latinFont, color: (0, import_pdf_lib.rgb)(1, 0.92, 0.92) });
-  page2.drawText("\u4EA4\u901A", { x: colX[3] + 6, y: y - 4, size: 10, font: cnFontBold, color: WHITE });
-  page2.drawText("/ Trans.", { x: colX[3] + 30, y: y - 4, size: 8, font: latinFont, color: (0, import_pdf_lib.rgb)(1, 0.92, 0.92) });
+  y = fieldRow(p1, "\u56FD\u7C4D", "Nationality", `${cnNat} / ${nationality}`, y, fonts);
+  y = fieldRow(p1, "\u59D3\u540D", "Full Name", fullName, y, fonts);
+  y = fieldRow(p1, "\u6027\u522B", "Gender", sex === "M" ? "\u7537 / Male" : "\u5973 / Female", y, fonts);
+  y = fieldRow(p1, "\u51FA\u751F\u65E5\u671F", "Date of Birth", dob, y, fonts);
+  y = fieldRow(p1, "\u62A4\u7167\u53F7\u7801", "Passport No.", passportNo, y, fonts);
+  y = fieldRow(p1, "\u62DC\u8BBF\u65E5\u671F", "Visit Dates", `${dateSlash(arrival)} \u2014 ${dateSlash(departure)}`, y, fonts);
+  y = fieldRow(p1, "\u524D\u5F80\u57CE\u5E02", "City to Visit", `${city} / ${cityEN}`, y, fonts);
+  y = fieldRow(p1, "\u8BBF\u95EE\u76EE\u7684", "Purpose", purpose, y, fonts);
+  y = fieldRow(p1, "\u4E0E\u9080\u8BF7\u65B9\u5173\u7CFB", "Relation", relation, y, fonts);
+  y = fieldRow(p1, "\u8D39\u7528\u8D1F\u62C5", "Funding Source", funding, y, fonts);
+  y -= 20;
+  rightText(p1, dateStr, y, 11, cnFont, C_BLACK);
+  y -= 20;
+  rightText(p1, inviterCompany, y, 10, cnFontBold, C_RED);
+  y -= 16;
+  const sigW = 180;
+  hLine(p1, y, PAGE_W - M - sigW, PAGE_W - M, C_BLACK, 0.8);
+  const sigLabelCN = "\u7B7E\u5B57 / ";
+  const sigLabelEN = "Signature:";
+  p1.drawText(sigLabelCN, { x: PAGE_W - M - sigW, y: y + 4, size: 7, font: cnFont, color: C_DGRAY });
+  const sigCNW = cnFont.widthOfTextAtSize(sigLabelCN, 7);
+  p1.drawText(sigLabelEN, { x: PAGE_W - M - sigW + sigCNW, y: y + 4, size: 7, font: latinFont, color: C_DGRAY });
+  watermark(p1, `\u4EC5\u4F9B${fullName}${genderSuffix}\u7533\u8BF7\u7B7E\u8BC1\u4F7F\u7528`, "For visa application only", cnFont, latinFont);
+  footerBand(p1);
+  const p2 = pdfDoc.addPage([PAGE_W, PAGE_H]);
+  headerBand(p2, 55);
+  centerText(p2, "\u884C\u7A0B\u5B89\u6392", PAGE_H - 28, 18, cnFontBold, C_WHITE);
+  p2.drawText("/ Itinerary Schedule", { x: PAGE_W / 2 + 42, y: PAGE_H - 28, size: 10, font: latinFont, color: (0, import_pdf_lib.rgb)(1, 0.9, 0.9) });
+  y = PAGE_H - 82;
+  p2.drawText(`\u53D7\u9080\u4EBA / Invitee: ${fullName}`, { x: M, y, size: 10, font: cnFont, color: C_BLACK });
+  p2.drawText(`\u62A4\u7167 / Passport: ${passportNo}`, { x: 320, y, size: 10, font: cnFont, color: C_BLACK });
+  y -= 16;
+  p2.drawText(`\u65E5\u671F / Dates: ${dateSlash(arrival)} \u2014 ${dateSlash(departure)}`, { x: M, y, size: 10, font: cnFont, color: C_BLACK });
+  p2.drawText(`\u57CE\u5E02 / City: ${city} / ${cityEN}`, { x: 320, y, size: 10, font: cnFont, color: C_BLACK });
   y -= 28;
-  for (let idx = 0; idx < itin.length; idx++) {
-    const day = itin[idx];
-    const bgColor = idx % 2 === 0 ? WHITE : (0, import_pdf_lib.rgb)(0.99, 0.98, 0.98);
-    page2.drawRectangle({ x: LEFT_MARGIN, y: y - 26 + 8, width: TABLE_WIDTH, height: 26, color: bgColor, borderWidth: 0 });
-    drawHLine(page2, y - 26 + 8, LEFT_MARGIN, LEFT_MARGIN + TABLE_WIDTH, (0, import_pdf_lib.rgb)(0.9, 0.9, 0.9), 0.3);
-    page2.drawText(day.date, { x: colX[0] + 6, y: y - 4, size: 9.5, font: cnFont, color: BLACK });
-    page2.drawText(day.act, { x: colX[1] + 6, y: y - 4, size: 9.5, font: cnFont, color: BLACK });
-    page2.drawText(day.acc, { x: colX[2] + 6, y: y - 4, size: 9.5, font: cnFont, color: BLACK });
-    page2.drawText("\u5305\u8F66", { x: colX[3] + 6, y: y - 4, size: 9.5, font: cnFont, color: BLACK });
-    y -= 26;
+  const cols = [M, M + 115, M + 345, M + 430];
+  const colW = [115 - 0, 345 - 115, 430 - 345, PAGE_W - M - 430];
+  p2.drawRectangle({ x: M, y: y - 20, width: CW, height: 28, color: C_RED });
+  p2.drawText("\u65E5\u671F", { x: cols[0] + 8, y: y - 6, size: 10, font: cnFontBold, color: C_WHITE });
+  p2.drawText("/ Date", { x: cols[0] + 32, y: y - 6, size: 7, font: latinFont, color: (0, import_pdf_lib.rgb)(1, 0.9, 0.9) });
+  p2.drawText("\u884C\u7A0B\u5B89\u6392", { x: cols[1] + 8, y: y - 6, size: 10, font: cnFontBold, color: C_WHITE });
+  p2.drawText("/ Activity", { x: cols[1] + 56, y: y - 6, size: 7, font: latinFont, color: (0, import_pdf_lib.rgb)(1, 0.9, 0.9) });
+  p2.drawText("\u4F4F\u5904", { x: cols[2] + 8, y: y - 6, size: 10, font: cnFontBold, color: C_WHITE });
+  p2.drawText("/ Hotel", { x: cols[2] + 32, y: y - 6, size: 7, font: latinFont, color: (0, import_pdf_lib.rgb)(1, 0.9, 0.9) });
+  p2.drawText("\u4EA4\u901A", { x: cols[3] + 8, y: y - 6, size: 10, font: cnFontBold, color: C_WHITE });
+  p2.drawText("/ Trans.", { x: cols[3] + 32, y: y - 6, size: 7, font: latinFont, color: (0, import_pdf_lib.rgb)(1, 0.9, 0.9) });
+  y -= 28;
+  for (let i = 0; i < itin.length; i++) {
+    const day = itin[i];
+    const bg = i % 2 === 0 ? C_WHITE : C_BGALT;
+    const rowH = 28;
+    p2.drawRectangle({ x: M, y: y - rowH + 8, width: CW, height: rowH, color: bg });
+    p2.drawRectangle({ x: cols[0], y: y - rowH + 8, width: colW[0], height: rowH, borderColor: (0, import_pdf_lib.rgb)(0.9, 0.9, 0.9), borderWidth: 0.3, color: bg });
+    p2.drawRectangle({ x: cols[1], y: y - rowH + 8, width: colW[1], height: rowH, borderColor: (0, import_pdf_lib.rgb)(0.9, 0.9, 0.9), borderWidth: 0.3, color: bg });
+    p2.drawRectangle({ x: cols[2], y: y - rowH + 8, width: colW[2], height: rowH, borderColor: (0, import_pdf_lib.rgb)(0.9, 0.9, 0.9), borderWidth: 0.3, color: bg });
+    p2.drawRectangle({ x: cols[3], y: y - rowH + 8, width: colW[3], height: rowH, borderColor: (0, import_pdf_lib.rgb)(0.9, 0.9, 0.9), borderWidth: 0.3, color: bg });
+    p2.drawText(day.date, { x: cols[0] + 8, y: y - 4, size: 9, font: cnFont, color: C_BLACK });
+    p2.drawText(day.act, { x: cols[1] + 8, y: y - 4, size: 9, font: cnFont, color: C_BLACK });
+    p2.drawText(day.hotel, { x: cols[2] + 8, y: y - 4, size: 9, font: cnFont, color: C_BLACK });
+    p2.drawText(day.transport, { x: cols[3] + 8, y: y - 4, size: 9, font: cnFont, color: C_BLACK });
+    y -= rowH;
   }
-  drawHLine(page2, y + 8, LEFT_MARGIN, LEFT_MARGIN + TABLE_WIDTH, DARK_RED, 1.5);
-  const footerY = 100;
-  page2.drawRectangle({ x: LEFT_MARGIN, y: footerY - 5, width: TABLE_WIDTH, height: 22, color: (0, import_pdf_lib.rgb)(1, 0.98, 0.95), borderWidth: 0 });
-  drawHLine(page2, footerY + 17, LEFT_MARGIN, LEFT_MARGIN + TABLE_WIDTH, GOLD, 1);
-  drawHLine(page2, footerY - 5, LEFT_MARGIN, LEFT_MARGIN + TABLE_WIDTH, GOLD, 1);
-  page2.drawText(`\u5907\u6CE8: \u4EC5\u4F9B${fullName}${genderSuffix}\u7533\u8BF7\u7B7E\u8BC1\u4F7F\u7528`, { x: LEFT_MARGIN + 10, y: footerY + 2, size: 9, font: cnFont, color: DARK_RED });
-  drawRightAligned(page2, dateStr, 55, 12, cnFont, DARK_TEXT);
-  drawRightAligned(page2, inviterCompany, 37, 11, cnFont, DARK_RED);
-  drawBottomBand(page2);
-  const page3 = pdfDoc.addPage([pageWidth, pageHeight]);
-  drawTopBand(page3, 55);
-  drawCentered(page3, "\u5907\u6CE8", pageHeight - 30, 20, cnFontBold, WHITE);
-  page3.drawText("/ Notes", { x: pageWidth / 2 + 30, y: pageHeight - 30, size: 12, font: latinFont, color: (0, import_pdf_lib.rgb)(1, 0.92, 0.92) });
-  y = pageHeight - 100;
-  for (let i = 0; i < 25; i++) {
-    drawHLine(page3, y, LEFT_MARGIN, pageWidth - RIGHT_MARGIN, LIGHT_GRAY, 0.5);
+  hLine(p2, y + 8, M, PAGE_W - M, C_RED, 1.5);
+  y -= 30;
+  p2.drawRectangle({ x: M, y: y - 4, width: CW, height: 26, color: (0, import_pdf_lib.rgb)(1, 0.98, 0.93), borderWidth: 0 });
+  hLine(p2, y + 22, M, PAGE_W - M, C_GOLD, 1);
+  hLine(p2, y - 4, M, PAGE_W - M, C_GOLD, 1);
+  p2.drawText(`\u5907\u6CE8: \u4EC5\u4F9B${fullName}${genderSuffix}\u7533\u8BF7\u7B7E\u8BC1\u4F7F\u7528`, { x: M + 12, y: y + 4, size: 9, font: cnFont, color: C_RED });
+  y -= 60;
+  rightText(p2, dateStr, y, 11, cnFont, C_BLACK);
+  y -= 20;
+  rightText(p2, inviterCompany, y, 10, cnFontBold, C_RED);
+  watermark(p2, `\u4EC5\u4F9B${fullName}${genderSuffix}\u7533\u8BF7\u7B7E\u8BC1\u4F7F\u7528`, "For visa application only", cnFont, latinFont);
+  footerBand(p2);
+  const p3 = pdfDoc.addPage([PAGE_W, PAGE_H]);
+  headerBand(p3, 55);
+  centerText(p3, "\u5907\u6CE8", PAGE_H - 28, 18, cnFontBold, C_WHITE);
+  p3.drawText("/ Notes & Observations", { x: PAGE_W / 2 + 32, y: PAGE_H - 28, size: 10, font: latinFont, color: (0, import_pdf_lib.rgb)(1, 0.9, 0.9) });
+  y = PAGE_H - 90;
+  p3.drawText(`\u53D7\u9080\u4EBA: ${fullName}    \u62A4\u7167: ${passportNo}`, { x: M, y, size: 10, font: cnFont, color: C_BLACK });
+  y -= 30;
+  for (let i = 0; i < 22; i++) {
+    hLine(p3, y, M, PAGE_W - M, (0, import_pdf_lib.rgb)(0.88, 0.88, 0.88), 0.5);
     y -= 28;
   }
-  drawBottomBand(page3);
+  y -= 10;
+  rightText(p3, dateStr, y, 11, cnFont, C_BLACK);
+  y -= 20;
+  rightText(p3, inviterCompany, y, 10, cnFontBold, C_RED);
+  watermark(p3, `\u4EC5\u4F9B${fullName}${genderSuffix}\u7533\u8BF7\u7B7E\u8BC1\u4F7F\u7528`, "For visa application only", cnFont, latinFont);
+  footerBand(p3);
   const pdfBytes = await pdfDoc.save();
   process.stdout.write(pdfBytes);
 }
