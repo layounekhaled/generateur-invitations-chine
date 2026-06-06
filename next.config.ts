@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
   },
   reactStrictMode: false,
   serverExternalPackages: ["@pdf-lib/fontkit", "fontkit"],
+  turbopack: {},
   webpack: (config, { isServer }) => {
     if (isServer) {
       config.externals = config.externals || [];
