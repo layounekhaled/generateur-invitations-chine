@@ -78,10 +78,10 @@ const emptyForm: InvitationForm = {
   arrivalDate: '',
   departureDate: '',
   visitPurpose: '商务洽谈',
-  cityToVisit: '广州',
+  cityToVisit: '广州、东莞等城市',
   inviterRelation: '客户',
   fundingSource: '客户本人',
-  inviterCompany: '佛山市乐织外贸服务有限公司',
+  inviterCompany: '佛山市盈达通外贸服务有限公司',
   notes: '',
 }
 
@@ -265,7 +265,7 @@ export default function Home() {
         cityToVisit: row['Ville'] || row['ville'] || row['cityToVisit'] || row['city'] || '广州',
         inviterRelation: row['Relation'] || row['relation'] || row['inviterRelation'] || '客户',
         fundingSource: row['Financement'] || row['financement'] || row['fundingSource'] || row['funding'] || '客户本人',
-        inviterCompany: row['Entreprise invitante'] || row['entreprise'] || row['inviterCompany'] || '佛山市乐织外贸服务有限公司',
+        inviterCompany: row['Entreprise invitante'] || row['entreprise'] || row['inviterCompany'] || '佛山市盈达通外贸服务有限公司',
         notes: row['Notes'] || row['notes'] || '',
       }))
 
@@ -348,7 +348,7 @@ export default function Home() {
       cityToVisit: record.cityToVisit,
       inviterRelation: record.inviterRelation,
       fundingSource: record.fundingSource,
-      inviterCompany: record.inviterCompany || '佛山市乐织外贸服务有限公司',
+      inviterCompany: record.inviterCompany || '佛山市盈达通外贸服务有限公司',
       notes: record.notes || '',
     })
     setActiveTab('create')
@@ -381,7 +381,7 @@ export default function Home() {
         cityToVisit: record.cityToVisit,
         inviterRelation: record.inviterRelation,
         fundingSource: record.fundingSource,
-        inviterCompany: record.inviterCompany || '佛山市乐织外贸服务有限公司',
+        inviterCompany: record.inviterCompany || '佛山市盈达通外贸服务有限公司',
         notes: record.notes || '',
       }
 
@@ -594,21 +594,14 @@ export default function Home() {
                         </Select>
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="cityToVisit">Ville à visiter</Label>
-                        <Select value={form.cityToVisit} onValueChange={(v) => updateForm('cityToVisit', v)}>
-                          <SelectTrigger>
-                            <SelectValue />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="广州">Guangzhou (广州)</SelectItem>
-                            <SelectItem value="佛山">Foshan (佛山)</SelectItem>
-                            <SelectItem value="深圳">Shenzhen (深圳)</SelectItem>
-                            <SelectItem value="上海">Shanghai (上海)</SelectItem>
-                            <SelectItem value="北京">Beijing (北京)</SelectItem>
-                            <SelectItem value="义乌">Yiwu (义乌)</SelectItem>
-                            <SelectItem value="杭州">Hangzhou (杭州)</SelectItem>
-                          </SelectContent>
-                        </Select>
+                        <Label htmlFor="cityToVisit">Ville(s) à visiter</Label>
+                        <Input
+                          id="cityToVisit"
+                          placeholder="广州、东莞等城市"
+                          value={form.cityToVisit}
+                          onChange={(e) => updateForm('cityToVisit', e.target.value)}
+                        />
+                        <p className="text-xs text-gray-400">Séparez les villes par 、(ex: 广州、深圳、东莞等城市)</p>
                       </div>
                     </div>
 
@@ -646,7 +639,7 @@ export default function Home() {
                       <Label htmlFor="inviterCompany">Entreprise invitante</Label>
                       <Input
                         id="inviterCompany"
-                        placeholder="佛山市乐织外贸服务有限公司"
+                        placeholder="佛山市盈达通外贸服务有限公司"
                         value={form.inviterCompany}
                         onChange={(e) => updateForm('inviterCompany', e.target.value)}
                       />

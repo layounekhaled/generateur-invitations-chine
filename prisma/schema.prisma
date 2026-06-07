@@ -9,7 +9,7 @@ datasource db {
 
 model Invitation {
   id              String   @id @default(cuid())
-  template        String   // "akkak" or "houacine"
+  template        String   // "yingtabong"
   lastName        String
   firstName       String
   sex             String   // "M" or "F"
@@ -18,10 +18,11 @@ model Invitation {
   passportNumber  String
   arrivalDate     String
   departureDate   String
-  visitPurpose    String
-  cityToVisit     String
-  inviterRelation String
-  fundingSource   String
+  visitPurpose    String   @default("贸易合作洽谈及市场考察")
+  cityToVisit     String   @default("广州、东莞等城市")
+  inviterRelation String @default("商业合作伙伴")
+  fundingSource   String   @default("自行承担")
+  inviterCompany  String   @default("佛山市盈达通外贸服务有限公司")
   notes           String?
   pdfGenerated    Boolean  @default(false)
   createdAt       DateTime @default(now())

@@ -1,0 +1,3651 @@
+<?xml version="1.0" ?>
+<w:document xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" mc:Ignorable="w14 w15 wp14">
+  <w:body>
+    <w:p w:rsidR="000A4E18" w:rsidRDefault="001D0232">
+      <w:r w:rsidRPr="001D0232">
+        <w:rPr>
+          <w:noProof/>
+          <w:lang w:eastAsia="fr-FR"/>
+        </w:rPr>
+        <w:drawing>
+          <wp:anchor distT="0" distB="0" distL="114300" distR="114300" simplePos="0" relativeHeight="251658240" behindDoc="1" locked="0" layoutInCell="1" allowOverlap="1" wp14:anchorId="700DB327" wp14:editId="589ED4E1">
+            <wp:simplePos x="0" y="0"/>
+            <wp:positionH relativeFrom="column">
+              <wp:posOffset>-868680</wp:posOffset>
+            </wp:positionH>
+            <wp:positionV relativeFrom="paragraph">
+              <wp:posOffset>-876935</wp:posOffset>
+            </wp:positionV>
+            <wp:extent cx="7578671" cy="10721414"/>
+            <wp:effectExtent l="0" t="0" r="3810" b="3810"/>
+            <wp:wrapNone/>
+            <wp:docPr id="1" name="Image 1" descr="C:\Users\hp\Downloads\foshan yingtang.png"/>
+            <wp:cNvGraphicFramePr>
+              <a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/>
+            </wp:cNvGraphicFramePr>
+            <a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+              <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                <pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                  <pic:nvPicPr>
+                    <pic:cNvPr id="0" name="Picture 1" descr="C:\Users\hp\Downloads\foshan yingtang.png"/>
+                    <pic:cNvPicPr>
+                      <a:picLocks noChangeAspect="1" noChangeArrowheads="1"/>
+                    </pic:cNvPicPr>
+                  </pic:nvPicPr>
+                  <pic:blipFill>
+                    <a:blip r:embed="rId4" cstate="print">
+                      <a:extLst>
+                        <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+                          <a14:useLocalDpi xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" val="0"/>
+                        </a:ext>
+                      </a:extLst>
+                    </a:blip>
+                    <a:srcRect/>
+                    <a:stretch>
+                      <a:fillRect/>
+                    </a:stretch>
+                  </pic:blipFill>
+                  <pic:spPr bwMode="auto">
+                    <a:xfrm>
+                      <a:off x="0" y="0"/>
+                      <a:ext cx="7578671" cy="10721414"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                      <a:avLst/>
+                    </a:prstGeom>
+                    <a:noFill/>
+                    <a:ln>
+                      <a:noFill/>
+                    </a:ln>
+                  </pic:spPr>
+                </pic:pic>
+              </a:graphicData>
+            </a:graphic>
+            <wp14:sizeRelH relativeFrom="margin">
+              <wp14:pctWidth>0</wp14:pctWidth>
+            </wp14:sizeRelH>
+            <wp14:sizeRelV relativeFrom="margin">
+              <wp14:pctHeight>0</wp14:pctHeight>
+            </wp14:sizeRelV>
+          </wp:anchor>
+        </w:drawing>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="001D0232" w:rsidRDefault="001D0232"/>
+    <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868">
+      <w:pPr>
+        <w:wordWrap w:val="0"/>
+        <w:autoSpaceDE w:val="0"/>
+        <w:autoSpaceDN w:val="0"/>
+        <w:spacing w:after="0" w:line="232" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868">
+      <w:pPr>
+        <w:wordWrap w:val="0"/>
+        <w:autoSpaceDE w:val="0"/>
+        <w:autoSpaceDN w:val="0"/>
+        <w:spacing w:after="0" w:line="232" w:lineRule="auto"/>
+        <w:jc w:val="center"/>
+        <w:rPr>
+          <w:sz w:val="36"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+      </w:pPr>
+      <w:proofErr w:type="spellStart"/>
+      <w:r w:rsidRPr="00CF0868">
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+          <w:b/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="36"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>商务邀请函</w:t>
+      </w:r>
+      <w:bookmarkStart w:id="0" w:name="_GoBack"/>
+      <w:bookmarkEnd w:id="0"/>
+      <w:proofErr w:type="spellEnd"/>
+      <w:r w:rsidRPr="00CF0868">
+        <w:rPr>
+          <w:noProof/>
+          <w:sz w:val="18"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <mc:AlternateContent>
+          <mc:Choice Requires="wps">
+            <w:drawing>
+              <wp:anchor distT="0" distB="0" distL="114300" distR="114300" simplePos="0" relativeHeight="251666432" behindDoc="0" locked="0" layoutInCell="1" allowOverlap="1" wp14:anchorId="6816A641" wp14:editId="47F4F6B0">
+                <wp:simplePos x="0" y="0"/>
+                <wp:positionH relativeFrom="page">
+                  <wp:posOffset>1054100</wp:posOffset>
+                </wp:positionH>
+                <wp:positionV relativeFrom="page">
+                  <wp:posOffset>9309100</wp:posOffset>
+                </wp:positionV>
+                <wp:extent cx="5765800" cy="279400"/>
+                <wp:effectExtent l="0" t="0" r="635" b="14605"/>
+                <wp:wrapNone/>
+                <wp:docPr id="16" name="文本框 2"/>
+                <wp:cNvGraphicFramePr/>
+                <a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+                  <a:graphicData uri="http://schemas.microsoft.com/office/word/2010/wordprocessingShape">
+                    <wps:wsp>
+                      <wps:cNvSpPr txBox="1"/>
+                      <wps:spPr>
+                        <a:xfrm>
+                          <a:off x="1601470" y="2139315"/>
+                          <a:ext cx="2132965" cy="3376295"/>
+                        </a:xfrm>
+                        <a:prstGeom prst="rect">
+                          <a:avLst/>
+                        </a:prstGeom>
+                        <a:noFill/>
+                        <a:ln w="6350">
+                          <a:noFill/>
+                        </a:ln>
+                      </wps:spPr>
+                      <wps:style>
+                        <a:lnRef idx="0">
+                          <a:schemeClr val="accent1"/>
+                        </a:lnRef>
+                        <a:fillRef idx="0">
+                          <a:schemeClr val="accent1"/>
+                        </a:fillRef>
+                        <a:effectRef idx="0">
+                          <a:schemeClr val="accent1"/>
+                        </a:effectRef>
+                        <a:fontRef idx="minor">
+                          <a:schemeClr val="dk1"/>
+                        </a:fontRef>
+                      </wps:style>
+                      <wps:txbx>
+                        <w:txbxContent>
+                          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868"/>
+                        </w:txbxContent>
+                      </wps:txbx>
+                      <wps:bodyPr wrap="square" lIns="25400" tIns="0" rIns="25400" bIns="0">
+                        <a:noAutofit/>
+                      </wps:bodyPr>
+                    </wps:wsp>
+                  </a:graphicData>
+                </a:graphic>
+              </wp:anchor>
+            </w:drawing>
+          </mc:Choice>
+          <mc:Fallback>
+            <w:pict>
+              <v:shapetype w14:anchorId="6816A641" id="_x0000_t202" coordsize="21600,21600" o:spt="202" path="m,l,21600r21600,l21600,xe">
+                <v:stroke joinstyle="miter"/>
+                <v:path gradientshapeok="t" o:connecttype="rect"/>
+              </v:shapetype>
+              <v:shape id="文本框 2" o:spid="_x0000_s1026" type="#_x0000_t202" style="position:absolute;left:0;text-align:left;margin-left:83pt;margin-top:733pt;width:454pt;height:22pt;z-index:251666432;visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;mso-position-horizontal-relative:page;mso-position-vertical:absolute;mso-position-vertical-relative:page;v-text-anchor:top" o:gfxdata="UEsDBBQABgAIAAAAIQC2gziS/gAAAOEBAAATAAAAW0NvbnRlbnRfVHlwZXNdLnhtbJSRQU7DMBBF
+90jcwfIWJU67QAgl6YK0S0CoHGBkTxKLZGx5TGhvj5O2G0SRWNoz/78nu9wcxkFMGNg6quQqL6RA
+0s5Y6ir5vt9lD1JwBDIwOMJKHpHlpr69KfdHjyxSmriSfYz+USnWPY7AufNIadK6MEJMx9ApD/oD
+OlTrorhX2lFEilmcO2RdNtjC5xDF9pCuTyYBB5bi6bQ4syoJ3g9WQ0ymaiLzg5KdCXlKLjvcW893
+SUOqXwnz5DrgnHtJTxOsQfEKIT7DmDSUCaxw7Rqn8787ZsmRM9e2VmPeBN4uqYvTtW7jvijg9N/y
+JsXecLq0q+WD6m8AAAD//wMAUEsDBBQABgAIAAAAIQA4/SH/1gAAAJQBAAALAAAAX3JlbHMvLnJl
+bHOkkMFqwzAMhu+DvYPRfXGawxijTi+j0GvpHsDYimMaW0Yy2fr2M4PBMnrbUb/Q94l/f/hMi1qR
+JVI2sOt6UJgd+ZiDgffL8ekFlFSbvV0oo4EbChzGx4f9GRdb25HMsYhqlCwG5lrLq9biZkxWOiqY
+22YiTra2kYMu1l1tQD30/bPm3wwYN0x18gb45AdQl1tp5j/sFB2T0FQ7R0nTNEV3j6o9feQzro1i
+OWA14Fm+Q8a1a8+Bvu/d/dMb2JY5uiPbhG/ktn4cqGU/er3pcvwCAAD//wMAUEsDBBQABgAIAAAA
+IQDpms/AGQIAAGIEAAAOAAAAZHJzL2Uyb0RvYy54bWysVMuO0zAU3SPxD5b3NI9OMzRqOgJGg5AQ
+IAY+wHXsxsIvbLdJfwD+gBUb9nxXv4NrJ+2MhtUgNo59fc65T2d1NSiJ9sx5YXSDi1mOEdPUtEJv
+G/z5082z5xj5QHRLpNGswQfm8dX66ZNVb2tWms7IljkEItrXvW1wF4Kts8zTjiniZ8YyDZfcOEUC
+HN02ax3pQV3JrMzzKuuNa60zlHkP1uvxEq+TPueMhvecexaQbDDEFtLq0rqJa7ZekXrriO0EncIg
+/xCFIkKD07PUNQkE7Zz4S0oJ6ow3PMyoUZnhXFCWcoBsivxBNrcdsSzlAsXx9lwm//9k6bv9B4dE
+C72rMNJEQY+OP74ff/4+/vqGylif3voaYLcWgGF4aQbAnuwejDHtgTsVv5AQivdVXlxcQr0PDS6L
++XJeLMZKsyEgCgAwlstqgREFxHx+WZXLhMjupKzz4TUzCsVNgx20MlWY7N/6AGEB9ASJnrW5EVKm
+dkqN+gZX80WeCOcbYEgNxJjQGHjahYNkUUHqj4xDKSC8kZiGkL2SDu0JjA+hlOmQUk9KgI40Dm4f
+Q5zwkcrSgD6GfGYkz0aHM1kJbVzK90HY7ZdTyHzEnyow5h1LEIbNMDV6Y9oD9LmHF9Fg/3VHHMNI
+vtEwcuXiIo9PKB1g4+5bN5M1xqXNi10wXKQuRf1RdPILg5yaNz26+FLunxPq7tew/gMAAP//AwBQ
+SwMEFAAGAAgAAAAhACHjOOPfAAAADgEAAA8AAABkcnMvZG93bnJldi54bWxMT8tOwzAQvCPxD9Yi
+caN2UBuqEKcqSIgiuPQBXN14SSLidRS7Tfr3bLnAbWZnNDuTL0bXiiP2ofGkIZkoEEiltw1VGnbb
+p5s5iBANWdN6Qg0nDLAoLi9yk1k/0BqPm1gJDqGQGQ11jF0mZShrdCZMfIfE2pfvnYlM+0ra3gwc
+7lp5q1QqnWmIP9Smw8cay+/NwWl4mD+vhuX75+tYz9YfLwmF1ektaH19NS7vQUQc458ZzvW5OhTc
+ae8PZINomacpb4kMpr/obFF3U77tGc0SpUAWufw/o/gBAAD//wMAUEsBAi0AFAAGAAgAAAAhALaD
+OJL+AAAA4QEAABMAAAAAAAAAAAAAAAAAAAAAAFtDb250ZW50X1R5cGVzXS54bWxQSwECLQAUAAYA
+CAAAACEAOP0h/9YAAACUAQAACwAAAAAAAAAAAAAAAAAvAQAAX3JlbHMvLnJlbHNQSwECLQAUAAYA
+CAAAACEA6ZrPwBkCAABiBAAADgAAAAAAAAAAAAAAAAAuAgAAZHJzL2Uyb0RvYy54bWxQSwECLQAU
+AAYACAAAACEAIeM4498AAAAOAQAADwAAAAAAAAAAAAAAAABzBAAAZHJzL2Rvd25yZXYueG1sUEsF
+BgAAAAAEAAQA8wAAAH8FAAAAAA==
+" filled="f" stroked="f" strokeweight=".5pt">
+                <v:textbox inset="2pt,0,2pt,0">
+                  <w:txbxContent>
+                    <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868"/>
+                  </w:txbxContent>
+                </v:textbox>
+                <w10:wrap anchorx="page" anchory="page"/>
+              </v:shape>
+            </w:pict>
+          </mc:Fallback>
+        </mc:AlternateContent>
+      </w:r>
+      <w:r w:rsidRPr="00CF0868">
+        <w:rPr>
+          <w:noProof/>
+          <w:sz w:val="18"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:drawing>
+          <wp:anchor distT="0" distB="0" distL="114300" distR="114300" simplePos="0" relativeHeight="251667456" behindDoc="0" locked="0" layoutInCell="1" allowOverlap="1" wp14:anchorId="1BA88712" wp14:editId="2B527BCE">
+            <wp:simplePos x="0" y="0"/>
+            <wp:positionH relativeFrom="page">
+              <wp:posOffset>762000</wp:posOffset>
+            </wp:positionH>
+            <wp:positionV relativeFrom="page">
+              <wp:posOffset>9677400</wp:posOffset>
+            </wp:positionV>
+            <wp:extent cx="241300" cy="215900"/>
+            <wp:effectExtent l="0" t="0" r="2540" b="4445"/>
+            <wp:wrapNone/>
+            <wp:docPr id="18" name="IMAGE"/>
+            <wp:cNvGraphicFramePr>
+              <a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/>
+            </wp:cNvGraphicFramePr>
+            <a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+              <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                <pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                  <pic:nvPicPr>
+                    <pic:cNvPr id="1" name="avatar.jpg"/>
+                    <pic:cNvPicPr/>
+                  </pic:nvPicPr>
+                  <pic:blipFill>
+                    <a:blip r:embed="rId5">
+                      <a:extLst>
+                        <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+                          <a14:useLocalDpi xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" val="0"/>
+                        </a:ext>
+                      </a:extLst>
+                    </a:blip>
+                    <a:stretch>
+                      <a:fillRect/>
+                    </a:stretch>
+                  </pic:blipFill>
+                  <pic:spPr>
+                    <a:xfrm>
+                      <a:off x="0" y="0"/>
+                      <a:ext cx="241300" cy="215900"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                      <a:avLst/>
+                    </a:prstGeom>
+                  </pic:spPr>
+                </pic:pic>
+              </a:graphicData>
+            </a:graphic>
+            <wp14:sizeRelH relativeFrom="page">
+              <wp14:pctWidth>0</wp14:pctWidth>
+            </wp14:sizeRelH>
+            <wp14:sizeRelV relativeFrom="page">
+              <wp14:pctHeight>0</wp14:pctHeight>
+            </wp14:sizeRelV>
+          </wp:anchor>
+        </w:drawing>
+      </w:r>
+      <w:r w:rsidRPr="00CF0868">
+        <w:rPr>
+          <w:noProof/>
+          <w:sz w:val="18"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:drawing>
+          <wp:anchor distT="0" distB="0" distL="114300" distR="114300" simplePos="0" relativeHeight="251668480" behindDoc="0" locked="0" layoutInCell="1" allowOverlap="1" wp14:anchorId="16646581" wp14:editId="2496CD46">
+            <wp:simplePos x="0" y="0"/>
+            <wp:positionH relativeFrom="page">
+              <wp:posOffset>762000</wp:posOffset>
+            </wp:positionH>
+            <wp:positionV relativeFrom="page">
+              <wp:posOffset>9931400</wp:posOffset>
+            </wp:positionV>
+            <wp:extent cx="215900" cy="228600"/>
+            <wp:effectExtent l="0" t="0" r="2540" b="4445"/>
+            <wp:wrapNone/>
+            <wp:docPr id="19" name="IMAGE"/>
+            <wp:cNvGraphicFramePr>
+              <a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/>
+            </wp:cNvGraphicFramePr>
+            <a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+              <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                <pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                  <pic:nvPicPr>
+                    <pic:cNvPr id="1" name="avatar.jpg"/>
+                    <pic:cNvPicPr/>
+                  </pic:nvPicPr>
+                  <pic:blipFill>
+                    <a:blip r:embed="rId6">
+                      <a:extLst>
+                        <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+                          <a14:useLocalDpi xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" val="0"/>
+                        </a:ext>
+                      </a:extLst>
+                    </a:blip>
+                    <a:stretch>
+                      <a:fillRect/>
+                    </a:stretch>
+                  </pic:blipFill>
+                  <pic:spPr>
+                    <a:xfrm>
+                      <a:off x="0" y="0"/>
+                      <a:ext cx="215900" cy="228600"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                      <a:avLst/>
+                    </a:prstGeom>
+                  </pic:spPr>
+                </pic:pic>
+              </a:graphicData>
+            </a:graphic>
+            <wp14:sizeRelH relativeFrom="page">
+              <wp14:pctWidth>0</wp14:pctWidth>
+            </wp14:sizeRelH>
+            <wp14:sizeRelV relativeFrom="page">
+              <wp14:pctHeight>0</wp14:pctHeight>
+            </wp14:sizeRelV>
+          </wp:anchor>
+        </w:drawing>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868">
+      <w:pPr>
+        <w:wordWrap w:val="0"/>
+        <w:autoSpaceDE w:val="0"/>
+        <w:autoSpaceDN w:val="0"/>
+        <w:spacing w:after="0" w:line="386" w:lineRule="auto"/>
+        <w:ind w:firstLine="920"/>
+        <w:jc w:val="both"/>
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868">
+      <w:pPr>
+        <w:wordWrap w:val="0"/>
+        <w:autoSpaceDE w:val="0"/>
+        <w:autoSpaceDN w:val="0"/>
+        <w:spacing w:after="0" w:line="386" w:lineRule="auto"/>
+        <w:ind w:firstLine="920"/>
+        <w:jc w:val="both"/>
+        <w:rPr>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+      </w:pPr>
+      <w:proofErr w:type="spellStart"/>
+      <w:r w:rsidRPr="00CF0868">
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>致：中国驻阿尔及利亚使领馆签证中心</w:t>
+      </w:r>
+      <w:proofErr w:type="spellEnd"/>
+    </w:p>
+    <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868">
+      <w:pPr>
+        <w:wordWrap w:val="0"/>
+        <w:autoSpaceDE w:val="0"/>
+        <w:autoSpaceDN w:val="0"/>
+        <w:spacing w:after="0" w:line="386" w:lineRule="auto"/>
+        <w:ind w:firstLine="920"/>
+        <w:jc w:val="both"/>
+        <w:rPr>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+      </w:pPr>
+      <w:proofErr w:type="spellStart"/>
+      <w:r w:rsidRPr="00CF0868">
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>尊敬的签证官员</w:t>
+      </w:r>
+      <w:proofErr w:type="spellEnd"/>
+      <w:r w:rsidRPr="00CF0868">
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>：</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868">
+      <w:pPr>
+        <w:wordWrap w:val="0"/>
+        <w:autoSpaceDE w:val="0"/>
+        <w:autoSpaceDN w:val="0"/>
+        <w:spacing w:after="0" w:line="239" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868">
+      <w:pPr>
+        <w:wordWrap w:val="0"/>
+        <w:autoSpaceDE w:val="0"/>
+        <w:autoSpaceDN w:val="0"/>
+        <w:spacing w:after="0" w:line="285" w:lineRule="auto"/>
+        <w:ind w:left="708" w:right="520" w:firstLine="708"/>
+        <w:jc w:val="both"/>
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="18"/>
+          <w:lang w:val="en-US"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r w:rsidRPr="00CF0868">
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>我司佛山市盈达通外贸服务有限公司诚挚邀请以下合作伙伴莅临中国，开展贸易合作洽谈及市场考察活动。本次行程旨在促进双方商业交流</w:t>
+      </w:r>
+      <w:r w:rsidRPr="00CF0868">
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="18"/>
+          <w:lang w:val="en-US"/>
+        </w:rPr>
+        <w:t>，</w:t>
+      </w:r>
+      <w:r w:rsidRPr="00CF0868">
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>探讨长期</w:t>
+      </w:r>
+      <w:r w:rsidRPr="00CF0868">
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>合作机遇。受邀方需自行承担国际往返旅费及在华期间产生的各项费</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868">
+      <w:pPr>
+        <w:wordWrap w:val="0"/>
+        <w:autoSpaceDE w:val="0"/>
+        <w:autoSpaceDN w:val="0"/>
+        <w:spacing w:after="0" w:line="239" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="18"/>
+          <w:lang w:val="en-US"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868">
+      <w:pPr>
+        <w:wordWrap w:val="0"/>
+        <w:autoSpaceDE w:val="0"/>
+        <w:autoSpaceDN w:val="0"/>
+        <w:spacing w:after="0" w:line="340" w:lineRule="auto"/>
+        <w:ind w:firstLine="920"/>
+        <w:jc w:val="both"/>
+        <w:rPr>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+      </w:pPr>
+      <w:proofErr w:type="spellStart"/>
+      <w:r w:rsidRPr="00CF0868">
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>邀请信息如下</w:t>
+      </w:r>
+      <w:proofErr w:type="spellEnd"/>
+      <w:r w:rsidRPr="00CF0868">
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>：</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868">
+      <w:pPr>
+        <w:wordWrap w:val="0"/>
+        <w:autoSpaceDE w:val="0"/>
+        <w:autoSpaceDN w:val="0"/>
+        <w:spacing w:after="0" w:line="246" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="14"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:tbl>
+      <w:tblPr>
+        <w:tblW w:w="0" w:type="auto"/>
+        <w:tblInd w:w="920" w:type="dxa"/>
+        <w:tblBorders>
+          <w:top w:val="single" w:sz="4" w:space="0" w:color="FFFFFF"/>
+          <w:left w:val="single" w:sz="4" w:space="0" w:color="FFFFFF"/>
+          <w:bottom w:val="single" w:sz="4" w:space="0" w:color="FFFFFF"/>
+          <w:right w:val="single" w:sz="4" w:space="0" w:color="FFFFFF"/>
+          <w:insideH w:val="single" w:sz="4" w:space="0" w:color="FFFFFF"/>
+          <w:insideV w:val="single" w:sz="4" w:space="0" w:color="FFFFFF"/>
+        </w:tblBorders>
+        <w:tblCellMar>
+          <w:left w:w="0" w:type="dxa"/>
+          <w:right w:w="0" w:type="dxa"/>
+        </w:tblCellMar>
+        <w:tblLook w:val="0000" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="0" w:noVBand="0"/>
+      </w:tblPr>
+      <w:tblGrid>
+        <w:gridCol w:w="2040"/>
+        <w:gridCol w:w="4480"/>
+      </w:tblGrid>
+      <w:tr w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidTr="000A2093">
+        <w:trPr>
+          <w:trHeight w:val="480"/>
+        </w:trPr>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2040" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="20" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:jc w:val="center"/>
+              <w:rPr>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>被邀请人详细信息</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="4480" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="40" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:jc w:val="center"/>
+              <w:rPr>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>具体内容</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidTr="000A2093">
+        <w:trPr>
+          <w:trHeight w:val="520"/>
+        </w:trPr>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2040" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="40" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="20"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>姓名</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="4480" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="40" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="1300"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>KRIBAA ABDELOUAHID</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidTr="000A2093">
+        <w:trPr>
+          <w:trHeight w:val="500"/>
+        </w:trPr>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2040" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="40" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="20"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>性别</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="4480" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="60" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:jc w:val="center"/>
+              <w:rPr>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>男</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidTr="000A2093">
+        <w:trPr>
+          <w:trHeight w:val="480"/>
+        </w:trPr>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2040" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="40" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="20"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>国籍</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="4480" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="40" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:jc w:val="center"/>
+              <w:rPr>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>阿尔及利亚</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidTr="000A2093">
+        <w:trPr>
+          <w:trHeight w:val="520"/>
+        </w:trPr>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2040" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="40" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="20"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>护照号码</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="4480" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="60" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:jc w:val="center"/>
+              <w:rPr>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>176782160</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidTr="000A2093">
+        <w:trPr>
+          <w:trHeight w:val="500"/>
+        </w:trPr>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2040" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="20" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="20"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>预计入境日期</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="4480" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="40" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:jc w:val="center"/>
+              <w:rPr>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>2026</w:t>
+            </w:r>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>年</w:t>
+            </w:r>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>2</w:t>
+            </w:r>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>月</w:t>
+            </w:r>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>10</w:t>
+            </w:r>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>日</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidTr="000A2093">
+        <w:trPr>
+          <w:trHeight w:val="500"/>
+        </w:trPr>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2040" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="20" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="20"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>预计离境日期</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="4480" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="40" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:jc w:val="center"/>
+              <w:rPr>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>2026</w:t>
+            </w:r>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>年</w:t>
+            </w:r>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>2</w:t>
+            </w:r>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>月</w:t>
+            </w:r>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>20</w:t>
+            </w:r>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>日</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidTr="000A2093">
+        <w:trPr>
+          <w:trHeight w:val="500"/>
+        </w:trPr>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2040" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="20" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="40"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>访问城市</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="4480" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="40" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:jc w:val="center"/>
+              <w:rPr>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="18"/>
+              </w:rPr>
+              <w:t>广州、东莞等城市</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+      </w:tr>
+    </w:tbl>
+    <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868">
+      <w:pPr>
+        <w:wordWrap w:val="0"/>
+        <w:autoSpaceDE w:val="0"/>
+        <w:autoSpaceDN w:val="0"/>
+        <w:spacing w:after="0" w:line="239" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868">
+      <w:pPr>
+        <w:wordWrap w:val="0"/>
+        <w:autoSpaceDE w:val="0"/>
+        <w:autoSpaceDN w:val="0"/>
+        <w:spacing w:after="0" w:line="419" w:lineRule="auto"/>
+        <w:ind w:firstLine="920"/>
+        <w:jc w:val="both"/>
+        <w:rPr>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+      </w:pPr>
+      <w:proofErr w:type="spellStart"/>
+      <w:r w:rsidRPr="00CF0868">
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+          <w:color w:val="BEBEBE"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>邀</w:t>
+      </w:r>
+      <w:r w:rsidRPr="00CF0868">
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>请方声明</w:t>
+      </w:r>
+      <w:proofErr w:type="spellEnd"/>
+      <w:r w:rsidRPr="00CF0868">
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>：</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="001D0232" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868">
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+      </w:pPr>
+      <w:proofErr w:type="spellStart"/>
+      <w:r w:rsidRPr="00CF0868">
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="18"/>
+        </w:rPr>
+        <w:t>我公司督促被邀请人在华期间将严格遵循中国法律法规，并安排其按时离境。如有需要进一步了解的信息，请随时与我公司取得联系</w:t>
+      </w:r>
+      <w:proofErr w:type="spellEnd"/>
+    </w:p>
+    <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868">
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="23"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868">
+      <w:pPr>
+        <w:wordWrap w:val="0"/>
+        <w:autoSpaceDE w:val="0"/>
+        <w:autoSpaceDN w:val="0"/>
+        <w:spacing w:after="0" w:line="356" w:lineRule="auto"/>
+        <w:ind w:firstLine="5700"/>
+        <w:jc w:val="both"/>
+        <w:rPr>
+          <w:sz w:val="23"/>
+        </w:rPr>
+      </w:pPr>
+      <w:proofErr w:type="spellStart"/>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="23"/>
+        </w:rPr>
+        <w:t>佛山市盈达通外贸服务有限公司</w:t>
+      </w:r>
+      <w:proofErr w:type="spellEnd"/>
+    </w:p>
+    <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868">
+      <w:pPr>
+        <w:autoSpaceDE w:val="0"/>
+        <w:autoSpaceDN w:val="0"/>
+        <w:spacing w:after="0" w:line="434" w:lineRule="auto"/>
+        <w:ind w:firstLine="6960"/>
+        <w:jc w:val="both"/>
+        <w:rPr>
+          <w:sz w:val="23"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="23"/>
+        </w:rPr>
+        <w:t>2026</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="23"/>
+        </w:rPr>
+        <w:t>年</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="23"/>
+        </w:rPr>
+        <w:t>1</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="23"/>
+        </w:rPr>
+        <w:t>月</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="23"/>
+        </w:rPr>
+        <w:t>28</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="23"/>
+        </w:rPr>
+        <w:t>日</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868">
+      <w:pPr>
+        <w:rPr>
+          <w:lang w:val="en-US"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="001D0232" w:rsidRPr="00CF0868" w:rsidRDefault="001D0232">
+      <w:pPr>
+        <w:rPr>
+          <w:lang w:val="en-US"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="001D0232" w:rsidRPr="00CF0868" w:rsidRDefault="001D0232">
+      <w:pPr>
+        <w:rPr>
+          <w:lang w:val="en-US"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="001D0232" w:rsidRPr="00CF0868" w:rsidRDefault="001D0232">
+      <w:pPr>
+        <w:rPr>
+          <w:lang w:val="en-US"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="001D0232" w:rsidRPr="00CF0868" w:rsidRDefault="001D0232">
+      <w:pPr>
+        <w:rPr>
+          <w:lang w:val="en-US"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="001D0232" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868">
+      <w:pPr>
+        <w:rPr>
+          <w:lang w:val="en-US"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r w:rsidRPr="001D0232">
+        <w:rPr>
+          <w:noProof/>
+          <w:lang w:eastAsia="fr-FR"/>
+        </w:rPr>
+        <w:lastRenderedPageBreak/>
+        <w:drawing>
+          <wp:anchor distT="0" distB="0" distL="114300" distR="114300" simplePos="0" relativeHeight="251660288" behindDoc="1" locked="0" layoutInCell="1" allowOverlap="1" wp14:anchorId="65AB6C25" wp14:editId="7C60A33A">
+            <wp:simplePos x="0" y="0"/>
+            <wp:positionH relativeFrom="page">
+              <wp:align>left</wp:align>
+            </wp:positionH>
+            <wp:positionV relativeFrom="paragraph">
+              <wp:posOffset>-896620</wp:posOffset>
+            </wp:positionV>
+            <wp:extent cx="7578671" cy="10721414"/>
+            <wp:effectExtent l="0" t="0" r="3810" b="3810"/>
+            <wp:wrapNone/>
+            <wp:docPr id="2" name="Image 2" descr="C:\Users\hp\Downloads\foshan yingtang.png"/>
+            <wp:cNvGraphicFramePr>
+              <a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/>
+            </wp:cNvGraphicFramePr>
+            <a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+              <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                <pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                  <pic:nvPicPr>
+                    <pic:cNvPr id="0" name="Picture 1" descr="C:\Users\hp\Downloads\foshan yingtang.png"/>
+                    <pic:cNvPicPr>
+                      <a:picLocks noChangeAspect="1" noChangeArrowheads="1"/>
+                    </pic:cNvPicPr>
+                  </pic:nvPicPr>
+                  <pic:blipFill>
+                    <a:blip r:embed="rId4" cstate="print">
+                      <a:extLst>
+                        <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+                          <a14:useLocalDpi xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" val="0"/>
+                        </a:ext>
+                      </a:extLst>
+                    </a:blip>
+                    <a:srcRect/>
+                    <a:stretch>
+                      <a:fillRect/>
+                    </a:stretch>
+                  </pic:blipFill>
+                  <pic:spPr bwMode="auto">
+                    <a:xfrm>
+                      <a:off x="0" y="0"/>
+                      <a:ext cx="7578671" cy="10721414"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                      <a:avLst/>
+                    </a:prstGeom>
+                    <a:noFill/>
+                    <a:ln>
+                      <a:noFill/>
+                    </a:ln>
+                  </pic:spPr>
+                </pic:pic>
+              </a:graphicData>
+            </a:graphic>
+            <wp14:sizeRelH relativeFrom="margin">
+              <wp14:pctWidth>0</wp14:pctWidth>
+            </wp14:sizeRelH>
+            <wp14:sizeRelV relativeFrom="margin">
+              <wp14:pctHeight>0</wp14:pctHeight>
+            </wp14:sizeRelV>
+          </wp:anchor>
+        </w:drawing>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="001D0232" w:rsidRPr="00CF0868" w:rsidRDefault="001D0232">
+      <w:pPr>
+        <w:rPr>
+          <w:lang w:val="en-US"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="001D0232" w:rsidRPr="00CF0868" w:rsidRDefault="001D0232">
+      <w:pPr>
+        <w:rPr>
+          <w:lang w:val="en-US"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868">
+      <w:pPr>
+        <w:wordWrap w:val="0"/>
+        <w:autoSpaceDE w:val="0"/>
+        <w:autoSpaceDN w:val="0"/>
+        <w:spacing w:after="0" w:line="176" w:lineRule="auto"/>
+        <w:jc w:val="center"/>
+        <w:rPr>
+          <w:sz w:val="44"/>
+        </w:rPr>
+      </w:pPr>
+      <w:proofErr w:type="spellStart"/>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+          <w:b/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="44"/>
+        </w:rPr>
+        <w:t>详细行程</w:t>
+      </w:r>
+      <w:proofErr w:type="spellEnd"/>
+      <w:r>
+        <w:rPr>
+          <w:noProof/>
+        </w:rPr>
+        <w:drawing>
+          <wp:anchor distT="0" distB="0" distL="114300" distR="114300" simplePos="0" relativeHeight="251670528" behindDoc="0" locked="0" layoutInCell="1" allowOverlap="1" wp14:anchorId="1500D734" wp14:editId="5C4CA4FB">
+            <wp:simplePos x="0" y="0"/>
+            <wp:positionH relativeFrom="page">
+              <wp:posOffset>685800</wp:posOffset>
+            </wp:positionH>
+            <wp:positionV relativeFrom="page">
+              <wp:posOffset>190500</wp:posOffset>
+            </wp:positionV>
+            <wp:extent cx="2286000" cy="381000"/>
+            <wp:effectExtent l="0" t="0" r="2540" b="4445"/>
+            <wp:wrapNone/>
+            <wp:docPr id="6" name="IMAGE"/>
+            <wp:cNvGraphicFramePr>
+              <a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/>
+            </wp:cNvGraphicFramePr>
+            <a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+              <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                <pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                  <pic:nvPicPr>
+                    <pic:cNvPr id="1" name="avatar.jpg"/>
+                    <pic:cNvPicPr/>
+                  </pic:nvPicPr>
+                  <pic:blipFill>
+                    <a:blip r:embed="rId7" cstate="print">
+                      <a:extLst>
+                        <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+                          <a14:useLocalDpi xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" val="0"/>
+                        </a:ext>
+                      </a:extLst>
+                    </a:blip>
+                    <a:stretch>
+                      <a:fillRect/>
+                    </a:stretch>
+                  </pic:blipFill>
+                  <pic:spPr>
+                    <a:xfrm>
+                      <a:off x="0" y="0"/>
+                      <a:ext cx="2286000" cy="381000"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                      <a:avLst/>
+                    </a:prstGeom>
+                  </pic:spPr>
+                </pic:pic>
+              </a:graphicData>
+            </a:graphic>
+            <wp14:sizeRelH relativeFrom="page">
+              <wp14:pctWidth>0</wp14:pctWidth>
+            </wp14:sizeRelH>
+            <wp14:sizeRelV relativeFrom="page">
+              <wp14:pctHeight>0</wp14:pctHeight>
+            </wp14:sizeRelV>
+          </wp:anchor>
+        </w:drawing>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:noProof/>
+        </w:rPr>
+        <mc:AlternateContent>
+          <mc:Choice Requires="wps">
+            <w:drawing>
+              <wp:anchor distT="0" distB="0" distL="114300" distR="114300" simplePos="0" relativeHeight="251673600" behindDoc="0" locked="0" layoutInCell="1" allowOverlap="1" wp14:anchorId="02B57B88" wp14:editId="0750BA72">
+                <wp:simplePos x="0" y="0"/>
+                <wp:positionH relativeFrom="page">
+                  <wp:posOffset>1054100</wp:posOffset>
+                </wp:positionH>
+                <wp:positionV relativeFrom="page">
+                  <wp:posOffset>9347200</wp:posOffset>
+                </wp:positionV>
+                <wp:extent cx="5791200" cy="279400"/>
+                <wp:effectExtent l="0" t="0" r="635" b="14605"/>
+                <wp:wrapNone/>
+                <wp:docPr id="11" name="文本框 2"/>
+                <wp:cNvGraphicFramePr/>
+                <a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+                  <a:graphicData uri="http://schemas.microsoft.com/office/word/2010/wordprocessingShape">
+                    <wps:wsp>
+                      <wps:cNvSpPr txBox="1"/>
+                      <wps:spPr>
+                        <a:xfrm>
+                          <a:off x="1601470" y="2139315"/>
+                          <a:ext cx="2132965" cy="3376295"/>
+                        </a:xfrm>
+                        <a:prstGeom prst="rect">
+                          <a:avLst/>
+                        </a:prstGeom>
+                        <a:noFill/>
+                        <a:ln w="6350">
+                          <a:noFill/>
+                        </a:ln>
+                      </wps:spPr>
+                      <wps:style>
+                        <a:lnRef idx="0">
+                          <a:schemeClr val="accent1"/>
+                        </a:lnRef>
+                        <a:fillRef idx="0">
+                          <a:schemeClr val="accent1"/>
+                        </a:fillRef>
+                        <a:effectRef idx="0">
+                          <a:schemeClr val="accent1"/>
+                        </a:effectRef>
+                        <a:fontRef idx="minor">
+                          <a:schemeClr val="dk1"/>
+                        </a:fontRef>
+                      </wps:style>
+                      <wps:txbx>
+                        <w:txbxContent>
+                          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868"/>
+                        </w:txbxContent>
+                      </wps:txbx>
+                      <wps:bodyPr wrap="square" lIns="25400" tIns="0" rIns="25400" bIns="0">
+                        <a:noAutofit/>
+                      </wps:bodyPr>
+                    </wps:wsp>
+                  </a:graphicData>
+                </a:graphic>
+              </wp:anchor>
+            </w:drawing>
+          </mc:Choice>
+          <mc:Fallback>
+            <w:pict>
+              <v:shape w14:anchorId="02B57B88" id="_x0000_s1027" type="#_x0000_t202" style="position:absolute;left:0;text-align:left;margin-left:83pt;margin-top:736pt;width:456pt;height:22pt;z-index:251673600;visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;mso-position-horizontal-relative:page;mso-position-vertical:absolute;mso-position-vertical-relative:page;v-text-anchor:top" o:gfxdata="UEsDBBQABgAIAAAAIQC2gziS/gAAAOEBAAATAAAAW0NvbnRlbnRfVHlwZXNdLnhtbJSRQU7DMBBF
+90jcwfIWJU67QAgl6YK0S0CoHGBkTxKLZGx5TGhvj5O2G0SRWNoz/78nu9wcxkFMGNg6quQqL6RA
+0s5Y6ir5vt9lD1JwBDIwOMJKHpHlpr69KfdHjyxSmriSfYz+USnWPY7AufNIadK6MEJMx9ApD/oD
+OlTrorhX2lFEilmcO2RdNtjC5xDF9pCuTyYBB5bi6bQ4syoJ3g9WQ0ymaiLzg5KdCXlKLjvcW893
+SUOqXwnz5DrgnHtJTxOsQfEKIT7DmDSUCaxw7Rqn8787ZsmRM9e2VmPeBN4uqYvTtW7jvijg9N/y
+JsXecLq0q+WD6m8AAAD//wMAUEsDBBQABgAIAAAAIQA4/SH/1gAAAJQBAAALAAAAX3JlbHMvLnJl
+bHOkkMFqwzAMhu+DvYPRfXGawxijTi+j0GvpHsDYimMaW0Yy2fr2M4PBMnrbUb/Q94l/f/hMi1qR
+JVI2sOt6UJgd+ZiDgffL8ekFlFSbvV0oo4EbChzGx4f9GRdb25HMsYhqlCwG5lrLq9biZkxWOiqY
+22YiTra2kYMu1l1tQD30/bPm3wwYN0x18gb45AdQl1tp5j/sFB2T0FQ7R0nTNEV3j6o9feQzro1i
+OWA14Fm+Q8a1a8+Bvu/d/dMb2JY5uiPbhG/ktn4cqGU/er3pcvwCAAD//wMAUEsDBBQABgAIAAAA
+IQDcT8rkHgIAAGkEAAAOAAAAZHJzL2Uyb0RvYy54bWysVEuOEzEQ3SNxB8t70p9MMiRKZwSMBiEh
+QAwcwHHbiYXtMraT7lwAbsCKDXvOlXNQdieZ0bAaxMZtl1+9qldV7sVVbzTZCR8U2IZWo5ISYTm0
+yq4b+vnTzbPnlITIbMs0WNHQvQj0avn0yaJzc1HDBnQrPEESG+ada+gmRjcvisA3wrAwAicsXkrw
+hkU8+nXRetYhu9FFXZbTogPfOg9chIDW6+GSLjO/lILH91IGEYluKOYW8+rzukprsVyw+dozt1H8
+mAb7hywMUxaDnqmuWWRk69VfVEZxDwFkHHEwBUipuMgaUE1VPlBzu2FOZC1YnODOZQr/j5a/233w
+RLXYu4oSywz26PDj++Hn78Ovb6RO9elcmCPs1iEw9i+hR+zJHtCYZPfSm/RFQSTdT8vq4hLrvW9o
+XY1n42oyVFr0kXAEoLGeTSeUcESMx5fTepYRxR2V8yG+FmBI2jTUYytzhdnubYiYFkJPkBTZwo3S
+OrdTW9I1dDqelNnhfIMe2qJjEjQknndxr0Vi0PajkFgKTG9wzEMoXmlPdgzHh3EubMzSMxOik5vE
+sI9xPOKTq8gD+hjns0eODDaenY2y4LPeB2m3X04pywF/qsCgO5Ug9qt+mIFTX1fQ7rHdHT6Mhoav
+W+YFJfqNxcmrJxdlekn5gBt/37o6WlN6Fl5sI0iVm5XCDKTH8DjPuYfHt5cezP1zRt39IZZ/AAAA
+//8DAFBLAwQUAAYACAAAACEAqz94luAAAAAOAQAADwAAAGRycy9kb3ducmV2LnhtbEyPzU7DMBCE
+70i8g7VI3KiTiqZRiFMVJEQRXFr+rm68xBHxOordJn17tie4faMZzc6Wq8l14ohDaD0pSGcJCKTa
+m5YaBe9vjzc5iBA1Gd15QgUnDLCqLi9KXRg/0haPu9gILqFQaAU2xr6QMtQWnQ4z3yOx9+0HpyPL
+oZFm0COXu07OkySTTrfEF6zu8cFi/bM7OAX3+dNmXH98vUx2sf18TilsTq9BqeuraX0HIuIU/8Jw
+ns/ToeJNe38gE0THOsv4l8hwu5wznSPJMmfaMy1SdmVVyv9vVL8AAAD//wMAUEsBAi0AFAAGAAgA
+AAAhALaDOJL+AAAA4QEAABMAAAAAAAAAAAAAAAAAAAAAAFtDb250ZW50X1R5cGVzXS54bWxQSwEC
+LQAUAAYACAAAACEAOP0h/9YAAACUAQAACwAAAAAAAAAAAAAAAAAvAQAAX3JlbHMvLnJlbHNQSwEC
+LQAUAAYACAAAACEA3E/K5B4CAABpBAAADgAAAAAAAAAAAAAAAAAuAgAAZHJzL2Uyb0RvYy54bWxQ
+SwECLQAUAAYACAAAACEAqz94luAAAAAOAQAADwAAAAAAAAAAAAAAAAB4BAAAZHJzL2Rvd25yZXYu
+eG1sUEsFBgAAAAAEAAQA8wAAAIUFAAAAAA==
+" filled="f" stroked="f" strokeweight=".5pt">
+                <v:textbox inset="2pt,0,2pt,0">
+                  <w:txbxContent>
+                    <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868"/>
+                  </w:txbxContent>
+                </v:textbox>
+                <w10:wrap anchorx="page" anchory="page"/>
+              </v:shape>
+            </w:pict>
+          </mc:Fallback>
+        </mc:AlternateContent>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:noProof/>
+        </w:rPr>
+        <w:drawing>
+          <wp:anchor distT="0" distB="0" distL="114300" distR="114300" simplePos="0" relativeHeight="251674624" behindDoc="0" locked="0" layoutInCell="1" allowOverlap="1" wp14:anchorId="3F0D5712" wp14:editId="7DD22C16">
+            <wp:simplePos x="0" y="0"/>
+            <wp:positionH relativeFrom="page">
+              <wp:posOffset>774700</wp:posOffset>
+            </wp:positionH>
+            <wp:positionV relativeFrom="page">
+              <wp:posOffset>9702800</wp:posOffset>
+            </wp:positionV>
+            <wp:extent cx="215900" cy="228600"/>
+            <wp:effectExtent l="0" t="0" r="2540" b="4445"/>
+            <wp:wrapNone/>
+            <wp:docPr id="13" name="IMAGE"/>
+            <wp:cNvGraphicFramePr>
+              <a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/>
+            </wp:cNvGraphicFramePr>
+            <a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+              <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                <pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                  <pic:nvPicPr>
+                    <pic:cNvPr id="1" name="avatar.jpg"/>
+                    <pic:cNvPicPr/>
+                  </pic:nvPicPr>
+                  <pic:blipFill>
+                    <a:blip r:embed="rId8">
+                      <a:extLst>
+                        <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+                          <a14:useLocalDpi xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" val="0"/>
+                        </a:ext>
+                      </a:extLst>
+                    </a:blip>
+                    <a:stretch>
+                      <a:fillRect/>
+                    </a:stretch>
+                  </pic:blipFill>
+                  <pic:spPr>
+                    <a:xfrm>
+                      <a:off x="0" y="0"/>
+                      <a:ext cx="215900" cy="228600"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                      <a:avLst/>
+                    </a:prstGeom>
+                  </pic:spPr>
+                </pic:pic>
+              </a:graphicData>
+            </a:graphic>
+            <wp14:sizeRelH relativeFrom="page">
+              <wp14:pctWidth>0</wp14:pctWidth>
+            </wp14:sizeRelH>
+            <wp14:sizeRelV relativeFrom="page">
+              <wp14:pctHeight>0</wp14:pctHeight>
+            </wp14:sizeRelV>
+          </wp:anchor>
+        </w:drawing>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:noProof/>
+        </w:rPr>
+        <w:drawing>
+          <wp:anchor distT="0" distB="0" distL="114300" distR="114300" simplePos="0" relativeHeight="251675648" behindDoc="0" locked="0" layoutInCell="1" allowOverlap="1" wp14:anchorId="02F241C1" wp14:editId="22D14309">
+            <wp:simplePos x="0" y="0"/>
+            <wp:positionH relativeFrom="page">
+              <wp:posOffset>762000</wp:posOffset>
+            </wp:positionH>
+            <wp:positionV relativeFrom="page">
+              <wp:posOffset>9969500</wp:posOffset>
+            </wp:positionV>
+            <wp:extent cx="215900" cy="228600"/>
+            <wp:effectExtent l="0" t="0" r="2540" b="4445"/>
+            <wp:wrapNone/>
+            <wp:docPr id="14" name="IMAGE"/>
+            <wp:cNvGraphicFramePr>
+              <a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/>
+            </wp:cNvGraphicFramePr>
+            <a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+              <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                <pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                  <pic:nvPicPr>
+                    <pic:cNvPr id="1" name="avatar.jpg"/>
+                    <pic:cNvPicPr/>
+                  </pic:nvPicPr>
+                  <pic:blipFill>
+                    <a:blip r:embed="rId9">
+                      <a:extLst>
+                        <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+                          <a14:useLocalDpi xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" val="0"/>
+                        </a:ext>
+                      </a:extLst>
+                    </a:blip>
+                    <a:stretch>
+                      <a:fillRect/>
+                    </a:stretch>
+                  </pic:blipFill>
+                  <pic:spPr>
+                    <a:xfrm>
+                      <a:off x="0" y="0"/>
+                      <a:ext cx="215900" cy="228600"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                      <a:avLst/>
+                    </a:prstGeom>
+                  </pic:spPr>
+                </pic:pic>
+              </a:graphicData>
+            </a:graphic>
+            <wp14:sizeRelH relativeFrom="page">
+              <wp14:pctWidth>0</wp14:pctWidth>
+            </wp14:sizeRelH>
+            <wp14:sizeRelV relativeFrom="page">
+              <wp14:pctHeight>0</wp14:pctHeight>
+            </wp14:sizeRelV>
+          </wp:anchor>
+        </w:drawing>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868">
+      <w:pPr>
+        <w:wordWrap w:val="0"/>
+        <w:autoSpaceDE w:val="0"/>
+        <w:autoSpaceDN w:val="0"/>
+        <w:spacing w:after="0" w:line="239" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="24"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:tbl>
+      <w:tblPr>
+        <w:tblW w:w="0" w:type="auto"/>
+        <w:tblInd w:w="1080" w:type="dxa"/>
+        <w:tblBorders>
+          <w:top w:val="single" w:sz="4" w:space="0" w:color="FFFFFF"/>
+          <w:left w:val="single" w:sz="4" w:space="0" w:color="FFFFFF"/>
+          <w:bottom w:val="single" w:sz="4" w:space="0" w:color="FFFFFF"/>
+          <w:right w:val="single" w:sz="4" w:space="0" w:color="FFFFFF"/>
+          <w:insideH w:val="single" w:sz="4" w:space="0" w:color="FFFFFF"/>
+          <w:insideV w:val="single" w:sz="4" w:space="0" w:color="FFFFFF"/>
+        </w:tblBorders>
+        <w:tblCellMar>
+          <w:left w:w="0" w:type="dxa"/>
+          <w:right w:w="0" w:type="dxa"/>
+        </w:tblCellMar>
+        <w:tblLook w:val="0000" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="0" w:noVBand="0"/>
+      </w:tblPr>
+      <w:tblGrid>
+        <w:gridCol w:w="1199"/>
+        <w:gridCol w:w="1318"/>
+        <w:gridCol w:w="3669"/>
+        <w:gridCol w:w="658"/>
+        <w:gridCol w:w="1138"/>
+      </w:tblGrid>
+      <w:tr w:rsidR="00CF0868" w:rsidTr="000A2093">
+        <w:trPr>
+          <w:trHeight w:val="400"/>
+        </w:trPr>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1200" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="40" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="540"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>天数</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1320" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="40" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="500"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>日期</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3680" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="60" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="480"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>行程</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="660" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="40" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:jc w:val="center"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>交通</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1140" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="60" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="480"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>用餐</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w:rsidR="00CF0868" w:rsidTr="000A2093">
+        <w:trPr>
+          <w:trHeight w:val="460"/>
+        </w:trPr>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1200" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="120" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="140"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>Day1</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1320" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="100" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="100"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>2.10</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3680" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="100" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="100"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>搭乘国际航班，飞往广州，夜宿航班</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>。</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="660" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="100" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:jc w:val="center"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>飞机</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1140" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="100" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="500"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>无</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w:rsidR="00CF0868" w:rsidTr="000A2093">
+        <w:trPr>
+          <w:trHeight w:val="740"/>
+        </w:trPr>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1200" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="80" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="140"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>Day2-3</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1320" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="80" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="120"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>2.11-2.12</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3680" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="80" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:left="120" w:right="80" w:firstLine="20"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="18"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="18"/>
+              </w:rPr>
+              <w:t>考察广州中大纺织商圈，走访国际轻纺城和长江辅料城</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="18"/>
+              </w:rPr>
+              <w:t>。</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="660" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="80" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:jc w:val="center"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>包车</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1140" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="80" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:jc w:val="center"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>早／午／晚</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w:rsidR="00CF0868" w:rsidTr="000A2093">
+        <w:trPr>
+          <w:trHeight w:val="740"/>
+        </w:trPr>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1200" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="100" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="140"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>Day4</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1320" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="100" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="120"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>2.13</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3680" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="60" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:left="120" w:right="80"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>考察广州番禺服装产业带，走访沙溪商贸城和周边工厂</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>。</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="660" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="80" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:jc w:val="center"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>包车</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1140" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="80" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:jc w:val="center"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>早／午／晚</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w:rsidR="00CF0868" w:rsidTr="000A2093">
+        <w:trPr>
+          <w:trHeight w:val="460"/>
+        </w:trPr>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1200" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="100" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="140"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>Day5</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1320" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="120" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="120"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>2.14</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3680" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="100" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="120"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>东莞虎门服装批发市场采购</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>。</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="660" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="80" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:jc w:val="center"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>包车</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1140" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="80" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:jc w:val="center"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>早／午／晚</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w:rsidR="00CF0868" w:rsidTr="000A2093">
+        <w:trPr>
+          <w:trHeight w:val="440"/>
+        </w:trPr>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1200" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="80" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="140"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>Day6-9</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1320" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="80" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="120"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>2.15-2.18</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3680" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="80" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="120"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>深度验厂与采购谈判</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>。</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="660" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="80" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:jc w:val="center"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>包车</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1140" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="80" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:jc w:val="center"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>早／午／晚</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w:rsidR="00CF0868" w:rsidTr="000A2093">
+        <w:trPr>
+          <w:trHeight w:val="440"/>
+        </w:trPr>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1200" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="80" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="140"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>Day10</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1320" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="80" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="120"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>2.19</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3680" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="80" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="120"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>考察南沙保税仓</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>。</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="660" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="80" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:jc w:val="center"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>包车</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1140" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="80" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:jc w:val="center"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>早／午／晚</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr w:rsidR="00CF0868" w:rsidTr="000A2093">
+        <w:trPr>
+          <w:trHeight w:val="1080"/>
+        </w:trPr>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1200" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="80" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="140"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>Day11</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1320" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="80" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="100"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>2.20</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="3680" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="67" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:left="120" w:right="60"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+                <w:lang w:val="en-US"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>酒店早餐后，送往广州白云国际机场，办理乘机手续。乘坐国际航班离开中国</w:t>
+            </w:r>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+                <w:lang w:val="en-US"/>
+              </w:rPr>
+              <w:t>，</w:t>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>返回阿尔及利亚</w:t>
+            </w:r>
+            <w:r w:rsidRPr="00CF0868">
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+                <w:lang w:val="en-US"/>
+              </w:rPr>
+              <w:t>，</w:t>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>行程圆满结束</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>。</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="660" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="80" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:jc w:val="center"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>包车</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="1140" w:type="dxa"/>
+            <w:tcBorders>
+              <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+              <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+            </w:tcBorders>
+          </w:tcPr>
+          <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="000A2093">
+            <w:pPr>
+              <w:wordWrap w:val="0"/>
+              <w:autoSpaceDE w:val="0"/>
+              <w:autoSpaceDN w:val="0"/>
+              <w:spacing w:before="80" w:after="0" w:line="239" w:lineRule="auto"/>
+              <w:ind w:firstLine="100"/>
+              <w:jc w:val="both"/>
+              <w:rPr>
+                <w:sz w:val="19"/>
+              </w:rPr>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+                <w:color w:val="000000"/>
+                <w:sz w:val="19"/>
+              </w:rPr>
+              <w:t>早</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+    </w:tbl>
+    <w:p w:rsidR="001D0232" w:rsidRPr="00CF0868" w:rsidRDefault="001D0232">
+      <w:pPr>
+        <w:rPr>
+          <w:lang w:val="en-US"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="001D0232" w:rsidRPr="00CF0868" w:rsidRDefault="001D0232">
+      <w:pPr>
+        <w:rPr>
+          <w:lang w:val="en-US"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="001D0232" w:rsidRPr="00CF0868" w:rsidRDefault="001D0232">
+      <w:pPr>
+        <w:rPr>
+          <w:lang w:val="en-US"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="001D0232" w:rsidRPr="00CF0868" w:rsidRDefault="001D0232">
+      <w:pPr>
+        <w:rPr>
+          <w:lang w:val="en-US"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="001D0232" w:rsidRPr="00CF0868" w:rsidRDefault="001D0232">
+      <w:pPr>
+        <w:rPr>
+          <w:lang w:val="en-US"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="001D0232" w:rsidRPr="00CF0868" w:rsidRDefault="001D0232">
+      <w:pPr>
+        <w:rPr>
+          <w:lang w:val="en-US"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868">
+      <w:pPr>
+        <w:wordWrap w:val="0"/>
+        <w:autoSpaceDE w:val="0"/>
+        <w:autoSpaceDN w:val="0"/>
+        <w:spacing w:after="0" w:line="365" w:lineRule="auto"/>
+        <w:ind w:firstLine="5700"/>
+        <w:jc w:val="both"/>
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="19"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868">
+      <w:pPr>
+        <w:wordWrap w:val="0"/>
+        <w:autoSpaceDE w:val="0"/>
+        <w:autoSpaceDN w:val="0"/>
+        <w:spacing w:after="0" w:line="365" w:lineRule="auto"/>
+        <w:ind w:firstLine="5700"/>
+        <w:jc w:val="both"/>
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun"/>
+          <w:color w:val="000000"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868">
+      <w:pPr>
+        <w:wordWrap w:val="0"/>
+        <w:autoSpaceDE w:val="0"/>
+        <w:autoSpaceDN w:val="0"/>
+        <w:spacing w:after="0" w:line="365" w:lineRule="auto"/>
+        <w:ind w:firstLine="5700"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:proofErr w:type="spellStart"/>
+      <w:r w:rsidRPr="00CF0868">
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+        </w:rPr>
+        <w:t>佛山市盈达通外贸服务有限公司</w:t>
+      </w:r>
+      <w:proofErr w:type="spellEnd"/>
+    </w:p>
+    <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868">
+      <w:pPr>
+        <w:wordWrap w:val="0"/>
+        <w:autoSpaceDE w:val="0"/>
+        <w:autoSpaceDN w:val="0"/>
+        <w:spacing w:after="0" w:line="239" w:lineRule="auto"/>
+        <w:jc w:val="both"/>
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun"/>
+          <w:color w:val="000000"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00CF0868" w:rsidRPr="00CF0868" w:rsidRDefault="00CF0868" w:rsidP="00CF0868">
+      <w:pPr>
+        <w:autoSpaceDE w:val="0"/>
+        <w:autoSpaceDN w:val="0"/>
+        <w:spacing w:after="0" w:line="266" w:lineRule="auto"/>
+        <w:ind w:firstLine="6960"/>
+        <w:jc w:val="both"/>
+      </w:pPr>
+      <w:r w:rsidRPr="00CF0868">
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+        </w:rPr>
+        <w:t>2026</w:t>
+      </w:r>
+      <w:r w:rsidRPr="00CF0868">
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+        </w:rPr>
+        <w:t>年</w:t>
+      </w:r>
+      <w:r w:rsidRPr="00CF0868">
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+        </w:rPr>
+        <w:t>1</w:t>
+      </w:r>
+      <w:r w:rsidRPr="00CF0868">
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+        </w:rPr>
+        <w:t>月</w:t>
+      </w:r>
+      <w:r w:rsidRPr="00CF0868">
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+        </w:rPr>
+        <w:t>28</w:t>
+      </w:r>
+      <w:r w:rsidRPr="00CF0868">
+        <w:rPr>
+          <w:rFonts w:ascii="SimSun" w:eastAsia="SimSun" w:hAnsi="SimSun" w:hint="eastAsia"/>
+          <w:color w:val="000000"/>
+        </w:rPr>
+        <w:t>日</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="001D0232" w:rsidRPr="00CF0868" w:rsidRDefault="001D0232">
+      <w:pPr>
+        <w:rPr>
+          <w:lang w:val="en-US"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="001D0232" w:rsidRPr="00CF0868" w:rsidRDefault="001D0232">
+      <w:pPr>
+        <w:rPr>
+          <w:lang w:val="en-US"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="001D0232" w:rsidRPr="00CF0868" w:rsidRDefault="001D0232">
+      <w:pPr>
+        <w:rPr>
+          <w:lang w:val="en-US"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="001D0232" w:rsidRPr="00CF0868" w:rsidRDefault="001D0232">
+      <w:pPr>
+        <w:rPr>
+          <w:lang w:val="en-US"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="001D0232" w:rsidRPr="00CF0868" w:rsidRDefault="001D0232">
+      <w:pPr>
+        <w:rPr>
+          <w:lang w:val="en-US"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="001D0232" w:rsidRPr="00CF0868" w:rsidRDefault="001D0232">
+      <w:pPr>
+        <w:rPr>
+          <w:lang w:val="en-US"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="001D0232" w:rsidRPr="00CF0868" w:rsidRDefault="001D0232">
+      <w:pPr>
+        <w:rPr>
+          <w:lang w:val="en-US"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="001D0232" w:rsidRPr="00CF0868" w:rsidRDefault="001D0232">
+      <w:pPr>
+        <w:rPr>
+          <w:lang w:val="en-US"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p w:rsidR="001D0232" w:rsidRDefault="001D0232">
+      <w:r w:rsidRPr="001D0232">
+        <w:rPr>
+          <w:noProof/>
+          <w:lang w:eastAsia="fr-FR"/>
+        </w:rPr>
+        <w:drawing>
+          <wp:anchor distT="0" distB="0" distL="114300" distR="114300" simplePos="0" relativeHeight="251661312" behindDoc="0" locked="0" layoutInCell="1" allowOverlap="1" wp14:anchorId="49519F52" wp14:editId="5B59EE45">
+            <wp:simplePos x="0" y="0"/>
+            <wp:positionH relativeFrom="column">
+              <wp:posOffset>-2464850</wp:posOffset>
+            </wp:positionH>
+            <wp:positionV relativeFrom="paragraph">
+              <wp:posOffset>265114</wp:posOffset>
+            </wp:positionV>
+            <wp:extent cx="10377073" cy="7475256"/>
+            <wp:effectExtent l="2858" t="0" r="8572" b="8573"/>
+            <wp:wrapNone/>
+            <wp:docPr id="3" name="Image 3" descr="C:\Users\hp\Downloads\WhatsApp Image 2026-03-13 at 09.38.55.jpeg"/>
+            <wp:cNvGraphicFramePr>
+              <a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/>
+            </wp:cNvGraphicFramePr>
+            <a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+              <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                <pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                  <pic:nvPicPr>
+                    <pic:cNvPr id="0" name="Picture 2" descr="C:\Users\hp\Downloads\WhatsApp Image 2026-03-13 at 09.38.55.jpeg"/>
+                    <pic:cNvPicPr>
+                      <a:picLocks noChangeAspect="1" noChangeArrowheads="1"/>
+                    </pic:cNvPicPr>
+                  </pic:nvPicPr>
+                  <pic:blipFill>
+                    <a:blip r:embed="rId10">
+                      <a:extLst>
+                        <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+                          <a14:useLocalDpi xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" val="0"/>
+                        </a:ext>
+                      </a:extLst>
+                    </a:blip>
+                    <a:srcRect/>
+                    <a:stretch>
+                      <a:fillRect/>
+                    </a:stretch>
+                  </pic:blipFill>
+                  <pic:spPr bwMode="auto">
+                    <a:xfrm rot="16200000">
+                      <a:off x="0" y="0"/>
+                      <a:ext cx="10377073" cy="7475256"/>
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                      <a:avLst/>
+                    </a:prstGeom>
+                    <a:noFill/>
+                    <a:ln>
+                      <a:noFill/>
+                    </a:ln>
+                  </pic:spPr>
+                </pic:pic>
+              </a:graphicData>
+            </a:graphic>
+            <wp14:sizeRelH relativeFrom="margin">
+              <wp14:pctWidth>0</wp14:pctWidth>
+            </wp14:sizeRelH>
+            <wp14:sizeRelV relativeFrom="margin">
+              <wp14:pctHeight>0</wp14:pctHeight>
+            </wp14:sizeRelV>
+          </wp:anchor>
+        </w:drawing>
+      </w:r>
+    </w:p>
+    <w:sectPr w:rsidR="001D0232">
+      <w:pgSz w:w="11906" w:h="16838"/>
+      <w:pgMar w:top="1417" w:right="1417" w:bottom="1417" w:left="1417" w:header="708" w:footer="708" w:gutter="0"/>
+      <w:cols w:space="708"/>
+      <w:docGrid w:linePitch="360"/>
+    </w:sectPr>
+  </w:body>
+</w:document>
