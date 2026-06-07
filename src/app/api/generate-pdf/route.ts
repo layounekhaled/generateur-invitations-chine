@@ -29,12 +29,13 @@ export async function POST(request: NextRequest) {
     const filename = `invitation_${safeLastName}_${safeFirstName}`
     const docxPath = path.join(tmpDir, `${filename}.docx`)
     const pdfPath = path.join(tmpDir, `${filename}.pdf`)
+    const dataPath = path.join(tmpDir, 'data.json')
 
     // Template path
     const templatePath = path.join(process.cwd(), 'public', 'template.docx')
 
-    // Prepare data for Python script
-    const pythonData = JSON.stringify({
+    // Write data to a temp JSON file (avoids shell escaping issues with Chinese characters)
+    const pythonData = {
       lastName: body.lastName,
       firstName: body.firstName,
       sex: body.sex || 'M',
@@ -44,22 +45,25 @@ export async function POST(request: NextRequest) {
       departureDate: body.departureDate,
       cityToVisit: body.cityToVisit || '广州、东莞等城市',
       inviterCompany: body.inviterCompany || '佛山市盈达通外贸服务有限公司',
-    })
+    }
+    await fs.writeFile(dataPath, JSON.stringify(pythonData), 'utf-8')
 
-    // Call Python script to modify the Word template and convert to PDF
+    // Call Python script using @data.json file reference
     const scriptPath = path.join(process.cwd(), 'scripts', 'word_generator.py')
 
     const { stdout, stderr } = await execFileAsync('python3', [
       scriptPath,
-      '--data', pythonData,
+      '--data', `@${dataPath}`,
       '--template', templatePath,
       '--output', docxPath,
       '--pdf', pdfPath,
-    ], { timeout: 60000 })
+    ], { timeout: 60000, maxBuffer: 5 * 1024 * 1024 })
 
     if (stderr) {
       console.error('Python stderr:', stderr)
     }
+
+    console.log('Python stdout:', stdout)
 
     // Read the generated PDF
     let pdfBytes: Buffer
