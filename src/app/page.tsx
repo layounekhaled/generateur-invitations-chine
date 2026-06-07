@@ -105,7 +105,9 @@ export default function Home() {
   const [importData, setImportData] = useState<InvitationForm[]>([])
   const [importLoading, setImportLoading] = useState(false)
   const [bulkMode, setBulkMode] = useState(false)
+  const [templateFile, setTemplateFile] = useState<File | null>(null)
   const fileInputRef = useRef<HTMLInputElement>(null)
+  const templateInputRef = useRef<HTMLInputElement>(null)
   const { toast } = useToast()
 
   const updateForm = useCallback((field: keyof InvitationForm, value: string) => {
@@ -131,8 +133,8 @@ export default function Home() {
     setHistory(stored)
   }, [])
 
-  // Generate PDF
-  const handleGeneratePDF = useCallback(async (data?: InvitationForm) => {
+  // Generate DOCX
+  const handleGenerateDocx = useCallback(async (data?: InvitationForm) => {
     const formData = data || form
     if (!formData.lastName || !formData.firstName || !formData.passportNumber || !formData.arrivalDate || !formData.departureDate) {
       toast({
@@ -145,23 +147,29 @@ export default function Home() {
 
     setLoading(true)
     try {
+      // Send as FormData to support template file upload
+      const fd = new FormData()
+      if (templateFile) {
+        fd.append('template', templateFile)
+      }
+      fd.append('data', JSON.stringify(formData))
+
       const response = await fetch('/api/generate-pdf', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: fd,
       })
 
       if (!response.ok) {
         const errData = await response.json().catch(() => ({}))
-        throw new Error(errData.error || 'Erreur de génération PDF')
+        throw new Error(errData.error || 'Erreur de génération du document')
       }
 
-      // Download PDF binary directly from response
+      // Download DOCX binary directly from response
       const blob = await response.blob()
       const url = URL.createObjectURL(blob)
       const link = document.createElement('a')
       link.href = url
-      link.download = `invitation_${formData.lastName}_${formData.firstName}.pdf`
+      link.download = `invitation_${formData.lastName}_${formData.firstName}.docx`
       link.style.display = 'none'
       document.body.appendChild(link)
       link.click()
@@ -172,20 +180,20 @@ export default function Home() {
 
       saveToHistory(formData)
       toast({
-        title: 'PDF généré avec succès',
-        description: `Invitation pour ${formData.firstName} ${formData.lastName} téléchargée.`,
+        title: 'Document généré avec succès',
+        description: `Invitation pour ${formData.firstName} ${formData.lastName} téléchargée (.docx).`,
       })
     } catch (error) {
       console.error(error)
       toast({
         title: 'Erreur',
-        description: 'Impossible de générer le PDF. Veuillez réessayer.',
+        description: 'Impossible de générer le document. Veuillez réessayer.',
         variant: 'destructive',
       })
     } finally {
       setLoading(false)
     }
-  }, [form, saveToHistory, toast])
+  }, [form, templateFile, saveToHistory, toast])
 
   // Preview
   const handlePreview = useCallback(async () => {
@@ -295,13 +303,18 @@ export default function Home() {
     let successCount = 0
     let errorCount = 0
 
-    // Generate one PDF per person
+    // Generate one DOCX per person
     for (const data of importData) {
       try {
+        const fd = new FormData()
+        if (templateFile) {
+          fd.append('template', templateFile)
+        }
+        fd.append('data', JSON.stringify(data))
+
         const response = await fetch('/api/generate-pdf', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data),
+          body: fd,
         })
 
         if (response.ok) {
@@ -309,7 +322,7 @@ export default function Home() {
           const url = URL.createObjectURL(blob)
           const link = document.createElement('a')
           link.href = url
-          link.download = `invitation_${data.lastName}_${data.firstName}.pdf`
+          link.download = `invitation_${data.lastName}_${data.firstName}.docx`
           link.style.display = 'none'
           document.body.appendChild(link)
           link.click()
@@ -328,10 +341,10 @@ export default function Home() {
     setImportLoading(false)
     toast({
       title: 'Génération terminée',
-      description: `${successCount} PDF généré(s) avec succès.${errorCount > 0 ? ` ${errorCount} erreur(s).` : ''}`,
+      description: `${successCount} document(s) généré(s) avec succès.${errorCount > 0 ? ` ${errorCount} erreur(s).` : ''}`,
       variant: errorCount > 0 ? 'destructive' : undefined,
     })
-  }, [importData, saveToHistory, toast])
+  }, [importData, templateFile, saveToHistory, toast])
 
   // Duplicate from history
   const handleDuplicate = useCallback((record: InvitationRecord) => {
@@ -405,7 +418,7 @@ export default function Home() {
     } catch {
       toast({
         title: 'Erreur',
-        description: 'Impossible de régénérer le PDF.',
+        description: 'Impossible de régénérer le document.',
         variant: 'destructive',
       })
     } finally {
@@ -436,7 +449,7 @@ export default function Home() {
               </div>
               <div>
                 <h1 className="text-xl font-bold text-gray-900">Générateur d&apos;invitations Chine</h1>
-                <p className="text-xs text-gray-500">邀请函生成器 — Invitation professionnelle pour visa chinois</p>
+                <p className="text-xs text-gray-500">邀请函生成器 — Génération de documents Word pour visa chinois</p>
               </div>
             </div>
             <Badge variant="outline" className="hidden sm:flex gap-1 text-xs">
@@ -658,6 +671,57 @@ export default function Home() {
                   </CardContent>
                 </Card>
 
+                {/* Template Upload */}
+                <Card>
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-base flex items-center gap-2">
+                      <FileText className="h-4 w-4" />
+                      Modèle Word
+                    </CardTitle>
+                    <CardDescription>
+                      Uploadez votre propre modèle .docx ou utilisez le modèle par défaut
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div
+                      onClick={() => templateInputRef.current?.click()}
+                      className="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center cursor-pointer hover:border-red-400 hover:bg-red-50/50 transition-colors"
+                    >
+                      {templateFile ? (
+                        <div className="flex items-center justify-center gap-2">
+                          <CheckCircle2 className="h-4 w-4 text-green-500" />
+                          <span className="text-sm font-medium text-green-700">{templateFile.name}</span>
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            onClick={(e) => { e.stopPropagation(); setTemplateFile(null); }}
+                            className="h-6 px-2 text-xs"
+                          >
+                            Supprimer
+                          </Button>
+                        </div>
+                      ) : (
+                        <div>
+                          <Upload className="h-5 w-5 mx-auto text-gray-400 mb-1" />
+                          <p className="text-sm text-gray-500">Cliquez pour uploader un modèle .docx</p>
+                          <p className="text-xs text-gray-400 mt-1">Modèle par défaut utilisé si aucun fichier</p>
+                        </div>
+                      )}
+                    </div>
+                    <input
+                      ref={templateInputRef}
+                      type="file"
+                      accept=".docx"
+                      onChange={(e) => {
+                        const file = e.target.files?.[0]
+                        if (file) setTemplateFile(file)
+                        if (e.target) e.target.value = ''
+                      }}
+                      className="hidden"
+                    />
+                  </CardContent>
+                </Card>
+
                 {/* Action Buttons */}
                 <div className="flex flex-wrap gap-3">
                   <Button
@@ -670,12 +734,12 @@ export default function Home() {
                     Aperçu
                   </Button>
                   <Button
-                    onClick={() => handleGeneratePDF()}
+                    onClick={() => handleGenerateDocx()}
                     disabled={loading}
                     className="flex-1 min-w-[140px] bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800"
                   >
                     {loading ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <Download className="h-4 w-4 mr-2" />}
-                    Télécharger PDF
+                    Télécharger Word
                   </Button>
                   <Button
                     onClick={() => setForm({ ...emptyForm })}
@@ -783,7 +847,7 @@ export default function Home() {
                           <li>Le programme se génère automatiquement selon les dates</li>
                           <li>Vérifiez les informations avant de générer</li>
                           <li>Utilisez l&apos;onglet Import pour les listes CSV/Excel</li>
-                          <li>Le PDF est au format A4 prêt à imprimer</li>
+                          <li>Le document Word est généré à partir du modèle uploadé</li>
                         </ul>
                       </div>
                     </div>
@@ -886,7 +950,7 @@ export default function Home() {
                           className="flex-1 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800"
                         >
                           {importLoading ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <Download className="h-4 w-4 mr-2" />}
-                          Générer {importData.length} PDF
+                          Générer {importData.length} doc.
                         </Button>
                       </div>
                     </div>
